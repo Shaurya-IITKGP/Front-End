@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+    },
   },
   plugins: [],
-}
-
+};
