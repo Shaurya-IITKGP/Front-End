@@ -7,6 +7,7 @@ import { LandingPage, EventsPage, TeamsPage, SignUpPage } from "./routes";
 //Importing External Libraries
 import { Routes, Route } from "react-router-dom";
 
+
 const RoutingPaths = [
   {
     path: "/",
