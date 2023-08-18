@@ -22,7 +22,7 @@ const LandingPage = () => {
             <div className={"ml-40 " + s.heading}>
               <h1
                 className={
-                  "text-white mt-32 shrink font-serif relative " + s.head
+                  "text-white mt-[3rem] shrink font-serif relative " + s.head
                 }
               >
                 SHAURYA
@@ -40,7 +40,6 @@ const LandingPage = () => {
                 Register
               </button>
             </div>
-            \
             <div id="right-side " className=" flex ">
               <img className={"   right-0   " + s.img1} src={fut} alt="" />
             </div>
