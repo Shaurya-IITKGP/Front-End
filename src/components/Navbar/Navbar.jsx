@@ -1,26 +1,24 @@
 import React, { useState } from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import s from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/shauya22-.png";
 const Menu = () => (
   <>
     <div className="  text-white">
       <div className="">
-        <h1 className="my-2    ">
-          <a href="#">Home</a>
-        </h1>
         <h1 className="my-2   ">
-          <a href="#">Events</a>
+          <Link to="/events">Events</Link>
         </h1>
       </div>
       <div className="">
         <h1 className="my-2 ">
-          <a href="#">Sponsors</a>
+          <Link to="/sponsors">Sponsors</Link>
         </h1>
 
         <h1 className="my-2  ">
-          <a href="#">Team</a>
+          <Link to="/teams">Team</Link>
         </h1>
       </div>
      
@@ -40,19 +38,16 @@ export default function Navbar() {
           </h1>
         </div>
         <div
-          className={"flex gap-32 items-center font-mono font-semibold pr-10"}
+          className={"flex gap-20 items-center font-mono font-semibold pr-10"}
         >
-          <h1 className={"my-6 hover:text-white hidden md:block"}>
-            <a href="#">HOME</a>
-          </h1>
           <h1 className={"my-6  hover:text-white hidden md:block"}>
-            <a href="#">EVENTS</a>
+            <Link to="/events">EVENTS</Link>
           </h1>
           <h1 className={"my-6 hover:text-white hidden md:block"}>
-            <a href="#">SPONSORS</a>
+            <Link to="/sponsors">SPONSORS</Link>
           </h1>
           <h1 className={"my-6  hover:text-white hidden md:block"}>
-            <a href="#">TEAM</a>
+            <Link to="/teams">TEAM</Link>
           </h1>
 
           
