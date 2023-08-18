@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "@fortawesome/fontawesome-free/css/all.css";
 import picture from "../../assets/picture.jpg";
 import logo from "../../assets/logo.png";
-import Typed from "react-typed";
-import css from "../ComingSoon/app.css";
+import css from "./comingSoon.module.css";
+
 
 function ComingSoon() {
   const [countdown, setCountdown] = useState({
@@ -128,13 +127,14 @@ function ComingSoon() {
           <img src={logo} className="h-[200px] " />
         </div>
         <span className="w-full mt-10 text-center">
-          <Typed
+          {/* <Typed
             className="font-Montserrat font-mono font-bold uppercase ml-100 text-4xl md:text-5x2 lg:text-6xl mb-28 md:-mr-20 text-white md:text-right"
             strings={["Coming Soon..."]}
             typeSpeed={140}
             backSpeed={130}
             loop
-          />
+          /> */}
+          <div className={"uppercase ml-100 text-4xl md:text-5x2 lg:text-6xl mb-28 md:-mr-20 text-white md:text-center " }>Coming Soon...</div>
         </span>
       </div>
     </div>
