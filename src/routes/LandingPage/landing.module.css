@@ -278,7 +278,8 @@
     margin-left: -5rem;
   }
   .img1 {
-    margin-top: 10%
+    margin-top: 3%;
+    height:500px;
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -318,7 +319,7 @@
   }
   .img1 {
     margin-top: 10%;
-    height: 560px;
+    height: 460px;
     width: 1200px;
     margin-right: -1rem;
     animation: opa 2s;
@@ -349,9 +350,10 @@
     font-size: 1.6rem;
   }
   .img1 {
+    display: none;
     margin-top: 10%;
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     margin-left: 4rem;
     animation: opa 2s;
   }
@@ -385,6 +387,7 @@
     width: 350px;
     margin-left: 10rem;
     animation: opa 2s;
+    display: none;
   }
   .glowOnHover {
     margin-top: 4%;
