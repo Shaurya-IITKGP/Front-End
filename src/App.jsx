@@ -7,6 +7,7 @@ import { LandingPage, EventsPage, TeamsPage } from "./routes";
 //Importing External Libraries
 import { Routes, Route } from "react-router-dom";
 
+
 const RoutingPaths = [
   {
     path: "/",
@@ -20,6 +21,7 @@ const RoutingPaths = [
     path: "/teams",
     component: <TeamsPage />,
   },
+ 
 ];
 function App() {
   return (
