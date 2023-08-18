@@ -22,16 +22,12 @@ const RoutingPaths = [
   //   component: <TeamsPage />,
   // },
   {
-    path: "/events",
-    component: <EventsPage />,
-  },
-  {
-    path: "/teams",
-    component: <TeamsPage />,
-  },
-  {
     path: "/signup",
     component: <SignUpPage/>
+  },
+  {
+    path: "*",
+    component: <ComingSoon/>
   },
 ];
 function App() {

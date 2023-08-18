@@ -5,12 +5,12 @@ import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import About from "../AboutPage/About";
 import arrowdown from "../../assets/arrowdown.png"
-
+import { useNavigate } from "react-router-dom";
 
 
 
 const LandingPage = () => {
- 
+  const navigate=useNavigate();
 
   return(
     <>
@@ -36,7 +36,9 @@ const LandingPage = () => {
                 different events . Come join us and be part of this wonderful
                 fest.
               </p>
-              <button  className={s.glowOnHover}>
+              <button  className={s.glowOnHover} onClick={()=>{
+                navigate("/signup")
+              }}>
                 Register
               </button>
             </div>
