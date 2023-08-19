@@ -1,7 +1,7 @@
 import React from "react";
 
 //Importing routes
-import { LandingPage, EventsPage, TeamsPage, SignUpPage } from "./routes";
+import { LandingPage, EventsPage, TeamsPage, SignUpPage,ComingSoon } from "./routes";
 
 
 //Importing External Libraries
@@ -13,17 +13,21 @@ const RoutingPaths = [
     path: "/",
     component: <LandingPage />,
   },
-  {
-    path: "/events",
-    component: <EventsPage />,
-  },
-  {
-    path: "/teams",
-    component: <TeamsPage />,
-  },
+  // {
+  //   path: "/events",
+  //   component: <EventsPage />,
+  // },
+  // {
+  //   path: "/teams",
+  //   component: <TeamsPage />,
+  // },
   {
     path: "/signup",
     component: <SignUpPage/>
+  },
+  {
+    path: "*",
+    component: <ComingSoon/>
   },
 ];
 function App() {
