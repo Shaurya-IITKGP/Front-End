@@ -126,7 +126,7 @@ function ComingSoon() {
         <div className="flex justify-center items-center flex-col">
           <img src={logo} className="h-[200px] " />
         </div>
-        <span className="w-full mt-10 text-center">
+        <span className="w-full mt-10 text-center flex justify-center items-center">
           {/* <Typed
             className="font-Montserrat font-mono font-bold uppercase ml-100 text-4xl md:text-5x2 lg:text-6xl mb-28 md:-mr-20 text-white md:text-right"
             strings={["Coming Soon..."]}
@@ -134,7 +134,7 @@ function ComingSoon() {
             backSpeed={130}
             loop
           /> */}
-          <div className={"uppercase ml-100 text-4xl md:text-5x2 lg:text-6xl mb-28 md:-mr-20 text-white md:text-center " }>Coming Soon...</div>
+          <div className={"uppercase ml-100 text-4xl md:text-5x2 lg:text-6xl font-extrabold mb-28 md:-mr-20 text-white md:text-center " + css.typing_animation}>Coming&nbsp;Soon...</div>
         </span>
       </div>
     </div>

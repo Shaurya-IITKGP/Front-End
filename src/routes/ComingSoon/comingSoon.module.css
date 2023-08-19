@@ -1,7 +1,12 @@
 .typing_animation {
-    animation:
-        typing 3s steps(75, end) forwards infinite,
-        blinking 1s infinite;
+  width: 0;
+  animation-delay: 2s;
+  background: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation:
+    typing 3s steps(75, end) forwards infinite,
+    blinking 1s infinite;
 }
 
 @keyframes typing {
