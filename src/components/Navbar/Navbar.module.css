@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Tilt+Prism&family=Vina+Sans&family=Work+Sans&display=swap");
+.hammenu {
+  display: none;
+}
+.lpmain {
+  background-color: black;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hammenu {
+    display: block;
+    margin-right: 10px;
+  }
+  .lpmainhead {
+    display: none;
+  }
+
+  .logo1 {
+    right: 10;
+  }
+}
+
