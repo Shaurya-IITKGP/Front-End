@@ -50,10 +50,10 @@ const EventModal = ({ isOpen, onClose, eventName, eventRule, heroImage, modalRef
           <h2 className="text-4xl md:text-7xl px-4 font-bold text-gray-800">
             {eventName}
           </h2>
-          <p className="text-gray-500 py-2 md:py-4 px-4 max-w-md">
+          <div className="px-4 max-w-md overflow-y-auto">
             {eventRule}
-          </p>
-          <div className="px-2 md:px-4">
+          </div>
+          <div className="px-2 md:px-4 mt-4">
             <button className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md">
               Register for the event
             </button>
