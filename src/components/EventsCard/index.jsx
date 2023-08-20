@@ -12,7 +12,7 @@ const EVENTS = [
     <li><strong> For Relay Per Head: Rs.100</strong></li>
     <li><strong>Prize money worth Rs.61,000</strong></li>
     <li><strong>Contact: Priyanshu- 9073808624</strong></li>
-  </div>) , heroImage: "athletics2.jpg" },
+  </div>) , heroImage: "athleticsmodal.jpg" },
   { name: "Badminton", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Matches will be played in best of three sets(each set of 21 points) format.</p>
@@ -24,7 +24,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.800 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.28,500</strong></li>
     <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
-  </div>) , heroImage: "badminton2.jpg" },
+  </div>) , heroImage: "badmintonmodal.jpg" },
   { name: "Basketball", rule: (<div style={{ fontSize: "16px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Each match will have 4 quarters of 10 minutes each (for both Men and Women).</p>
@@ -33,7 +33,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.56,000</strong></li>
     <li><strong>Contact: Priyanshu-9073808624</strong></li>
-  </div>) , heroImage: "basketball2.jpg" },
+  </div>) , heroImage: "basketballmodal.jpg" },
   { name: "Chess", rule: (<div style={{ fontSize: "16px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Event format: Unrated Open Chess Mixed Tournament 
@@ -43,7 +43,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.17,500</strong></li>
     <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
-  </div>) , heroImage: "Chess2.jpg" },
+  </div>) , heroImage: "Chessmodal.jpg" },
   { name: "Cricket", rule:(<div style={{ fontSize: "20px" }}>
     <h1><strong>Rules:</strong></h1>
     <p> The format of the Tournament will be League cum Knockout</p>
@@ -52,7 +52,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
     <li><strong>Contact: Priyanshu-9073808624</strong></li>
-  </div>) , heroImage: "Cricket2.jpg" },
+  </div>) , heroImage: "Cricketmodal.jpg" },
   { name: "Football", rule: (<div>
     <h1><strong>Rules:</strong></h1>
     <p>The format of the Tournament will be League cum Knockout</p>
@@ -60,7 +60,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
     <li><strong>Contact:Himanshu- 7348701571</strong></li>
-  </div>) , heroImage: "Football2.jpg" },
+  </div>) , heroImage: "Footballmodal.jpg" },
   { name: "Hockey", rule: (<div>
     <h1><strong>Rules:</strong></h1>
     <p>Each match will have 4 quarters of 15 minutes each</p>
@@ -69,14 +69,14 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
     <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
-  </div>) , heroImage: "Hockey2.jpg" },
+  </div>) , heroImage: "Hockeymodal.jpg" },
   { name: "Mr. Shaurya", rule: (<div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quis eligendi commodi totam autem possimus dignissimos voluptatem modi perspiciatis odit debitis, porro nam blanditiis ab aut deserunt? Minus, perspiciatis totam.</p>
     <li>Venue:</li>
     <li>Fees:</li>
     <li>Time:</li>
     <li>Team Members required:</li>
-  </div>) , heroImage: "MRShaurya2.jpg" },
+  </div>) , heroImage: "MRShauryamodal.jpg" },
   { name: "Powerlifting", rule: (<div>
     <h1><strong>Rules:</strong></h1>
     <p>Events Format: Individual</p>
@@ -85,7 +85,7 @@ const EVENTS = [
     <li><strong>Rules:</strong></li>
     <li><strong>Prize money worth Rs.47,000</strong></li>
     <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
-  </div>) , heroImage: "Powelifting2.jpg" },
+  </div>) , heroImage: "Poweliftingmodal.jpg" },
   { name: "Squash", rule: (<div style={{ fontSize: "15px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Matches will be played individually in a knockout format</p>
@@ -94,7 +94,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.400 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.25,000</strong></li>
     <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
-  </div>) , heroImage: "Squash2.jpg" },
+  </div>) , heroImage: "Squashmodal.jpg" },
   { name: "Swimming", rule: (<div style={{ fontSize: "11px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Maximum of 2 participants for each event from a single college.Each player can participate in not more than 3 events(except Relay)</p>
@@ -104,7 +104,7 @@ const EVENTS = [
     <li><strong>For Relay Per Head Rs.100</strong></li>
     <li><strong>Prize money worth Rs. 54,000</strong></li>
     <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
-  </div>) , heroImage: "Swimming2.jpg" },
+  </div>) , heroImage: "Swimmingmodal.jpg" },
   { name: "Table Tennis", rule: (<div style={{ fontSize: "11px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Men: The Matches will be held on the basis of five singles</p>
@@ -118,7 +118,7 @@ const EVENTS = [
     </li>
     <li><strong>Prize money worth Rs.28,500</strong></li>
     <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
-  </div>) , heroImage: "TT2.jpg" },
+  </div>) , heroImage: "Tabletennismodal.jpg" },
   { name: "Tennis", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>Matches will be played in the best-of-three-sets format.</p>
@@ -132,7 +132,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.900 (M) & 600(W)</strong></li>
     <li><strong>Prize money worth Rs.29,500</strong></li>
     <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
-  </div>) , heroImage: "Tennis2.jpg" },
+  </div>) , heroImage: "Tennismodal.jpg" },
   { name: "Volleyball", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
     <p>The Tournament shall be played on a League cum Knockout basis.</p>
@@ -143,7 +143,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.56,000</strong></li>
     <li><strong>Contact:Himanshu- 7348701571</strong></li>
-  </div>) , heroImage: "Volleyball2.jpg" },
+  </div>) , heroImage: "Volleyballmodal.jpg" },
   { name: "Weightlifting", rule: (<div>
     <h1><strong>Rules:</strong></h1>
     <p>Each team is allowed to enter at most 2 participants in each category</p>
@@ -151,7 +151,7 @@ const EVENTS = [
     <li><strong>Registration Fee Per Head Rs.400</strong></li>
     <li><strong>Prize money worth Rs.27,000</strong></li>
     <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
-  </div>) , heroImage: "Weightlifting2.jpg" },
+  </div>) , heroImage: "Weightliftingmodal.jpg" },
 ];
 
 const EventsCard = ({ event }) => {
