@@ -11,6 +11,7 @@ const EVENTS = [
     <li><strong>Individual Reg. per event: Rs.200(500 for 3 events)</strong></li>
     <li><strong> For Relay Per Head: Rs.100</strong></li>
     <li><strong>Prize money worth Rs.61,000</strong></li>
+    <li><strong>Contact: Priyanshu- 9073808624</strong></li>
   </div>) , heroImage: "athletics2.jpg" },
   { name: "Badminton", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -22,6 +23,7 @@ const EVENTS = [
     <p>Women: Each college can have a max of 3 members in their team</p>
     <li><strong>Registration Fee per Head Rs.800 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.28,500</strong></li>
+    <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
   </div>) , heroImage: "badminton2.jpg" },
   { name: "Basketball", rule: (<div style={{ fontSize: "16px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -30,6 +32,7 @@ const EVENTS = [
     <p> Number of players: Each team will have a maximum of 12 players.</p>
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.56,000</strong></li>
+    <li><strong>Contact: Priyanshu-9073808624</strong></li>
   </div>) , heroImage: "basketball2.jpg" },
   { name: "Chess", rule: (<div style={{ fontSize: "16px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -39,6 +42,7 @@ const EVENTS = [
     </p>
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.17,500</strong></li>
+    <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
   </div>) , heroImage: "Chess2.jpg" },
   { name: "Cricket", rule:(<div style={{ fontSize: "20px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -47,6 +51,7 @@ const EVENTS = [
     <p>Number of Players: Each team will consist of 11+5 players</p>
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
+    <li><strong>Contact: Priyanshu-9073808624</strong></li>
   </div>) , heroImage: "Cricket2.jpg" },
   { name: "Football", rule: (<div>
     <h1><strong>Rules:</strong></h1>
@@ -54,6 +59,7 @@ const EVENTS = [
     <p>Numeber of Players: Each team will consist of 11+5 players</p>
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
+    <li><strong>Contact:Himanshu- 7348701571</strong></li>
   </div>) , heroImage: "Football2.jpg" },
   { name: "Hockey", rule: (<div>
     <h1><strong>Rules:</strong></h1>
@@ -62,6 +68,7 @@ const EVENTS = [
     <p>Number of Players: Each team(men only) will have 11+5 players</p>
     <li><strong>Registration Fee per Head Rs.750 (M)</strong></li>
     <li><strong>Prize money worth Rs.35,000</strong></li>
+    <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
   </div>) , heroImage: "Hockey2.jpg" },
   { name: "Mr. Shaurya", rule: (<div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quis eligendi commodi totam autem possimus dignissimos voluptatem modi perspiciatis odit debitis, porro nam blanditiis ab aut deserunt? Minus, perspiciatis totam.</p>
@@ -77,6 +84,7 @@ const EVENTS = [
     <p>Men's Weight Categories: Upto 56 Kg, 57-62 Kg, 63-69 Kg, 70-77 Kg, Above 77 Kg</p>
     <li><strong>Rules:</strong></li>
     <li><strong>Prize money worth Rs.47,000</strong></li>
+    <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
   </div>) , heroImage: "Powelifting2.jpg" },
   { name: "Squash", rule: (<div style={{ fontSize: "15px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -85,6 +93,7 @@ const EVENTS = [
     <p>Men: Matches will be played in best-of-three sets(each set of 11 points) format till quarterfinals and best-of-five sets afterwards</p>
     <li><strong>Registration Fee per Head Rs.400 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.25,000</strong></li>
+    <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
   </div>) , heroImage: "Squash2.jpg" },
   { name: "Swimming", rule: (<div style={{ fontSize: "11px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -94,6 +103,7 @@ const EVENTS = [
     <li><strong>Individual Reg. Per Head Rs.250 (500 if 3 events)</strong></li>
     <li><strong>For Relay Per Head Rs.100</strong></li>
     <li><strong>Prize money worth Rs. 54,000</strong></li>
+    <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
   </div>) , heroImage: "Swimming2.jpg" },
   { name: "Table Tennis", rule: (<div style={{ fontSize: "11px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -107,6 +117,7 @@ const EVENTS = [
     <li><strong>Registration Fee per Head Rs.450 (M) & 400(W)</strong>
     </li>
     <li><strong>Prize money worth Rs.28,500</strong></li>
+    <li><strong>Contact: Nikhil Bharat- 7020096806</strong></li>
   </div>) , heroImage: "TT2.jpg" },
   { name: "Tennis", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -120,6 +131,7 @@ const EVENTS = [
     <p>Women: Each team will have a maximum of 3 players</p>
     <li><strong>Registration Fee per Head Rs.900 (M) & 600(W)</strong></li>
     <li><strong>Prize money worth Rs.29,500</strong></li>
+    <li><strong>Contact: Archie Aravati- 7024385271 </strong></li>
   </div>) , heroImage: "Tennis2.jpg" },
   { name: "Volleyball", rule: (<div style={{ fontSize: "14px" }}>
     <h1><strong>Rules:</strong></h1>
@@ -130,6 +142,7 @@ const EVENTS = [
     <p>Women: Each team should have atleast 6 players and a maximum of 12 players</p>
     <li><strong>Registration Fee per Head Rs.300 (M & W)</strong></li>
     <li><strong>Prize money worth Rs.56,000</strong></li>
+    <li><strong>Contact:Himanshu- 7348701571</strong></li>
   </div>) , heroImage: "Volleyball2.jpg" },
   { name: "Weightlifting", rule: (<div>
     <h1><strong>Rules:</strong></h1>
@@ -137,6 +150,7 @@ const EVENTS = [
     <p>Men's Weight Categories: Upto 56 Kg, 57-62 Kg, 63-69 Kg, 70-77 Kg, Above 77 Kg</p>
     <li><strong>Registration Fee Per Head Rs.400</strong></li>
     <li><strong>Prize money worth Rs.27,000</strong></li>
+    <li><strong>Contact: Rishi Dhoble- 9205704432</strong></li>
   </div>) , heroImage: "Weightlifting2.jpg" },
 ];
 
