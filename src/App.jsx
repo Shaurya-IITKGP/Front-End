@@ -1,7 +1,8 @@
 import React from "react";
 
 //Importing routes
-import { LandingPage, EventsPage, TeamsPage } from "./routes";
+import { LandingPage, TeamsPage, EventsPage } from "./routes";
+
 
 
 //Importing External Libraries
