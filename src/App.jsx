@@ -13,10 +13,10 @@ const RoutingPaths = [
     path: "/",
     component: <LandingPage />,
   },
-  // {
-  //   path: "/events",
-  //   component: <EventsPage />,
-  // },
+  {
+    path: "/events",
+    component: <EventsPage />,
+  },
   // {
   //   path: "/teams",
   //   component: <TeamsPage />,
