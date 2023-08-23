@@ -1,20 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Vina+Sans&family=Work+Sans&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Roboto:wght@300&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Tilt+Prism&family=Vina+Sans&family=Work+Sans&display=swap');
 .about_main{
     background-color: black;
 }
 
 
 .about_p{
-    font-family: "Roboto Slab", serif;
-}
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top:2.5rem ;
+    margin-left: 12rem;
+    font-size: 1.3rem/* 24px */;
+    line-height: 2rem/* 32px */;
+    width: 75%;
+  
+    
 
-.about_flex{
+}
+.about_img{
     display: flex;
 }
-.about{
+.about_flex{
+    display: flex;
     
-    background: linear-gradient(to right, hsl(193, 100%, 51%), hsl(108, 88%, 48%));
+}
+.about_head{
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
    
@@ -24,12 +34,9 @@
     
     font-family: "Roboto Slab", serif;
 }
-@media only screen and   (max-width:1200px) {
+@media only screen and   (max-width:1350px) {
+    
     .about_head{
-        font-size: 90px;
-     
-    }
-    .about{
         font-size: 50px;
      
 
@@ -38,44 +45,45 @@
     .about_flex{
         flex-direction: column;
     }
+    .about_img{
+        display: none;
+    }
     
 }
 @media only screen and   (max-width:920px) {
-    .about_head{
-        font-size: 5.2rem;
-        margin-left: 4rem;
-       
-    
-    }
+   
   
     .about_p{
-        font-size: 2.3rem;
-        margin-left: 30px;
+        font-size: 1.2rem;
+        margin-left: 100px;
+        margin-bottom: 1rem;
     }
     .about_flex{
         flex-direction: column;
+    }
+    .about_img{
+        display: none;
     }
     
 }
 @media only screen and   (max-width:540px) {
-    .about_head{
-        font-size: 3.5rem;
-        margin-left: 4rem;
-       
     
-    }
-    .about{
-        font-size: 30px;
-      margin-left: 4rem;
+    .about_head{
+        font-size: 2.5rem;
+     
        
 
     }
     .about_p{
-        font-size: 2.3rem;
-        margin-left: 30px;
+        font-size: 1.1rem;
+        margin-left: 55px;
+       
     }
     .about_flex{
         flex-direction: column;
+    }
+    .about_img{
+        display: none;
     }
     
 }

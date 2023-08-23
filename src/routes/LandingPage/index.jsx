@@ -4,7 +4,7 @@ import fut from "../../assets/athlete11.png";
 import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import About from "../AboutPage/About";
-import arrowdown from "../../assets/arrowdown.png"
+import arrowdown from "../../assets/arrowdown1-removebg-preview(1).png"
 
 
 
@@ -44,18 +44,19 @@ const LandingPage = () => {
               <img className={"   right-0   " + s.img1} src={fut} alt="" />
             </div>
           </div>
-          <div>
-            <img className="w-screen" src="" alt="" />
-          </div>
+         
+        <div className={s.arrow_div}><img className={s.arrow_img1} src={arrowdown} alt="" /></div>
         </div>
-        {/* <h1 className={s.arrowdown}><img className="w-6 h-6" src={arrowdown} alt="" /></h1> */}
         </div>
     
       
-     {/* <div>      
+      <div className={ s.about} >      
         <About />
       </div>
-    */}
+     
+    
+      
+     
     </>
   )
 };
