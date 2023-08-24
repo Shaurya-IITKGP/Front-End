@@ -1,42 +1,34 @@
 body{
-    background-color: rgb(48, 48, 48);
-    
-    /* display: flex; */
+    background-color: rgb(60, 60, 60);
+
 }
-*{
-    margin: 25px;
-    /* padding: 10px; */
-}
-.container{
-    /* display: flex; */
-}
+
 .eventsheading{
-  font-size: 5rem;
-  font-weight: bold;
-  text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    background: #fff;
-    color: #000;
+    /* font-size: 5rem; */
+    font-weight: bold;
+    width: 500px;
+    font-size: 28px;
+    background: #a6a6a6;
+    color: #2b2b2b;
     padding: 10px;
-    line-height: 1.7em;
-    box-shadow: 0 2px 10px 0 #cac9c9;
+    margin: 10px auto;
+    /* line-height: 1.7em; */
+    box-shadow: 0 2px 10px 0 black;
     text-align: center;
-    user-select: none;
-    cursor: pointer;
-    border-left: 20px solid #ff5f00;
-    border-right: 20px solid #ff5f00;
+    /* user-select: none; */
+    /* cursor: pointer; */
+    border-left: 20px solid #860e0e;
+    border-right: 20px solid #1e0ec6;
     border-radius: 5px 55px 5px 55px;
     
 }
 .card{
     height: 230px;
     width: 320px;
-    /* margin: 10px; */
-    /* gap: 2px; */
     box-shadow :5px 5px 20px black;
     overflow: hidden;
-   float: left;
+    float: left;
+    margin: 50px;
  
 
 }
@@ -201,11 +193,7 @@ body{
   }
 
   @media screen and (min-width: 1200px) and (max-width: 1279px) {
-    *{
-        margin-left: 30px;
-        padding-left: 4px;
 
-    }
     .card{
        padding: 0px;
         width: 450px;
@@ -231,11 +219,7 @@ body{
   }
   
   @media screen and (min-width: 1050px) and (max-width: 1200px) {
-    *{
-        margin-left: 11px;
-        padding-left: 25px;
 
-    }
     .card{
         margin: 30px;
        padding: 0px;
@@ -274,12 +258,10 @@ body{
     
   }
   @media screen and (min-width:920px) and (max-width: 1024px) {
-    *{
-        margin-left: 11px;
-        padding-left: 25px;
 
-    }
     .card{
+      position: relative;
+      left: 150px;
         margin: 30px;
        padding: 0px;
         width: 300px;
@@ -318,13 +300,11 @@ body{
     
   }
   @media screen and (min-width:830px) and (max-width: 921px) {
-    *{
-        margin-left: 20px;
-        /* padding-left: 5px; */
-
-    }
     .card{
-        margin: 39px;
+      /* margin: 0px; */
+        margin-left: 54px;
+        position: relative;
+        left: 45px;
        padding: 0px;
         width: 280px;
         height: 250px;
@@ -360,12 +340,11 @@ body{
     
   }
   @media screen and  (min-width:760px) and (max-width: 830px) {
-   *{
-    margin: 18px;
-    /* padding: 10px; */
-   }
+
     .card{
-        margin: 19px;
+      margin: 40px;
+      position: relative;
+      left: 15px;
        padding: 0px;
         width: 300px;
         height: 250px;
@@ -389,26 +368,19 @@ body{
         align-items: center;
     }
     .card:hover .intro{
-      /* display: block; */
-
       animation: none;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* justify-content: center; */
       
   }
     
     
   }
   @media screen and (min-width:300px) and (max-width: 760px) {
-    *{
-        margin-left: 9px;
-        padding-left: 5px;
 
-    }
     .card{
-        margin: 30px;
+        margin-left: 110px;
        padding: 0px;
         width: 60vw;
         height: 230px;
@@ -445,16 +417,12 @@ body{
     
   }
   @media screen and (max-width: 300px) {
-    *{
-        margin-left: 8px;
-        padding-left: 0px;
 
-    }
     .card{
-        margin: 10px;
+        margin-left: 90px;
        padding: 0px;
-        width: 200px;
-        height: 180px;
+        width: 300px;
+        height: 250px;
         float: left;
        
      
@@ -462,14 +430,14 @@ body{
     }
     .card img{
       padding: 0px;
-        width: 200px;
-        height: 180px;
+        width: 300px;
+        height: 250px;
        
         
     }
     .intro{
         /* padding: 0px; */
-        width: 200px;
+        width: 300px;
         position: relative;
         bottom: 110px;
         display: flex;
