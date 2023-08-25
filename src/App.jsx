@@ -1,7 +1,7 @@
 import React from "react";
 
 //Importing routes
-import { LandingPage, EventsPage, TeamsPage, SignUpPage, SignInPage } from "./routes";
+import { LandingPage, EventsPage, TeamsPage, SignUpPage, SignInPage, Portal } from "./routes";
 
 
 //Importing External Libraries
@@ -27,6 +27,10 @@ const RoutingPaths = [
   {
     path: "/signin",
     component: <SignInPage/>
+  },
+  {
+    path: "/portal",
+    component: <Portal/>
   },
 ];
 function App() {
