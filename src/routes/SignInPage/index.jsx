@@ -10,23 +10,38 @@ const SignInPage = () => {
   const [isReal, setisReal] = useState(false);
   const handleClick = (event) => {
     // 👇️ toggle isActive state on click
-    setisReal(false);
-    setIsActive((current) => !current);
+    const userin = document.getElementById("user");
+    const passin = document.getElementById("pass");
+
+    if (passin.value == "") {
+      setisReal(false);
+    }
+
+    setIsActive(true);
   };
   const handleReal = (event) => {
-    // 👇️ toggle isActive state on click
-    setIsActive(false);
-    setisReal((current) => !current);
-  };
-  useEffect((e)=>{
-    let handler = (e)=>{
-        if(e.target.value==null){
-            setIsActive(false);
-            setisReal(false);
-        }
+    const userin = document.getElementById("user");
+    const passin = document.getElementById("pass");
+    if (userin.value == "") {
+      setIsActive(false);
     }
-    document.addEventListener('mousedown' , handler);
+
+    setisReal(true);
+  };
+  useEffect((e) => {
+    let handler = (e) => {
+      const userin = document.getElementById("user");
+      const passin = document.getElementById("pass");
+      if (userin.value == "") {
+        setIsActive(false);
+      }
+      if (passin.value == "") {
+        setisReal(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
   });
+
   return (
     <>
       <img
@@ -73,6 +88,7 @@ const SignInPage = () => {
                   type="text"
                   className="input absolute w-full h-full text-[1.2rem] text-[#555] px-[0.7rem] py-2 outline-none left-0 top-0 bg-transparent "
                   onClick={handleClick}
+                  id="user"
                 />
               </div>
             </div>
@@ -106,6 +122,7 @@ const SignInPage = () => {
                   type="password"
                   className="input absolute w-full h-full text-[1.2rem] text-[#555] px-[0.7rem] py-2 outline-none left-0 top-0 bg-transparent"
                   onClick={handleReal}
+                  id="pass"
                 />
               </div>
             </div>

@@ -4,7 +4,8 @@ import "https://kit.fontawesome.com/64d58efce2.js";
 import { useState } from "react";
 
 const Portal = () => {
-   const [serviceList, setServiceList] = useState([{ service: "" }]);
+   const [serviceList, setServiceList] = useState([{ service: "" }]
+   );
   console.log(serviceList);
   const handleServiceChange = (e, index) => {
     const { name, value } = e.target;
