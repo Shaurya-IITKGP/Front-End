@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Roboto:wght@300&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Tilt+Prism&family=Vina+Sans&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Vina+Sans&family=Work+Sans&display=swap");
 .about_main{
     background-color: black;
 }
 
 
 .about_p{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Times New Roman", Times, serif;
     color: white;
     margin-top:2.5rem ;
     margin-left: 12rem;

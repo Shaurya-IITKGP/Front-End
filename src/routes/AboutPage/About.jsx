@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react'
 import s from './About.module.css'
 import  about_img from "../../assets/About_img_1.png";
-import sp1 from "../../assets/sport-icon-clipart-7-removebg-preview1.png"
-import sp2 from "../../assets/sport-icon-clipart-7-removebg-preview2.png"
-import sp3 from "../../assets/sport-icon-clipart-7-removebg-preview3.png"
+import sportsimg1 from "../../assets/sport-icon-clipart-7-removebg-preview1.png"
+import sportsimg2 from "../../assets/sport-icon-clipart-7-removebg-preview2.png"
+import sportsimg3 from "../../assets/sport-icon-clipart-7-removebg-preview3.png"
 
 
 
@@ -16,15 +16,15 @@ const About = () => {
         
         <div className={s.about_flex}>
         
-        <p className={s.about_p }>Lorem34 sfgyug h dhfiuhihidhiuhu dh idh hi hidshfihdhiuh hduds hciudhu hdiu shfuid hiu iudh suifhdiuhui  jsdvhviuh sidhiou iufhiud hh aiuhudsi fiu gug iud fiuui giud iu dfhkhviulhvubv i fdiubjhbvbyu iuduhiu dhviud hvi iudh viudbuv gud dh viuhiudh viudhiuv hs  sdhfdiuhviushi dh iuh fiusdhigvkpodfn ovjo hvi hxiuvihvh  hvicvn v hini vj vf 89 9u 9  9 9fh  h988h nkjvnkjvkjvkjjgoo bhbiu b kjnk0vidf09 v89y 98rh 898hg8 fhvmfvij0i0 vhiof nvih fivhj09fvj09jfv9 hxin jcjvn oih 899vxlkvnkjcvbjc hviocx jjvnhoi;cvj; icjih zihv kzhvk zuhv kuzh iuvuiuzcgviuhzkugudshv uxiuvhchbiuvin oiydiufhdsiu gv ojfdviodfvj oo   odvjoij oj cojo jvoj ovhiv lllil vohvzbu vd v89 8h v xv vnnvihv9fu89y v09f 9 f89vh hvhih9 vhvxcvnkcvorem34 kefhiasu hfe sufhu  fshi dh si h asidsn hadoooo ISnoi ojfodji ogodfjiod ji gfo fdgij efknsnk fjzs soij oifj ozdifjhO FDhfhofho  oHD OS ohfdhuzs psum dolor sit amet consectetur adipisicing elit. Id maxime dolorem numquam autem distinctio labore voluptatibus assumenda corrupti aspernatur namfknkn atiuth odio, tempora voluptatem voluptate doloremque, reprehenderit quo veniam dicta repellendus. Blanditiis, obcaecatihbi.</p>
+        <p className={s.about_p }>Shaurya is the annual inter-collegiate sports fest of IIT Kharagpur, which is held over a span of three days, in the month of October. It was started in the year 2008 with a vision of promoting sports culture, and providing a national platform for athletes and sportsmen. Shaurya witnessed four editions, in the years 2008, 2009, 2010 and 2012. The last edition witnessed the presence of some of India's eminent sports personalities like Deepika Kumari, Joydeep Karmakar, Subrata Bhattacharya and Charles Borromeo. Shaurya is coming back after a long time this year in the month of October.Their are many events including Cricket , Football , Volleyball , Basketball , Badminton , Chess , Athletics , etc. The event hosted teams from institutions across India. SSN Chennai, MERI Kolkata, CCET Chandigarh, NIT Trichy, St. Xaviers Kolkata, NIT Durgapur, BCET Durgapur were some of the prominent participating colleges, other than the host IIT Kharagpur. </p>
         
       
         </div>
     </div>
     <div className={s.about_img}>
-      <img className='mt-20 ml-80 w-72 h-24' src={sp1} alt="" />
-      <img className='mt-20 w-72 h-24' src={sp2} alt="" />
-      <img className='mt-20 w-72 h-24' src={sp3} alt="" />
+      <img className='mt-20 ml-80 w-72 h-24' src={sportsimg1} alt="" />
+      <img className='mt-20 w-72 h-24' src={sportsimg2} alt="" />
+      <img className='mt-20 w-72 h-24' src={sportsimg3} alt="" />
     </div>
     </>
   )
