@@ -9,15 +9,20 @@ import arrowdown from "../../assets/arrowdown1-removebg-preview(1).png"
 
 
 
+
 const LandingPage = () => {
  
 
   return(
     <>
+    
   
-      <div className="bg-black w-screen h-screen snap-y">
+    <div className="bg-black  ">
         <Navbar />
-        <div>
+        
+
+       
+        <div className="bg-black mt-8">
           <div className={"flex shrink " + s.leftSide}>
             <div className={"ml-40 " + s.heading}>
               <h1
@@ -36,28 +41,44 @@ const LandingPage = () => {
                 different events . Come join us and be part of this wonderful
                 fest.
               </p>
-              <button  className={s.glowOnHover}>
+               <button  className={s.glowOnHover}>
                 Register
-              </button>
-            </div>
+               </button>
+              </div>
             <div id="right-side " className=" flex ">
               <img className={"   right-0   " + s.img1} src={fut} alt="" />
             </div>
-          </div>
+
          
-        <div className={s.arrow_div}><img className={s.arrow_img1} src={arrowdown} alt="" /></div>
+          </div>
+          <div className={s.arrow_div}><img className={s.arrow_img1} src={arrowdown} alt="" /></div>
+         
+         
+       
+        <div className={s.about_index_main} ><About /></div>
         </div>
-        </div>
+
     
+       
       
-      <div className={ s.about} >      
-        <About />
-      </div>
+
+    </div>
      
     
+     
+  
+  
+
+
+  </>
+
+
+
+
+    
       
      
-    </>
+    
   )
 };
 

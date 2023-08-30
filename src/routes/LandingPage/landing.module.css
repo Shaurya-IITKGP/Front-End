@@ -43,7 +43,9 @@
 .arrow_div{
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  background-color: #000;
+
+
 
 
 
@@ -51,7 +53,14 @@
 .arrow_img1{
   width: 5rem;
   animation: blink-animation 1s steps(5, start) infinite;
+  background-color: #000;
 
+}
+.about_index_main{
+  width: 100vw;
+  height: 100vh;
+background-color: black;
+margin-top: 0rem;
 }
 
 .head {
@@ -144,6 +153,11 @@
   /* left: 130px; */
   margin-top: 60px;
   letter-spacing: 5px;
+}
+.lp_up_down_main{
+background-color: #000;
+
+ 
 }
 
 .glowOnHover:before {
@@ -464,6 +478,9 @@
     width: 180px;
     left: 10px;
   }
+  .arrow_div{
+    margin-top: 5%;
+  }
 }
 
 @media only screen and (max-width: 472px) {
@@ -499,15 +516,7 @@
     visibility: hidden;
   }
 }
+.about_start{
 
-
-
-.about{
-  background-color: black;
-  width:100vw;
-  height: 100vh;
-  scroll-snap-align: start;
   
- 
- 
 }
