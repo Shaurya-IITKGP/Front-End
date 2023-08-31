@@ -1,0 +1,31 @@
+.typing_animation {
+  width: 0;
+  animation-delay: 2s;
+  background: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation:
+    typing 3s steps(75, end) forwards infinite,
+    blinking 1s infinite;
+}
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinking {
+    0% {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: black;
+    }
+    100% {
+      border-right-color: transparent;
+    }
+  }
