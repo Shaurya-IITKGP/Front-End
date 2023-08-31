@@ -4,12 +4,16 @@ import  about_img from "../../assets/About_img_1.png";
 import sportsimg1 from "../../assets/sport-icon-clipart-7-removebg-preview1.png"
 import sportsimg2 from "../../assets/sport-icon-clipart-7-removebg-preview2.png"
 import sportsimg3 from "../../assets/sport-icon-clipart-7-removebg-preview3.png"
+import Navbar from '../../components/Navbar/Navbar';
 
 
 
 const About = () => {
   return (
     <>
+   
+   <div className=' h-screen bg-black'>
+
    
     <div className={s.about_main}>
         <h1 className={s.about_head}>ABOUT US</h1>
@@ -25,6 +29,7 @@ const About = () => {
       <img className='mt-20 ml-80 w-72 h-24' src={sportsimg1} alt="" />
       <img className='mt-20 w-72 h-24' src={sportsimg2} alt="" />
       <img className='mt-20 w-72 h-24' src={sportsimg3} alt="" />
+    </div>
     </div>
     </>
   )

@@ -7,9 +7,7 @@ const Menu = () => (
   <>
     <div className="  text-white">
       <div className="">
-        <h1 className="my-2    ">
-          <a href="#">Home</a>
-        </h1>
+        
         <h1 className="my-2   ">
           <a href="#">Events</a>
         </h1>
@@ -42,9 +40,7 @@ export default function Navbar() {
         <div
           className={"flex gap-32 items-center font-mono font-semibold pr-10"}
         >
-          <h1 className={"my-6 hover:text-white hidden md:block"}>
-            <a href="#">HOME</a>
-          </h1>
+         
           <h1 className={"my-6  hover:text-white hidden md:block"}>
             <a href="#">EVENTS</a>
           </h1>
