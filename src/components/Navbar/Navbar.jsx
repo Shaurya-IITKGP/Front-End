@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       {toggleMenu && (
-        <div className="bg-black opacity-80 absolute z-50 w-screen h-screen flex justify-center items-center">
+        <div className="bg-black opacity-80 fixed z-50 w-screen h-screen flex justify-center items-center">
           <div
             ref={mobileNavRef}
             className={
