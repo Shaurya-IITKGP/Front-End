@@ -8,6 +8,6 @@ const EventsPage = (props) => {
       <Card details={CardData.CardData} />
     </>
   );
-}
+};
 
 export default EventsPage;
