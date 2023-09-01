@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import shauryaLogo from "../../assets/shauya22-.png";
+import kgpLogo from "../../assets/kgp-logo.png";
 
 // TODO : Add KGP Logo
 // TODO : Close Modal on clicking outside
@@ -19,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {toggleMenu && (
-        <div className="bg-black opacity-80 fixed z-50 w-screen h-screen flex justify-center items-center">
+        <div className="bg-[#000d] backdrop-blur-sm fixed z-50 w-screen h-screen flex justify-center items-center">
           <div
             ref={mobileNavRef}
             className={
@@ -96,8 +97,12 @@ export default function Navbar() {
             TEAM
           </Link>
         </div>
-        <div>
-          <img className="" src="" alt="IIT Kharagpur" />
+        <div className="">
+          <img
+            className={"w-12"}
+            src={kgpLogo}
+            alt="SHAURYA - IIT Kharagpur"
+          />
         </div>
         <div className="md:hidden flex justify-end w-full">
           <RiMenu3Line

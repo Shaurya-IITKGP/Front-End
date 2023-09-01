@@ -12,6 +12,12 @@
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
+@media screen and (max-width: 768px) {
+  .shining_text_animation {
+    font-size: 3.5rem;
+  }
+}
+
 @keyframes animate {
   0% {
     background-position: -500%;
