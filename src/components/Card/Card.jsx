@@ -1,12 +1,9 @@
-import React from "react";
 import "../../routes/EventsPage/card.css";
 import { Button, Heading } from "@chakra-ui/react";
 import css from "./event_card.module.css";
-import Navbar from "../Navbar/Navbar";
 const Card = (props) => {
   return (
     <>
-      <Navbar />
       <div className="px-20 max-w-[1440px] mx-auto">
         <Heading color="white" className="py-9 px-3">
           EVENTS

@@ -54,7 +54,7 @@ export default function Navbar() {
       )}
       <div
         className={
-          "flex items-center w-full md:justify-between bg-black shadow-sm shadow-[#090A0B] md:px-16 px-4 py-4 text-orange-500"
+          "sticky top-0 z-20 shadow-[#222] shadow-sm flex items-center w-full md:justify-between bg-black md:px-16 px-4 py-4 text-orange-500"
         }
       >
         <div className="md:border-none md:pr-0 md:mr-0 pr-4 mr-4 border-r-2 border-white">
