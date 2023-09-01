@@ -1,21 +1,14 @@
-import React from "react";
-
 import fut from "../../assets/athlete11.png";
 import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
-import About from "../AboutPage/About";
-import arrowdown from "../../assets/arrowdown.png"
 import { useNavigate } from "react-router-dom";
 
-
-
 const LandingPage = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  return(
+  return (
     <>
-  
-      <div className="bg-black w-screen h-screen snap-y">
+      <div className="w-screen h-screen snap-y">
         <Navbar />
         <div>
           <div className={"flex shrink " + s.leftSide}>
@@ -36,9 +29,12 @@ const LandingPage = () => {
                 different events . Come join us and be part of this wonderful
                 fest.
               </p>
-              <button  className={s.glowOnHover} onClick={()=>{
-                navigate("/signup")
-              }}>
+              <button
+                className={s.glowOnHover}
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
                 Register
               </button>
             </div>
@@ -50,16 +46,9 @@ const LandingPage = () => {
             <img className="w-screen" src="" alt="" />
           </div>
         </div>
-        {/* <h1 className={s.arrowdown}><img className="w-6 h-6" src={arrowdown} alt="" /></h1> */}
-        </div>
-    
-      
-     {/* <div>      
-        <About />
       </div>
-    */}
     </>
-  )
+  );
 };
 
 export default LandingPage;

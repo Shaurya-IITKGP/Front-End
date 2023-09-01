@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import shauryaLogo from "../../assets/shauya22-.png";
 
 // TODO : Add KGP Logo
+// TODO : Close Modal on clicking outside
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -18,7 +19,7 @@ export default function Navbar() {
   return (
     <>
       {toggleMenu && (
-        <div className="bg-black opacity-80 absolute z-50 w-full h-full flex justify-center items-center">
+        <div className="bg-black opacity-80 absolute z-50 w-screen h-screen flex justify-center items-center">
           <div
             ref={mobileNavRef}
             className={
