@@ -1,9 +1,11 @@
 import React from "react";
+import CardData from "../../CardData/CardData";
+import Card from "../../components/Card/Card";
 
-const EventsPage = () => {
+const EventsPage = (props) => {
   return (
     <>
-      Events Page
+      <Card details={CardData.CardData} />
     </>
   );
 };
