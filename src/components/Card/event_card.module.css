@@ -4,7 +4,7 @@
     border-radius: 10px;
     transition: 200ms ease;
     padding: 10rem 0 0;
-    min-width: 40ch;
+    /* min-width: 40ch; */
     max-height: 30ch;
     overflow: hidden;
     display: flex;
@@ -20,10 +20,10 @@
 
 .video_card .video_card_content {
     padding: 20px;
-    transform: translateY(75%);
+    transform: translateY(80%);
     transition: transform 300ms ease-in-out;
     color: white;
-    background: linear-gradient(#00000038, #000000a7, #000);
+    background: linear-gradient(transparent, #000000a7, #000);
 }
 
 .video_card .video_card_title {
@@ -74,5 +74,6 @@
     .video_card .video_card_content {
         transform: translateY(-10%);
     }
+
 }
 

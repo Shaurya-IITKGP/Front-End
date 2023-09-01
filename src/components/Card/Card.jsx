@@ -4,11 +4,11 @@ import css from "./event_card.module.css";
 const Card = (props) => {
   return (
     <>
-      <div className="px-20 max-w-[1440px] mx-auto">
+      <div className="md:px-20 px-10 max-w-[1440px] mx-auto">
         <Heading color="white" className="py-9 px-3">
           EVENTS
         </Heading>
-        <div className="flex justify-between items-center flex-wrap gap-5">
+        <div className="flex md:justify-between justify-center items-center flex-wrap gap-5 mb-3">
           {props.details.map((value, index) => (
             <div
               className={css.video_card}
