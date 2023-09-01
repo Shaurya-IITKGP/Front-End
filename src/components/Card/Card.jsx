@@ -8,7 +8,7 @@ const Card = (props) => {
       <Heading color="white" p={3}>Events</Heading>
       <div className="m-3 flex justify-around items-center flex-wrap gap-5">
         {props.details.map((value, index) => (
-            <div className={css.video_card} style={{backgroundImage: `url(${value.img})`}}>
+            <div className={css.video_card} key={index} style={{backgroundImage: `url(${value.img})`}}>
               <div className={css.video_card_content}>
                 <Heading className={css.video_card_title}>{value.title}</Heading>
                 <Button size='sm' m={1}>Read More</Button>
