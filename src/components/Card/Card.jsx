@@ -1,23 +1,19 @@
 import React from "react";
 import '../../routes/EventsPage/card.css';
-
-
-
+import {Button,Heading} from "@chakra-ui/react"
+import css from "./event_card.module.css"
 const Card = (props) => {
   return (
     <div className="p-3 bg-black">
-      <h1 className="eventsheading">EVENTS</h1>
+      <Heading color="white" p={3}>Events</Heading>
       <div className="m-3 flex justify-around items-center flex-wrap gap-5">
         {props.details.map((value, index) => (
-          <div>
-            <div className="card" key={index}>
-              <img src={value.img} alt="" />
-              <div className="intro">
-                <h1 className="card-title">{value.title}</h1>
-                <button className="button-17">View More</button>
+            <div className={css.video_card} style={{backgroundImage: `url(${value.img})`}}>
+              <div className={css.video_card_content}>
+                <Heading className={css.video_card_title}>{value.title}</Heading>
+                <Button size='sm' m={1}>Read More</Button>
               </div>
             </div>
-          </div>
         ))}
       </div>
     </div>

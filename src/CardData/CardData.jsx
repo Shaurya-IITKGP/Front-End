@@ -15,40 +15,40 @@ import volleyball from "../assets/volleyball.jpeg";
 const CardData = [
     {
         img: athletics,
-        title: 'athletics',
+        title: 'Athletics',
     },
     {
         img: aquatics,
-        title: 'aquatics',
+        title: 'Aquatics',
     },
     {
         img: badminton,
-        title: 'badminton',
+        title: 'Badminton',
     },
     {
         img: basketball,
-        title: 'basketball',
+        title: 'Basketball',
     },
    
     {
         img: football,
-        title: 'football',
+        title: 'Football',
     },
     {
         img: cricket,
-        title: 'cricket',
+        title: 'Cricket',
     },
     {
         img: weightlifting,
-        title: 'weightlifting',
+        title: 'Weigthlifting',
     },
     {
         img:hockey,
-        title: 'hockey',
+        title: 'Hockey',
     },
     {
         img: tabletennis,
-        title: 'table tennis',
+        title: 'Table Tennis',
     },
     // {
     //     img: chess,
@@ -56,15 +56,15 @@ const CardData = [
     // },
     {
         img:squash,
-        title: 'squash',
+        title: 'Squash',
     },
     {
         img: tennis,
-        title: 'tennis',
+        title: 'Tennis',
     },
     {
         img:volleyball,
-        title: 'volleyball',
+        title: 'Volleyball',
     },
 ];
 
