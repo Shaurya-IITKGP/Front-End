@@ -19,7 +19,7 @@ const LandingPage = () => {
               SHAURYA
             </h1>
             <p className={"text-white  shrink relative " + s.p1}>
-              the battle begins...
+              The Battle Begins...
             </p>
             <p className={"text-white w-3/4 mt-3 text-2xl mb-1 " + s.p2}>
               IIT Kharagpur's annual sports fest, a thrilling showcase of athleticism and camaraderie, featuring a variety of sports events. Uniting students nationwide in the spirit of competition and sportsmanship
