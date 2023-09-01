@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import picture from "../../assets/picture.jpg";
-import logo from "../../assets/logo.png";
 import css from "./comingSoon.module.css";
 
 
