@@ -18,7 +18,7 @@ const LandingPage = () => {
             >
               SHAURYA
             </h1>
-            <p className={"text-white  ml-4 shrink relative " + s.p1}>
+            <p className={"text-white  shrink relative " + s.p1}>
               the battle begins...
             </p>
             <p className={"text-white w-3/4 mt-3 text-2xl mb-1 " + s.p2}>

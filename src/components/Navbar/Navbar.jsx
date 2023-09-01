@@ -32,6 +32,12 @@ export default function Navbar() {
             <div className="flex flex-col gap-4 px-10 py-10">
               <Link
                 className="text-orange-500 font-bold text-2xl hover:text-white transition-all"
+                to="/"
+              >
+                HOME
+              </Link>
+              <Link
+                className="text-orange-500 font-bold text-2xl hover:text-white transition-all"
                 to="/events"
               >
                 EVENTS
@@ -65,15 +71,30 @@ export default function Navbar() {
           />
         </div>
         <div className={"flex gap-10 items-center font-mono font-semibold"}>
-          <h1 className={"transition-all hover:text-white hidden md:block"}>
-            <Link to="/events">EVENTS</Link>
-          </h1>
-          <h1 className={"transition-all hover:text-white hidden md:block"}>
-            <Link to="/sponsors">SPONSORS</Link>
-          </h1>
-          <h1 className={"transition-all hover:text-white hidden md:block"}>
-            <Link to="/teams">TEAM</Link>
-          </h1>
+          <Link
+            className="transition-all hover:text-white hidden md:block"
+            to="/"
+          >
+            HOME
+          </Link>
+          <Link
+            className={"transition-all hover:text-white hidden md:block"}
+            to="/events"
+          >
+            EVENTS
+          </Link>
+          <Link
+            className={"transition-all hover:text-white hidden md:block"}
+            to="/sponsors"
+          >
+            SPONSORS
+          </Link>
+          <Link
+            className={"transition-all hover:text-white hidden md:block"}
+            to="/teams"
+          >
+            TEAM
+          </Link>
         </div>
         <div>
           <img className="" src="" alt="IIT Kharagpur" />
