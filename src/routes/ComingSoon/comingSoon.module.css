@@ -1,31 +1,22 @@
-.typing_animation {
-  width: 0;
-  animation-delay: 2s;
-  background: white;
-  -webkit-text-fill-color: transparent;
+.shining_text_animation {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 5em;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
   -webkit-background-clip: text;
-  animation:
-    typing 3s steps(75, end) forwards infinite,
-    blinking 1s infinite;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-@keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+@keyframes animate {
+  0% {
+    background-position: -500%;
   }
-  
-  @keyframes blinking {
-    0% {
-      border-right-color: transparent;
-    }
-    50% {
-      border-right-color: black;
-    }
-    100% {
-      border-right-color: transparent;
-    }
+  100% {
+    background-position: 500%;
   }
+}
