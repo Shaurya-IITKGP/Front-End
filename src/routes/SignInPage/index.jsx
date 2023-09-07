@@ -9,7 +9,6 @@ const SignInPage = () => {
   const [isActive, setIsActive] = useState(false);
   const [isReal, setisReal] = useState(false);
   const handleClick = (event) => {
-    // 👇️ toggle isActive state on click
     const userin = document.getElementById("user");
     const passin = document.getElementById("pass");
 
@@ -48,14 +47,14 @@ const SignInPage = () => {
         className="wave box-border m-0 p-0  overflow-hidden fixed h-full z-[-1] left-0 bottom-0 max-[900px]:hidden"
         src={wave}
       />
-      <div className="container box-border m-0 p-0  overflow-hidden w-screen h-screen grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr]">
+      <div className="container box-border m-0 p-0  overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
         <div className="img flex items-center justify-end max-[900px]:hidden">
           <img src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
         </div>
         <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center text-center max-[900px]:justify-center">
           <form className="w-[360px] max-[1000px]:w-[290px]">
             <img src={avatar} className="h-[100px] block m-auto" />
-            <h2 className="title text-[#333] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
+            <h2 className="title text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
               Welcome
             </h2>
             <div
@@ -126,12 +125,6 @@ const SignInPage = () => {
                 />
               </div>
             </div>
-            <a
-              href="#"
-              className="block text-right no-underline text-[#999] text-[0.9rem] transition-[0.3s] my-2 hover:text-[#38d39f]"
-            >
-              Forgot Password?
-            </a>
             <input
               type="submit"
               className="btn block w-full h-[50px] bg-[linear-gradient(to_right,#32be8f,#38d39f,#32be8f)] bg-[200%] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-right"

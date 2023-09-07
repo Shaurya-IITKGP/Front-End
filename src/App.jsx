@@ -8,6 +8,7 @@ import {
   SignUpPage,
   ComingSoon,
   OptionToLogin,
+  SignInPage,
 } from "./routes";
 
 //Importing External Libraries
@@ -33,8 +34,12 @@ const RoutingPaths = [
     component: <OptionToLogin />,
   },
   {
-    path: "signup/player",
+    path: "register/player",
     component: <SignUpPage />,
+  },
+  {
+    path: "signin/poc",
+    component: <SignInPage />,
   },
   {
     path: "*",

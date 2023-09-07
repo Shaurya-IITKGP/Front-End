@@ -5,7 +5,7 @@ const OptionToLogin = () => {
     return (
         <div style={{color:"white",display:"flex",justifyContent:"center",alignItems:"center",height:"80vh",gap:"100px"}} >
             <div onClick={()=>{
-                navigate("/signup/player");
+                navigate("/register/player");
             }}>
                 <div style={{height:"200px",width:"200px",border:"1px solid white",borderRadius:"15px"}}>
 
@@ -15,7 +15,7 @@ const OptionToLogin = () => {
                 </p>
             </div>
             <div onClick={()=>{
-                navigate("/signup/poc");
+                navigate("/signin/poc");
             }}>
                 <div style={{height:"200px",width:"200px",border:"1px solid white",borderRadius:"15px"}}>
 
