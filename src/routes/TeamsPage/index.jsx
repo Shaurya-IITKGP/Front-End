@@ -1,9 +1,9 @@
 import React from 'react';
 import "./TeamsPage.css";
-import {faFacebook} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {faFacebook} from '@fortawesome/free-solid-svg-icons';
+// import { faLinkedin } from '@fortawesome/free-solid-svg-icons';
+// import { faInstagram } from '@fortawesome/free-solid-svg-icons';
 
 import Anushka from "../../assets/coreHeadAnushka-Singh.jpg";
 import Prashant from "../../assets/coreHeadprashant-tripathi.jpg";
@@ -45,9 +45,9 @@ const SpeakerBlock = ({ name, designation, image,furl,iurl,lurl}) => (
           <div className="social-links">
           
                  <ul>
-                    <a className="mx-[30px] text-3xl " href={furl}><FontAwesomeIcon icon={faFacebook}/> </a>
+                    {/* <a className="mx-[30px] text-3xl " href={furl}><FontAwesomeIcon icon={faFacebook}/> </a>
                     <a className="mx-[30px] text-3xl" href={lurl}><FontAwesomeIcon icon={faLinkedin}/> </a>
-                    <a className="mx-[30px] text-3xl" href={iurl}><FontAwesomeIcon icon={faInstagram}/> </a>
+                    <a className="mx-[30px] text-3xl" href={iurl}><FontAwesomeIcon icon={faInstagram}/> </a> */}
                  </ul>
       
           </div>
