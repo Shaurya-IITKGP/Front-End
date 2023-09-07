@@ -4,9 +4,7 @@ import "https://kit.fontawesome.com/64d58efce2.js";
 import { useState } from "react";
 
 const Portal = () => {
-  const [serviceList, setServiceList] = useState(
-    [{ player: "" }]
-  );
+  const [serviceList, setServiceList] = useState([{ service: "" }]);
   // console.log(serviceList);
   return (
     <>
@@ -14,7 +12,6 @@ const Portal = () => {
         <div className="contact-form overflow-y-auto scroll-smooth bg-[#1abc9c] relative w-[60rem] h-[50rem] rounded-3xl">
           <form
             autoComplete="off"
-            onsubmit="return false"
             className="z-10 overflow-y-auto relative  px-[2.2rem] py-[2.3rem]"
           >
             <h3 className="title text-white font-medium text-2xl leading-none mt-[-0.5rem] mb-[3rem]">
@@ -55,9 +52,9 @@ function InputItem({ singleService, serviceList, setServiceList, index }) {
     setServiceList([...serviceList, { service: "" }]);
   };
 
-  const handleServiceSubmit = ()=>{
+  const handleServiceSubmit = () => {
     console.log(serviceList);
-  }
+  };
 
   const handleClick = (e, index) => {
     // 👇️ toggle isActive state on click
@@ -75,7 +72,7 @@ function InputItem({ singleService, serviceList, setServiceList, index }) {
         <div className="first-division">
           <input
             type="text"
-            name="player"
+            name="service"
             id="service"
             value={singleService.service}
             className={
@@ -112,7 +109,7 @@ function InputItem({ singleService, serviceList, setServiceList, index }) {
             onClick={handleServiceAdd}
           />
         )}
-        {serviceList.length - 1 === index && serviceList.length < 16 && (
+        {serviceList.length - 1 === index && serviceList.length < 15 && (
           <input
             type="submit"
             value="Submit"
