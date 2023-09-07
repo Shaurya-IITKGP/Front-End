@@ -1,11 +1,19 @@
 import React from "react";
 
 //Importing routes
-import { LandingPage, EventsPage, TeamsPage, SignUpPage, SignInPage, Portal } from "./routes";
-
+import {
+  LandingPage,
+  EventsPage,
+  TeamsPage,
+  SignUpPage,
+  ComingSoon,
+  OptionToLogin,
+} from "./routes";
 
 //Importing External Libraries
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Layout from "./components/Layout/Layout";
 
 const RoutingPaths = [
   {
@@ -13,32 +21,34 @@ const RoutingPaths = [
     component: <LandingPage />,
   },
   {
-    path: "/events",
+    path: "events",
     component: <EventsPage />,
   },
+  // {
+  //   path: "/teams",
+  //   component: <TeamsPage />,
+  // },
   {
-    path: "/teams",
-    component: <TeamsPage />,
+    path: "signup",
+    component: <OptionToLogin />,
   },
   {
-    path: "/signup",
-    component: <SignUpPage/>
+    path: "signup/player",
+    component: <SignUpPage />,
   },
   {
-    path: "/signin",
-    component: <SignInPage/>
-  },
-  {
-    path: "/portal",
-    component: <Portal/>
+    path: "*",
+    component: <ComingSoon />,
   },
 ];
 function App() {
   return (
     <Routes>
-      {RoutingPaths.map((route, index) => (
-        <Route key={index} path={route.path} element={route.component} />
-      ))}
+      <Route path="/" element={<Layout />}>
+        {RoutingPaths.map((route, index) => (
+          <Route key={index} path={route.path} element={route.component} />
+        ))}
+      </Route>
     </Routes>
   );
 }
