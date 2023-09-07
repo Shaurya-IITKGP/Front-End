@@ -7,6 +7,7 @@ import {
   TeamsPage,
   SignUpPage,
   ComingSoon,
+  OptionToLogin,
 } from "./routes";
 
 //Importing External Libraries
@@ -29,6 +30,10 @@ const RoutingPaths = [
   // },
   {
     path: "signup",
+    component: <OptionToLogin />,
+  },
+  {
+    path: "signup/player",
     component: <SignUpPage />,
   },
   {

@@ -3,3 +3,4 @@ export { default as EventsPage } from "./EventsPage/index.jsx";
 export { default as TeamsPage } from "./TeamsPage/index.jsx";
 export { default as SignUpPage} from "./SignUpPage/index.jsx";
 export { default as ComingSoon } from "./ComingSoon/index.jsx";
+export { default as OptionToLogin } from "./OptionToLogin/index.jsx";
