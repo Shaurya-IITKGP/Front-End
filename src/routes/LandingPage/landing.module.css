@@ -45,8 +45,8 @@
  
   justify-content: center;
   
-  left: 45%;
-  bottom: 0;
+
+
  
 
 
@@ -599,6 +599,42 @@ background-color: #000;
   }
 }
 @media only screen and (max-width: 405px) {
+  .head {
+   
+    font-size: 3.3rem;
+  }
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    
+   
+  }
+  .heading {
+    margin-left: -5rem;
+  }
+  .p1 {
+    font-size: 1.6rem;
+
+  }
+  .p2 {
+    font-size: 1rem;
+  }
+  .img1 {
+    display: none;
+    
+  }
+  .glowOnHover {
+   
+    width: 150px;
+    left: 10px;
+  }
+  .arrow_img1{
+    margin-top: 1.5%;
+  }
+}
+@media only screen and (max-height: 650px) {
   .head {
    
     font-size: 3.3rem;

@@ -22,14 +22,13 @@ const LandingPage = () => {
  
    <div className="bg-black ">
    
-   
         <Navbar />
 
         
       <div className="">
           
            <div className={"flex shrink " + s.leftSide}>
-             <div className={"ml-40 " + s.heading}>
+             <div className={"ml-36 " + s.heading}>
               <h1
                 className={
                   "text-white mt-[3rem] shrink font-serif relative " + s.head
@@ -37,7 +36,7 @@ const LandingPage = () => {
               >
                 SHAURYA
               </h1>
-              <p className={"text-white  ml-4 shrink relative " + s.p1}>
+              <p className={"text-white   shrink relative " + s.p1}>
                 'the battle begins..'
               </p>
               <p className={"text-white w-3/4 mt-3 text-2xl mb-1 " + s.p2}>
@@ -64,6 +63,7 @@ const LandingPage = () => {
         </div>
         
         <h1 className={s.arrow_div}><img className={s.arrow_img1} src={arrowdown} alt="" /></h1>
+      
         <div className={s.amout_main} ><About/></div>
        
         </div>

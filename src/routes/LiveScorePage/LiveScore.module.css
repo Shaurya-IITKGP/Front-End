@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Roboto:wght@300&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Tilt+Prism&family=Vina+Sans&family=Work+Sans&display=swap');
+
+
+.LiveScore_Navbar{  background-color: black;
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+
+
+}
+.hammenu {
+  display: none;
+}
+.lpmain {
+  background-color: black;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hammenu {
+    display: block;
+    margin-right: 10px;
+  }
+  .lpmainhead {
+    display: none;
+  }
+
+  .logo1 {
+    right: 10;
+  }
+ 
+  #lp_navbar_head{
+    display:none;
+  }
+
+
+}
+
+
+.lpmainpage{
+  display: flex;
+  background: rgb(255,8,8);
+background: -moz-linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+background: linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0808",endColorstr="#ff5c00",GradientType=1); 
+}
+.lp_mainhead_navbar{
+  display: flex;
+justify-content: space-evenly
+}
+.searchBox{
+ position: absolute;
+ left: 30%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+
+  
+
+}
+.search_navbar{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+.searchButton {
+    color: white;
+  
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+
+}
+
+.searchInput {
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+
+   
+    padding: 10px;
+    color: white;
+  
+}
+.searchButton:hover {
+    background-color: orange;
+    color: black;
+
+} 
+.search_Game_Categories{
+  width: 100%;
+
+font-family: 'Roboto Slab', serif;
+
+
+
+}
+.lp_navbar_settings{
+  margin-top: 1.5rem/* 24px */;
+  margin-bottom: 1.5rem/* 24px */;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  display: block;
+  
+
+}
+
+
+.lp_livescore_inside{
+ 
+  margin-top: 1%;
+  margin-left: 0.5%;
+  margin-bottom: 1%;
+border: 1px solid white;
+height: 58vh;
+margin-right: 1%;
+overflow-y: scroll;
+  
+
+}
+.lp_pastmatches_inside{
+ 
+  margin-top: 2%;
+  margin-left: 0.5%;
+  margin-bottom: 1%;
+border: 1px solid white;
+height: 57vh;
+margin-right: 1%;
+
+
+overflow-y: scroll;
+
+  
+
+}
+.lp_matchespast_scores{
+  background-color: black;
+  border-radius: 1rem;
+  margin-top: 2%;
+}
+.example::-webkit-scrollbar {
+  display: none;
+}
+.lp_liveScore_Heading{
+  margin-left: 0.5rem/* 8px */;
+  font-size: 3rem/* 48px */;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    width: 66.666667%;
+
+}
+.lp_background_color{
+  background: rgb(255,8,8);
+  background: -moz-linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+  background: linear-gradient(90deg, rgba(255,8,8,0.9596171232164741) 0%, rgba(254,158,6,1) 0%, rgba(255,92,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0808",endColorstr="#ff5c00",GradientType=1); 
+  height: 90vh;
+
+}
+.lp_pastmatches_college{
+  color: white;
+  font-size: 2.25rem/* 36px */;
+  line-height: 2.5rem/* 40px */;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+
+}
+
+.lp_pastmatches_scores{
+  font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+@media only screen  and (max-width: 950px) {
+  #lp_navbar_head{
+    display:none;
+  }
+}
+
+      
+
+@media only screen and (max-width:600px) {
+  .search_Game_Categories{
+    width: 100%;
+  
+  font-family: 'Roboto Slab', serif;
+  
+  
+  
+  }
+.lpmainpage{
+  display: flex;
+  flex-direction: column;
+
+}
+.lp_livescore_inside{
+ 
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+margin-bottom: 1%;
+  
+border: 1px solid white;
+height: 57vh;
+
+
+  
+
+}
+
+
+
+
+  
+}
+@media only screen and (max-width:700px){
+  .lp_liveScore_Heading{
+    font-size: 3rem;
+  }
+
+
+}
+@media only screen and (max-width:530px)
+{
+  .lp_liveScore_Heading{
+    font-size: 2rem;
+  }
+
+}
+
+
+
+
+
