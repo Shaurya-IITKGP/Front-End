@@ -14,7 +14,7 @@ export const TeamCard = ({ name, designation, image }) => {
           <div className={css.image}>
             <img src={image} alt="" />
             <div className={css.socialLinks}>
-              <ul>
+              <ul className="flex justify-center items-center gap-2 wrap">
                 <Socials />
               </ul>
             </div>
@@ -34,26 +34,10 @@ export const TeamCard = ({ name, designation, image }) => {
 const Socials = () => {
   return (
     <>
-      <li>
-        <a>
-          <RiMailFill size={"2rem"} />
-        </a>
-      </li>
-      <li>
-        <a>
-          <RiLinkedinBoxFill size={"2rem"} />
-        </a>
-      </li>
-      <li>
-        <a>
-          <RiFacebookBoxFill size={"2rem"} />
-        </a>
-      </li>
-      <li>
-        <a>
-          <RiInstagramFill size={"2rem"} />
-        </a>
-      </li>
+      <RiMailFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+      <RiLinkedinBoxFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
+      <RiFacebookBoxFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
+      <RiInstagramFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
     </>
   );
 };

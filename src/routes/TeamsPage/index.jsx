@@ -9,13 +9,13 @@ const TeamsPage = () => {
         image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
       />
       <TeamCard
-        designation={"Name"}
-        name={"Design Head"}
+        designation={"Design Head"}
+        name={"Name"}
         image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
       />
       <TeamCard
-        designation={"Name"}
-        name={"Core Head"}
+        designation={"Core Head"}
+        name={"Name"}
         image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
       />
     </div>

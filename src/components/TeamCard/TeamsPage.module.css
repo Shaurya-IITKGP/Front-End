@@ -35,7 +35,7 @@
 }
 
 .speakerBlock .imageBox .image:after {
-  opacity: 0.2;
+  opacity: 0.6;
   z-index: 1;
   top: auto;
   bottom: 0;
@@ -77,31 +77,6 @@
   background-color: var(--social-bg);
 }
 
-.speakerBlock .socialLinks li {
-  position: relative;
-  display: inline-block;
-  margin: 0 9px;
-}
-
-.speakerBlock .socialLinks li a {
-  position: relative;
-  display: block;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--icon-clr);
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
-  cursor: pointer;
-}
-
-.speakerBlock .socialLinks li a:hover {
-  color: var(--icon-hover-clr);
-}
-
 .speakerBlock .innerBox:hover .socialLinks {
   bottom: 0;
 }
@@ -111,7 +86,12 @@
   padding-top: 10px;
   text-align: center;
 }
-
+.socialLinks .icon {
+  color: var(--icon-clr);
+}
+.socialLinks .icon:hover {
+  color: var(--icon-hover-clr);
+}
 .speakerBlock .captionBox .name {
   position: relative;
   display: block;
@@ -167,7 +147,7 @@ img {
   .speakerBlock .innerBox .imageBox:before {
     height: 100%;
   }
-  .speakerBlock .socialLinks li a {
+  .speakerBlock .socialLinks {
     color: var(--icon-clr);
   }
   .speakerBlock .innerBox .socialLinks {
@@ -178,5 +158,8 @@ img {
     padding: 10px 10px;
     text-align: center;
     background-color: var(--social-bg);
+  }
+  .socialLinks .icon {
+    color: var(--icon-hover-clr);
   }
 }
