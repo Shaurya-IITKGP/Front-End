@@ -2,10 +2,12 @@ import fut from "../../assets/athlete11.png";
 import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext/AuthContext";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-
+  const { isAuthenticated } = useContext(AuthContext);
   return (
     <>
       <div>
@@ -22,16 +24,21 @@ const LandingPage = () => {
               The Battle Begins...
             </p>
             <p className={"text-white w-3/4 mt-3 text-2xl mb-1 " + s.p2}>
-              IIT Kharagpur's annual sports fest, a thrilling showcase of athleticism and camaraderie, featuring a variety of sports events. Uniting students nationwide in the spirit of competition and sportsmanship
+              IIT Kharagpur's annual sports fest, a thrilling showcase of
+              athleticism and camaraderie, featuring a variety of sports events.
+              Uniting students nationwide in the spirit of competition and
+              sportsmanship
             </p>
-            <button
-              className={s.glowOnHover}
-              onClick={() => {
-                navigate("/signup");
-              }}
-            >
-              Register
-            </button>
+            {!isAuthenticated && (
+              <button
+                className={s.glowOnHover}
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
+                Register
+              </button>
+            )}
           </div>
           <div id="right-side " className=" flex ">
             <img className={"   right-0   " + s.img1} src={fut} alt="" />
