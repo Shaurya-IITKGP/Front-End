@@ -8,8 +8,7 @@ import { useEffect } from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "../../utils/config";
-
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const SignInPage = () => {
   const [isActive, setIsActive] = useState(false);
