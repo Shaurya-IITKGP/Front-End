@@ -1,5 +1,3 @@
-import React from "react";
-
 //Importing routes
 import {
   LandingPage,
@@ -12,8 +10,7 @@ import {
 } from "./routes";
 
 //Importing External Libraries
-import { Routes, Route, Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 
 const RoutingPaths = [
