@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import shauryaLogo from "../../assets/shauya22-.png";
 import kgpLogo from "../../assets/kgp-logo.png";
 
-// TODO : Add KGP Logo
 // TODO : Close Modal on clicking outside
 
 export default function Navbar() {
