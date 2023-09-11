@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import css from "./EventModal.module.css";
+import { useNavigate } from "react-router-dom";
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isOpen) {
@@ -64,7 +66,10 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
             {modalData.rules}
           </div>
           <div className="mt-4">
-            <button className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md">
+            <button onClick={()=>{
+              console.log(modalData);
+              navigate(`/register/event/${modalData.name}`);
+            }} className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md">
               Register for the event
             </button>
           </div>

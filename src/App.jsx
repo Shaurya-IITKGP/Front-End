@@ -12,6 +12,7 @@ import {
 //Importing External Libraries
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import EventRegistration from "./routes/EventRegistration";
 
 const RoutingPaths = [
   {
@@ -35,6 +36,10 @@ const RoutingPaths = [
     component: <SignUpPage />,
   },
   {
+path: "register/event/:eventName",
+component: <EventRegistration />
+  },
+  {
     path: "signin/poc",
     component: <SignInPage />,
   },
@@ -43,6 +48,7 @@ const RoutingPaths = [
     component: <ComingSoon />,
   },
 ];
+
 function App() {
   return (
     <Routes>

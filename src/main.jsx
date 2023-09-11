@@ -4,16 +4,16 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import "./input.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import AuthProvider from "./AuthContext/AuthContext.jsx";
+import {AppProvider} from "./AppContext/AppContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider>
-      <AuthProvider>
+      <AppProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </AuthProvider>
+      </AppProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

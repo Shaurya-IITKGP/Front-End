@@ -1,12 +1,12 @@
 import { createContext, useState } from "react";
 
-export const AuthContext = createContext();
+export const AppContext = createContext();
 
-export default function AuthProvider({ children }) {
+export function AppProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   return (
-    <AuthContext.Provider
+    <AppContext.Provider
       value={{
         isAuthenticated,
         user,
@@ -15,6 +15,6 @@ export default function AuthProvider({ children }) {
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </AppContext.Provider>
   );
 }

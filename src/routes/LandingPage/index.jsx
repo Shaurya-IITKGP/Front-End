@@ -3,11 +3,11 @@ import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../../AuthContext/AuthContext";
+import { AppContext } from "../../AppContext/AppContext";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated } = useContext(AppContext);
   return (
     <>
       <div>
