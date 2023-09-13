@@ -2,12 +2,12 @@ import fut from "../../assets/athlete11.png";
 import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { AppContext } from "../../AppContext/AppContext";
+import { useAuth } from "../../AppContext/AppContext";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useContext(AppContext);
+  const { isAuthenticated } = useAuth()
+  console.log(isAuthenticated)
   return (
     <>
       <div>

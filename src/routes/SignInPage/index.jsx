@@ -8,12 +8,14 @@ import { useEffect } from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../AppContext/AppContext";
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
 const SignInPage = () => {
   const [isActive, setIsActive] = useState(false);
   const [isReal, setisReal] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+  const { login, user } = useAuth()
   const handleClick = (event) => {
     const userin = document.getElementById("user");
     const passin = document.getElementById("pass");
@@ -46,36 +48,73 @@ const SignInPage = () => {
     };
     document.addEventListener("mousedown", handler);
   });
-  const onSubmit = async (values) => {
-    try {
-      const response = await axios.post(`${BASE_URL}/api/v1/signin`, {
-        email:values.user,
-        password:values.pass,
 
+  const onSubmit = async (values, resetValues) => {
+    try {
+      const response = await axios.post(`${BASE_URL}/api/college/sign-in`, {
+        username: values.user,
+        password: values.pass,
+      }, {
+        headers: {
+          Authorization: `Bearer ${user.token}`
+        }
       });
-      if(response.status===200){
-        console.log(response);
+
+      // Check the HTTP status code here
+      if (response.status === 200) {
+        resetValues()
+        let userData = response.data.data
+        let token = response.data.token
+        console.log(userData, token)
+        login(userData, token)
         navigate("/");
+      } else if (response.status === 400) {
+        console.log("Bad Request:", response.data.message);
+        resetValues()
+        // Handle the 400 response here
+      } else {
+        console.log("Error:", response);
+        resetValues()
+        // Handle other non-200 responses here
       }
     } catch (error) {
-      console.log(error);
+      if (error.response) {
+        // Axios has caught a response with an HTTP status code
+        if (error.response.status === 400) {
+          console.log("Bad Request:", error.response.data.message);
+          // Handle the 400 response here
+        } else {
+          console.log("Error:", error.response);
+          // Handle other non-200 responses here
+        }
+      } else if (error.request) {
+        // Axios made the request, but no response was received (e.g., network error)
+        console.log("Network Error:", error.message);
+        // Handle network errors here
+      } else {
+        // Something else went wrong
+        console.log("Error:", error.message);
+      }
+      resetValues()
     }
-  }
+  };
+
+
   return (
     <>
       <img
         className="wave box-border m-0 p-0  overflow-hidden fixed h-full z-[-1] left-0 bottom-0 max-[900px]:hidden"
         src={wave}
       />
-      <div className="container box-border m-0 p-0  overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
+      <div className="container box-border m-0 p-0 overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
         <div className="img flex items-center justify-end max-[900px]:hidden">
           <img src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
         </div>
         <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center text-center max-[900px]:justify-center">
           <Formik
             initialValues={{ user: "", pass: "" }}
-            onSubmit={async (values) => {
-              onSubmit(values);
+            onSubmit={async (values, { resetForm }) => {
+              onSubmit(values, resetForm);
             }}
           >
             {({
