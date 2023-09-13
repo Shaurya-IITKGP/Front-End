@@ -15,13 +15,13 @@ const OptionToLogin = () => {
                 </p>
             </div>
             <div onClick={()=>{
-                navigate("/signin/poc");
+                navigate("/signin/college");
             }}>
                 <div style={{height:"200px",width:"200px",border:"1px solid white",borderRadius:"15px"}}>
 
                 </div>
                 <p style={{textAlign:"center",fontWeight:"bolder"}}>
-                    Point of Contact
+                    College
                 </p>
             </div>
         </div>

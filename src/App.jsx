@@ -36,11 +36,11 @@ const RoutingPaths = [
     component: <SignUpPage />,
   },
   {
-path: "register/event/:eventName",
-component: <EventRegistration />
+    path: "register/event/:eventName",
+    component: <EventRegistration />
   },
   {
-    path: "signin/poc",
+    path: "signin/college",
     component: <SignInPage />,
   },
   {
