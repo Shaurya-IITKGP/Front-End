@@ -13,6 +13,7 @@ import {
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import EventRegistration from "./routes/EventRegistration";
+import { useEffect } from "react";
 
 const RoutingPaths = [
   {
