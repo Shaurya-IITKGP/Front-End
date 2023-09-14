@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import EVENT_DATA from "../../CardData/EventData.json";
 
 const EventRegistration = () => {
-  const { eventName } = useParams();
-  const maxTeamSize = 5;
-  const minTeamSize = 2;
+  const { eventName, eventType } = useParams();
 
-  const [teamMembers, setTeamMembers] = useState(['']);
+  for (let i = 0; i < EVENT_DATA.length; i++) {
+    if (EVENT_DATA[i].name === eventName) {
+      eventdata = EVENT_DATA[i];
+    }
+  }
+  const minTeamSize = 2;
+  const maxTeamSize = 5;
+
+  const [teamMembers, setTeamMembers] = useState([
+    { name: "", rollNumber: "", email: "", phoneNumber: "" },
+  ]);
 
   const handleAddMember = () => {
     if (teamMembers.length < maxTeamSize) {
-      setTeamMembers([...teamMembers, '']);
+      setTeamMembers([
+        ...teamMembers,
+        { name: "", rollNumber: "", email: "", phoneNumber: "" },
+      ]);
     }
   };
 
@@ -22,12 +34,25 @@ const EventRegistration = () => {
   };
 
   const handleSubmit = () => {
-    if (teamMembers.length >= minTeamSize && teamMembers.length <= maxTeamSize) {
-      if (teamMembers.every((member) => member.trim() !== '')) {
+    if (
+      teamMembers.length >= minTeamSize &&
+      teamMembers.length <= maxTeamSize
+    ) {
+      if (
+        teamMembers.every(
+          (member) =>
+            member.name.trim() !== "" &&
+            member.rollNumber.trim() !== "" &&
+            member.email.trim() !== "" &&
+            member.phoneNumber.trim() !== ""
+        )
+      ) {
         console.log(teamMembers);
-        alert('Registration successful');
+        alert("Registration successful");
       } else {
-        alert('Please fill in all team member IDs');
+        alert(
+          "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)"
+        );
       }
     } else {
       alert(`Team size should be between ${minTeamSize} and ${maxTeamSize}`);
@@ -36,7 +61,7 @@ const EventRegistration = () => {
 
   const handleInputChange = (index, event) => {
     const updatedTeamMembers = [...teamMembers];
-    updatedTeamMembers[index] = event.target.value;
+    updatedTeamMembers[index][event.target.name] = event.target.value;
     setTeamMembers(updatedTeamMembers);
   };
 
@@ -52,33 +77,58 @@ const EventRegistration = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center h-screen bg-black text-white"
+      className="flex flex-col items-center justify-center min-h-screen bg-black text-white"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <motion.div
-        className="bg-gray-800 p-8 rounded-lg shadow-lg"
+        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
         variants={itemVariants}
       >
-        <h2 className="text-2xl mb-4">{eventName} Team Registration</h2>
+        <h2 className="text-2xl mb-4">Team Registration</h2>
         <div className="space-y-4">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="flex items-center space-x-2"
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
               variants={itemVariants}
             >
               <input
                 type="text"
-                placeholder="Enter Team Member ID"
-                value={member}
+                placeholder="Enter Name"
+                name="name"
+                value={member.name}
                 onChange={(e) => handleInputChange(index, e)}
-                className="w-80 p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+                className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+              />
+              <input
+                type="text"
+                placeholder="Enter Roll Number"
+                name="rollNumber"
+                value={member.rollNumber}
+                onChange={(e) => handleInputChange(index, e)}
+                className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+              />
+              <input
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                value={member.email}
+                onChange={(e) => handleInputChange(index, e)}
+                className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+              />
+              <input
+                type="tel"
+                placeholder="Enter Phone Number"
+                name="phoneNumber"
+                value={member.phoneNumber}
+                onChange={(e) => handleInputChange(index, e)}
+                className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
               />
               <motion.button
                 onClick={() => handleRemoveMember(index)}
-                className="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                className="p-2 w-[100px] bg-red-500 text-white rounded-lg hover:bg-red-600"
                 variants={itemVariants}
               >
                 Remove
