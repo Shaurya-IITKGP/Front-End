@@ -13,7 +13,7 @@ import {
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import EventRegistration from "./routes/EventRegistration";
-import { useEffect } from "react";
+import ProfileDashboard from "./routes/ProfileDashboard";
 
 const RoutingPaths = [
   {
@@ -23,6 +23,10 @@ const RoutingPaths = [
   {
     path: "events",
     component: <EventsPage />,
+  },
+  {
+    path: "profile",
+    component: <ProfileDashboard user={{name: "Somya", shauryaId: "138293"}} events={[{name: "cricket", date: "13/10/2023"}, {name: "athletics", date: "14/10/2023"}]} />,
   },
   {
     path: "/teams",
