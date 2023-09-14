@@ -25,6 +25,10 @@ const RoutingPaths = [
     component: <EventsPage />,
   },
   {
+    path: "profile",
+    component: <ProfileDashboard user={{name: "Somya", shauryaId: "138293"}} events={[{name: "cricket", date: "13/10/2023"}, {name: "athletics", date: "14/10/2023"}]} />,
+  },
+  {
     path: "teams",
     component: <TeamsPage />,
   },
