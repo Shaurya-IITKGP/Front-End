@@ -1,5 +1,3 @@
-import React from "react";
-
 //Importing routes
 import {
   LandingPage,
@@ -7,12 +5,15 @@ import {
   TeamsPage,
   SignUpPage,
   ComingSoon,
+  OptionToLogin,
+  SignInPage,
 } from "./routes";
 
 //Importing External Libraries
-import { Routes, Route, Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import EventRegistration from "./routes/EventRegistration";
+import { useEffect } from "react";
 
 const RoutingPaths = [
   {
@@ -23,19 +24,32 @@ const RoutingPaths = [
     path: "events",
     component: <EventsPage />,
   },
-  // {
-  //   path: "/teams",
-  //   component: <TeamsPage />,
-  // },
+  {
+    path: "/teams",
+    component: <TeamsPage />,
+  },
   {
     path: "signup",
+    component: <OptionToLogin />,
+  },
+  {
+    path: "register/player",
     component: <SignUpPage />,
+  },
+  {
+    path: "register/event/:eventName",
+    component: <EventRegistration />
+  },
+  {
+    path: "signin/college",
+    component: <SignInPage />,
   },
   {
     path: "*",
     component: <ComingSoon />,
   },
 ];
+
 function App() {
   return (
     <Routes>

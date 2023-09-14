@@ -66,38 +66,6 @@ const SignUpPage = () => {
               value="Login"
               className="btn solid w-[150px] bg-[#5995fd] h-[49px] text-white uppercase font-semibold cursor-pointer transition-[0.5s] mx-0 my-2.5 rounded-[49px] border-[none] hover:bg-[#4d84e2] outline-none"
             />
-            <p className="social-text text-base px-0 py-[0.7rem]">
-              Or Sign in with social platforms
-            </p>
-            <div className="flex justify-center social-media">
-              <a
-                href="https://instagram.com/shaurya.iitkgp?igshid=MzRlODBiNWFlZA=="
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb] ;"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/shauryaiitkgp?mibextid=ZbWKwL"
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb] ;"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb] ;"
-              >
-                <i className="fab fa-google"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/shaurya-iit-kharagpur/home"
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb] ;"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
           </form>
           <form
             action="#"
@@ -143,38 +111,6 @@ const SignUpPage = () => {
               }
               value="Sign up"
             />
-            <p className="social-text text-base px-0 py-[0.7rem]">
-              Or Sign up with social platforms
-            </p>
-            <div className="flex justify-center social-media">
-              <a
-                href="https://instagram.com/shaurya.iitkgp?igshid=MzRlODBiNWFlZA=="
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb]"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/shauryaiitkgp?mibextid=ZbWKwL"
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb]"
-              >
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a
-                href="#"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb]"
-              >
-                <i className="fab fa-google"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/shaurya-iit-kharagpur/home"
-                target="_blank"
-                className="social-icon h-[46px] w-[46px] flex justify-center items-center text-[#333] border no-underline text-[1.1rem] transition-[0.3s] mx-[0.45rem] my-0 rounded-[50%] border-solid border-[#333] hover:text-[#4481eb] hover:border-[#4481eb]"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
           </form>
         </div>
       </div>
@@ -197,10 +133,10 @@ const SignUpPage = () => {
             <h3 className="panel-h3 font-semibold leading-none text-2xl max-[870px]:text-[1rem]">
               New here ?
             </h3>
-            <p className="panel-p  text-[0.95rem] px-0 py-[0.7rem] max-[870px]:text-[1rem] max-[870px]:pt-[0.5rem] max-[870px]:pr-[0rem] max-[570px]:text-[0.6rem] max-[570px]:mb-[-9rem] ">
+            {/* <p className="panel-p  text-[0.95rem] px-0 py-[0.7rem] max-[870px]:text-[1rem] max-[870px]:pt-[0.5rem] max-[870px]:pr-[0rem] max-[570px]:text-[0.6rem] max-[570px]:mb-[-9rem] ">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
-            </p>
+            </p> */}
             {/* transparent btn ------w-[130px] h-[41px] font-semibold text-[0.8rem] m-0 border-2 border-solid border-white bg-none*/}
             <button
               className={
@@ -238,11 +174,11 @@ const SignUpPage = () => {
                 : "content text-white transition-transform duration-[0.9s] ease-[ease-in-out] delay-[0.6s] translate-x-[800px] max-[870px]:transition-transform max-[870px]:duration-[0.9s] max-[870px]:ease-[ease-in-out] max-[870px]:delay-[0.8s] max-[870px]:pr-[15%]  max-[570px]:pt-[0.5rem] max-[570px]:pr-[1rem] max-[870px]:translate-y-[300px]"
             }
           >
-            <h3 className="panel-h3 font-semibold leading-none text-2xl max-[870px]:text-[1.2rem]"></h3>
-            <p className="panel-p text-[0.95rem] px-0 py-[0.7rem] max-[870px]:text-[1rem] max-[870px]:pt-[25rem] max-[870px]:pr-[0rem] ">
+            <h3 className="panel-h3 font-semibold leading-none text-2xl max-[870px]:text-[1.2rem]">Already Registered ?</h3>
+            {/* <p className="panel-p text-[0.95rem] px-0 py-[0.7rem] max-[870px]:text-[1rem] max-[870px]:pt-[25rem] max-[870px]:pr-[0rem] ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti.
-            </p>
+            </p> */}
             <button
               className="btn transparent w-[150px] bg-[#5995fd] h-[49px] text-white uppercase font-semibold cursor-pointer transition-[0.5s] mx-0 my-2.5 rounded-[49px] border-[none] hover:bg-[#4d84e2] outline-none max-[870px]:w-[140px] max-[870px]:h-[50px] max-[870px]:h-[35px] max-[870px]:text-[1.1rem]  "
               id="sign-in-btn"

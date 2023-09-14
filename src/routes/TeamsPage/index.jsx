@@ -1,7 +1,25 @@
-import React from "react";
+import { TeamCard } from "../../components/TeamCard";
 
 const TeamsPage = () => {
-  return <div>Team page</div>;
+  return (
+    <div className="grid pb-20 justify-items-center md:grid-cols-3 gap-10 px-12 py-10">
+      <TeamCard
+        designation={"Web Head"}
+        name={"Name"}
+        image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
+      />
+      <TeamCard
+        designation={"Design Head"}
+        name={"Name"}
+        image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
+      />
+      <TeamCard
+        designation={"Core Head"}
+        name={"Name"}
+        image={"https://i.ibb.co/JC4skS0/team-animate.jpg"}
+      />
+    </div>
+  );
 };
 
 export default TeamsPage;
