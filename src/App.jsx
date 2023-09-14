@@ -13,7 +13,7 @@ import {
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import EventRegistration from "./routes/EventRegistration";
-import ProfileDashboard from "./routes/ProfileDashboard";
+import { useEffect } from "react";
 
 const RoutingPaths = [
   {
@@ -25,15 +25,15 @@ const RoutingPaths = [
     component: <EventsPage />,
   },
   {
-    path: "profile",
-    component: <ProfileDashboard user={{name: "Somya", shauryaId: "138293"}} events={[{name: "cricket", date: "13/10/2023"}, {name: "athletics", date: "14/10/2023"}]} />,
-  },
-  {
     path: "teams",
     component: <TeamsPage />,
   },
   {
-    path: "register/event/:eventName/:eventType",
+    path: "signup",
+    component: <OptionToLogin />,
+  },
+  {
+    path: "register/event/:eventName",
     component: <EventRegistration />
   },
   {
