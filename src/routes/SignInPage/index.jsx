@@ -7,74 +7,51 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Formik } from "formik";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../AppContext/AppContext";
-const BASE_URL = import.meta.env.VITE_BASE_URL
+import { Navigate } from "react-router-dom";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-const SignInPage = () => {
-  const [isActive, setIsActive] = useState(false);
-  const [isReal, setisReal] = useState(false);
+const RegisterPage = () => {
   const navigate = useNavigate();
-  const { login, user } = useAuth()
-  const handleClick = (event) => {
-    const userin = document.getElementById("user");
-    const passin = document.getElementById("pass");
+  const location = useLocation();
 
-    if (passin.value == "") {
-      setisReal(false);
-    }
+  const { login, user } = useAuth();
 
-    setIsActive(true);
-  };
-  const handleReal = (event) => {
-    const userin = document.getElementById("user");
-    const passin = document.getElementById("pass");
-    if (userin.value == "") {
-      setIsActive(false);
-    }
+  useEffect(() => {
+    console.log(location.pathname);
+  }, []);
 
-    setisReal(true);
-  };
-  useEffect((e) => {
-    let handler = (e) => {
-      const userin = document.getElementById("user");
-      const passin = document.getElementById("pass");
-      if (userin.value == "") {
-        setIsActive(false);
-      }
-      if (passin.value == "") {
-        setisReal(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-  });
-
-  const onSubmit = async (values, resetValues) => {
+  const onCollegeLogin = async (values, resetValues) => {
     try {
-      const response = await axios.post(`${BASE_URL}/api/college/sign-in`, {
-        username: values.user,
-        password: values.pass,
-      }, {
-        headers: {
-          Authorization: `Bearer ${user.token}`
+      const response = await axios.post(
+        `${BASE_URL}/api/college/sign-in`,
+        {
+          username: values.username,
+          password: values.password,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
         }
-      });
+      );
 
       // Check the HTTP status code here
       if (response.status === 200) {
-        resetValues()
-        let userData = response.data.data
-        let token = response.data.token
-        console.log(userData, token)
-        login(userData, token)
-        navigate("/");
+        resetValues();
+        let userData = response.data.data;
+        let token = response.data.token;
+        console.log(userData, token);
+        login(userData, token);
+        navigate("/events");
       } else if (response.status === 400) {
         console.log("Bad Request:", response.data.message);
-        resetValues()
+        resetValues();
         // Handle the 400 response here
       } else {
         console.log("Error:", response);
-        resetValues()
+        resetValues();
         // Handle other non-200 responses here
       }
     } catch (error) {
@@ -95,10 +72,63 @@ const SignInPage = () => {
         // Something else went wrong
         console.log("Error:", error.message);
       }
-      resetValues()
+      resetValues();
     }
   };
 
+  const onAddPlayer = async (values, resetValues) => {
+    try {
+      const response = await axios.post(
+        `${BASE_URL}/api/college/sign-in`,
+        {
+          username: values.user,
+          password: values.pass,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
+
+      // Check the HTTP status code here
+      if (response.status === 200) {
+        resetValues();
+        let userData = response.data.data;
+        let token = response.data.token;
+        console.log(userData, token);
+        login(userData, token);
+        navigate("/events");
+      } else if (response.status === 400) {
+        console.log("Bad Request:", response.data.message);
+        resetValues();
+        // Handle the 400 response here
+      } else {
+        console.log("Error:", response);
+        resetValues();
+        // Handle other non-200 responses here
+      }
+    } catch (error) {
+      if (error.response) {
+        // Axios has caught a response with an HTTP status code
+        if (error.response.status === 400) {
+          console.log("Bad Request:", error.response.data.message);
+          // Handle the 400 response here
+        } else {
+          console.log("Error:", error.response);
+          // Handle other non-200 responses here
+        }
+      } else if (error.request) {
+        // Axios made the request, but no response was received (e.g., network error)
+        console.log("Network Error:", error.message);
+        // Handle network errors here
+      } else {
+        // Something else went wrong
+        console.log("Error:", error.message);
+      }
+      resetValues();
+    }
+  };
 
   return (
     <>
@@ -110,108 +140,262 @@ const SignInPage = () => {
         <div className="img flex items-center justify-end max-[900px]:hidden">
           <img src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
         </div>
-        <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center text-center max-[900px]:justify-center">
-          <Formik
-            initialValues={{ user: "", pass: "" }}
-            onSubmit={async (values, { resetForm }) => {
-              onSubmit(values, resetForm);
-            }}
-          >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-            }) => (
-              <form className="w-[360px] max-[1000px]:w-[290px]" onSubmit={handleSubmit} >
-                <img src={avatar} className="h-[100px] block m-auto" />
-                <h2 className="title text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
-                  Welcome
-                </h2>
-                <div
-                  className={
-                    isActive
-                      ? "input-div one  relative grid grid-cols-[7%_93%] mx-0 my-[25px] px-0 py-[5px] border-b-2 border-b-[#d9d9d9] border-solid mt-0 before:content-[''] before:absolute   before:h-0.5 before:bg-[#38d39f] before:transition-[0.4s] before:-bottom-0.5 before:right-[50%] after:content-[''] after:absolute  after:h-0.5 after:bg-[#38d39f] after:transition-[0.4s] after:-bottom-0.5 after:left-[50%] before:w-[50%] after:w-[50%]"
-                      : "input-div one  relative grid grid-cols-[7%_93%] mx-0 my-[25px] px-0 py-[5px] border-b-2 border-b-[#d9d9d9] border-solid mt-0 before:content-[''] before:absolute  before:w-[0%] before:h-0.5 before:bg-[#38d39f] before:transition-[0.4s] before:-bottom-0.5 before:right-[50%] after:content-[''] after:absolute  after:w-[0%] after:h-0.5 after:bg-[#38d39f] after:transition-[0.4s] after:-bottom-0.5 after:left-[50%]"
-                  }
+        <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center max-[900px]:justify-center">
+          {location.pathname == "/register/player" ? (
+            <Formik
+              initialValues={{
+                name: "",
+                rollNo: "",
+                email: "",
+                phone: "",
+                password: "",
+                gender: "",
+                collegeId: "",
+              }}
+              onSubmit={async (values, { resetForm }) => {
+                onAddPlayer(values, resetForm);
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+              }) => (
+                <form
+                  className="w-[360px] max-[1000px]:w-[290px]"
+                  onSubmit={handleSubmit}
                 >
-                  <div className="i text-[#d9d9d9] flex justify-center items-center relative h-[45px]">
-                    <i
-                      className={
-                        isActive
-                          ? "fas fa-user transition-[0.3s] text-[#38d39f]"
-                          : "fas fa-user transition-[0.3s]"
-                      }
-                    ></i>
-                  </div>
-                  <div className="div relative h-[45px]">
-                    <h5
-                      className={
-                        isActive
-                          ? "username absolute -translate-y-2/4 text-[#999] text-lg transition-[0.3s] left-2.5  text-[15px] top-[-5px]"
-                          : "username absolute -translate-y-2/4 text-[#999] text-lg transition-[0.3s] left-2.5 top-2/4 "
-                      }
-                    >
-                      Username
-                    </h5>
+                  <img src={avatar} className="h-[100px] block m-auto" />
+                  <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
+                    {location.pathname == "/register/college"
+                      ? "College Login"
+                      : location.pathname == "/register/player"
+                      ? "Player Registration"
+                      : null}
+                  </h2>
+
+                  <div className="relative z-0 mb-8">
                     <input
                       type="text"
-                      className="input absolute w-full h-full text-[1.2rem] text-[#555] px-[0.7rem] py-2 outline-none left-0 top-0 bg-transparent "
-                      onClick={handleClick}
+                      id="name"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
                       onChange={handleChange}
-                      value={values.user}
-                      id="user"
+                      value={values.name}
                     />
+                    <label
+                      htmlFor="name"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Name
+                    </label>
                   </div>
-                </div>
-                <div
-                  className={
-                    isReal
-                      ? "input-div pass  relative grid grid-cols-[7%_93%] mx-0 my-[25px] px-0 py-[5px] border-b-2 border-b-[#d9d9d9] border-solid mb-[4px] before:content-[''] before:absolute before:h-0.5 before:bg-[#38d39f] before:transition-[0.4s] before:-bottom-0.5 before:right-[50%] after:content-[''] after:absolute  after:h-0.5 after:bg-[#38d39f] after:transition-[0.4s] after:-bottom-0.5 after:left-[50%] before:w-[50%] after:w-[50%]"
-                      : "input-div pass  relative grid grid-cols-[7%_93%] mx-0 my-[25px] px-0 py-[5px] border-b-2 border-b-[#d9d9d9] border-solid mb-[4px] before:content-[''] before:absolute  before:w-[0%] before:h-0.5 before:bg-[#38d39f] before:transition-[0.4s] before:-bottom-0.5 before:right-[50%] after:content-[''] after:absolute  after:w-[0%] after:h-0.5 after:bg-[#38d39f] after:transition-[0.4s] after:-bottom-0.5 after:left-[50%]"
-                  }
-                >
-                  <div className="i text-[#d9d9d9] flex justify-center items-center relative h-[45px]">
-                    <i
-                      className={
-                        isReal
-                          ? "fas fa-lock transition-[0.3s] text-[#38d39f]"
-                          : "fas fa-lock transition-[0.3s]"
-                      }
-                    ></i>
+
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="rollNo"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.rollNo}
+                    />
+                    <label
+                      htmlFor="rollNo"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Roll Number
+                    </label>
                   </div>
-                  <div className="div relative h-[45px]">
-                    <h5
-                      className={
-                        isReal
-                          ? "password absolute -translate-y-2/4 text-[#999] text-lg transition-[0.3s] left-2.5  text-[15px] top-[-5px]"
-                          : "password absolute -translate-y-2/4 text-[#999] text-lg transition-[0.3s] left-2.5 top-2/4"
-                      }
+
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="email"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.email}
+                    />
+                    <label
+                      htmlFor="email"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Email
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="phone"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.phone}
+                    />
+                    <label
+                      htmlFor="phone"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Phone
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 mb-8">
+                    <label className="text-lg text-white mb-2">Apply for</label>
+                    <div className="flex">
+                      <div className="flex items-center mr-4">
+                        <input
+                          id="male"
+                          type="radio"
+                          value="Male"
+                          name="gender"
+                          onChange={handleChange}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          htmlFor="male"
+                          className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >
+                          Male Category
+                        </label>
+                      </div>
+                      <div className="flex items-center mr-4">
+                        <input
+                          id="female"
+                          type="radio"
+                          value="Female"
+                          name="gender"
+                          onChange={handleChange}
+                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          htmlFor="female"
+                          className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >
+                          Female Category
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="collegeId"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.collegeId}
+                    />
+                    <label
+                      htmlFor="collegeId"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      College ID
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="password"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.password}
+                    />
+                    <label
+                      htmlFor="password"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
                       Password
-                    </h5>
+                    </label>
+                  </div>
+                  <input
+                    type="submit"
+                    className="btn block w-full h-[50px] bg-[linear-gradient(to_right,#32be8f,#38d39f,#32be8f)] bg-[200%] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-right"
+                    value="Login"
+                  />
+                </form>
+              )}
+            </Formik>
+          ) : location.pathname == "/register/college" ? (
+            <Formik
+              initialValues={{ username: "", password: "" }}
+              onSubmit={async (values, { resetForm }) => {
+                onCollegeLogin(values, resetForm);
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+              }) => (
+                <form
+                  className="w-[360px] max-[1000px]:w-[290px]"
+                  onSubmit={handleSubmit}
+                >
+                  <img src={avatar} className="h-[100px] block m-auto" />
+                  <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
+                    {location.pathname == "/register/college"
+                      ? "College Login"
+                      : location.pathname == "/register/player"
+                      ? "Player Registration"
+                      : null}
+                  </h2>
+                  <div className="relative z-0 mb-8">
+                    <input
+                      type="text"
+                      id="username"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      onChange={handleChange}
+                      value={values.username}
+                    />
+                    <label
+                      htmlFor="username"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      College ID
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 mb-8">
                     <input
                       type="password"
-                      className="input absolute w-full h-full text-[1.2rem] text-[#555] px-[0.7rem] py-2 outline-none left-0 top-0 bg-transparent"
-                      onClick={handleReal}
+                      id="password"
+                      className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
                       onChange={handleChange}
-                      value={values.pass}
-                      id="pass"
+                      value={values.password}
                     />
+                    <label
+                      htmlFor="password"
+                      className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Password
+                    </label>
                   </div>
-                </div>
-                <input
-                  type="submit"
-                  className="btn block w-full h-[50px] bg-[linear-gradient(to_right,#32be8f,#38d39f,#32be8f)] bg-[200%] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-right"
-                  value="Login"
-                />
-              </form>)}
-          </Formik>
+                  <input
+                    type="submit"
+                    className="btn block w-full h-[50px] bg-[linear-gradient(to_right,#32be8f,#38d39f,#32be8f)] bg-[200%] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-right"
+                    value="Login"
+                  />
+                </form>
+              )}
+            </Formik>
+          ) : null}
         </div>
       </div>
     </>
   );
 };
-export default SignInPage;
+export default RegisterPage;

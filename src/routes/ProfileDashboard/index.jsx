@@ -1,6 +1,9 @@
 import React from 'react';
+import { useAuth } from '../../AppContext/AppContext';
 
-const ProfileDashboard = ({ user, events }) => {
+const ProfileDashboard = () => {
+  const { user } = useAuth()
+  const events = [{ name: "cricket", date: "13/10/2023" }, { name: "athletics", date: "14/10/2023" }]
   return (
     <div className="min-h-screen bg-black text-white p-6">
       <div className="container mx-auto px-4 py-8">
@@ -17,8 +20,8 @@ const ProfileDashboard = ({ user, events }) => {
                 {/* SVG Path for User Icon */}
               </svg>
             </div>
-            <h1 className="text-3xl font-semibold mb-2">{user.name}</h1>
-            <p className="text-gray-400 text-sm mb-4">Shaurya ID: {user.shauryaId}</p>
+            <h1 className="text-3xl font-semibold mb-2">{user.college}</h1>
+            <p className="text-gray-400 text-sm mb-4">Shaurya ID: {user.id}</p>
           </div>
 
           {/* Demarcation Line */}
