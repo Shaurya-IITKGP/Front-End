@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Landing Page -->
+    <url>
+        <loc>https://shauryafest.in/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Events Page -->
+    <url>
+        <loc>https://shauryafest.in/events</loc>
+        <priority>1</priority>
+    </url>
+
+    <!-- Teams Page -->
+    <url>
+        <loc>https://shauryafest.in/teams</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Sign Up Page -->
+    <url>
+        <loc>https://shauryafest.in/signup</loc>
+        <priority>1</priority>
+    </url>
+
+    <!-- Player Registration Page -->
+    <url>
+        <loc>https://shauryafest.in/register/player</loc>
+        <priority>1</priority>
+    </url>
+
+    <!-- College Sign-In Page -->
+    <url>
+        <loc>https://shauryafest.in/signin/college</loc>
+        <priority>1</priority>
+    </url>
+
+    <!-- Catch-All Page (Coming Soon) -->
+    <url>
+        <loc>https://shauryafest.in/*</loc>
+        <priority>0.6</priority>
+    </url>
+</urlset>
