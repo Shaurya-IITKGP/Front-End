@@ -1,9 +1,39 @@
 import React, { useState, useEffect } from "react";
 import css from "./EventModal.module.css";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../AppContext/AppContext";
+
+const EVENT_TYPE = {
+  badminton: ["men's-team", "women's-team"],
+  chess: ["team"],
+  basketball: ["men's-team", "women's-team"],
+  cricket: ["men's-team"],
+  football: ["men's-team"],
+  hockey: ["men's-team"],
+  tennis: ["men's-team", "women's-team"],
+  "table-tennis": ["men's-team", "women's-team"],
+  volleyball: ["men's-team", "women's-team"],
+  squash: ["men's-team", "women's-team"],
+  weightlifting: [
+    "under-56-kg",
+    "57-to-62-kg",
+    "63-to-69-kg",
+    "70-to-77-kg",
+    "above-77-kg",
+  ],
+  powerlifting: [
+    "under-56-kg",
+    "57-to-62-kg",
+    "63-to-69-kg",
+    "70-to-77-kg",
+    "above-77-kg",
+  ],
+};
+
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     if (isOpen) {
@@ -13,7 +43,8 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
     }
   }, [isOpen]);
 
-  if (!isOpen || !modalData.name) return null;
+  if (!isOpen || !modalData.name || !EVENT_TYPE[modalData.name.split(" ").join("-").toLowerCase()])
+    return null;
 
   const closeModalOnOverlayClick = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
@@ -23,7 +54,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${
+      className={`fixed inset-0 px-10 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${
         isAnimating
           ? "pointer-events-auto opacity-100"
           : "pointer-events-none opacity-0"
@@ -32,7 +63,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
       ref={modalRef}
     >
       <div
-        className={`bg-[#fffd] p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto md:flex-row flex flex-col relative transform transition-transform ${
+        className={`bg-white p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto md:flex-row flex flex-col relative transform transition-transform ${
           isAnimating
             ? "scale-105 translate-y-0 duration-500 ease-in-out"
             : "scale-0 translate-y-8 duration-500 ease-in-out"
@@ -66,15 +97,40 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
             {modalData.rules}
           </div>
           <div className="mt-4">
-            <button onClick={()=>{
-              console.log(modalData);
-              navigate(`/register/event/${modalData.name}`);
-            }} className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md">
-              Register for the event
-            </button>
+            {isAuthenticated ? (
+              <>
+                <p className="font-bold text-lg">Register as: </p>
+                <div className="flex gap-4 items-center flex-wrap">
+                  {EVENT_TYPE[modalData.name.split(" ").join("-").toLowerCase()].map((type) => (
+                    <button
+                      onClick={() => {
+                        console.log(modalData);
+                        navigate(
+                          `/register/event/${modalData.name.split(" ").join("-").toLowerCase()}/${type
+                            .split("'")[0]
+                            .toLowerCase()}`
+                        );
+                      }}
+                      className="text-white capitalize text-center px-6 py-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-md md:text-xl hover:bg-blue-600 hover:shadow-md"
+                    >
+                      {type.replace(/-/g, ' ')}
+                    </button>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <button
+                onClick={() => {
+                  navigate("/register/college");
+                }}
+                className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md"
+              >
+                Login
+              </button>
+            )}
           </div>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <div
             className="rounded-2xl w-full h-96 overflow-hidden mx-auto"
             style={{

@@ -36,7 +36,7 @@ const LandingPage = () => {
                   navigate("/signup");
                 }}
               >
-                Register
+                Login
               </button>
             )}
           </div>

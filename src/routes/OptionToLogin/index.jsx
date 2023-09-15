@@ -15,7 +15,7 @@ const OptionToLogin = () => {
                 </p>
             </div>
             <div onClick={()=>{
-                navigate("/signin/college");
+                navigate("/register/college");
             }}>
                 <div style={{height:"200px",width:"200px",border:"1px solid white",borderRadius:"15px"}}>
 

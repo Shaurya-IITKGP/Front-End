@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 export const useAuth = () => {
   const [user, setUser] = useState(() => {
-    const userData = localStorage.getItem('user');
+    const userData = localStorage.getItem('user'); 
     return userData ? JSON.parse(userData) : {
       token: null,
       college: null,
