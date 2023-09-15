@@ -29,7 +29,7 @@ const LandingPage = () => {
               Uniting students nationwide in the spirit of competition and
               sportsmanship
             </p>
-            {isAuthenticated && (
+            {!isAuthenticated && (
               <button
                 className={s.glowOnHover}
                 onClick={() => {
