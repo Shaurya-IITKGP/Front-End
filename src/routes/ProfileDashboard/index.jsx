@@ -5,7 +5,7 @@ const ProfileDashboard = () => {
   const { user } = useAuth()
   const events = [{ name: "cricket", date: "13/10/2023" }, { name: "athletics", date: "14/10/2023" }]
   return (
-    <div className="min-h-screen bg-black text-white p-6">
+    <div className="min-h-screen w-full bg-black text-white p-6">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
           {/* User Info */}

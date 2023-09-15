@@ -25,27 +25,15 @@ const RoutingPaths = [
     component: <EventsPage />,
   },
   {
-    path: "profile",
-    component: <ProfileDashboard />,
-  },
-  {
-    path: "/teams",
+    path: "teams",
     component: <TeamsPage />,
-  },
-  {
-    path: "signup",
-    component: <OptionToLogin />,
   },
   {
     path: "register/event/:eventName/:eventType",
     component: <EventRegistration />
   },
   {
-    path: "register/college",
-    component: <SignInPage />,
-  },
-  {
-    path: "register/player",
+    path: "login",
     component: <SignInPage />,
   },
   {

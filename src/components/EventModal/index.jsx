@@ -121,7 +121,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
             ) : (
               <button
                 onClick={() => {
-                  navigate("/register/college");
+                  navigate("/login");
                 }}
                 className="text-white w-full md:w-max px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl md:text-2xl hover:bg-blue-600 hover:shadow-md"
               >
