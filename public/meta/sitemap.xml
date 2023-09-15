@@ -18,21 +18,9 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- Sign Up Page -->
+    <!-- Authentication Page -->
     <url>
-        <loc>https://shauryafest.in/signup</loc>
-        <priority>1</priority>
-    </url>
-
-    <!-- Player Registration Page -->
-    <url>
-        <loc>https://shauryafest.in/register/player</loc>
-        <priority>1</priority>
-    </url>
-
-    <!-- College Sign-In Page -->
-    <url>
-        <loc>https://shauryafest.in/signin/college</loc>
+        <loc>https://shauryafest.in/login</loc>
         <priority>1</priority>
     </url>
 

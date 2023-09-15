@@ -23,7 +23,7 @@ const EventsPage = () => {
 
   return (
     <>
-      <div className="md:px-20 px-10 pb-20 max-w-[1440px] mx-auto">
+      <div className="md:px-20 w-full px-10 pb-20 max-w-[1440px] mx-auto">
         <Heading color="white" className="py-9 px-3">
           EVENTS
         </Heading>

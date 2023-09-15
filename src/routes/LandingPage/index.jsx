@@ -10,7 +10,7 @@ const LandingPage = () => {
   console.log(isAuthenticated)
   return (
     <>
-      <div>
+      <div className="w-full">
         <div className={"flex shrink " + s.leftSide}>
           <div className={"ml-40 " + s.heading}>
             <h1
@@ -33,7 +33,7 @@ const LandingPage = () => {
               <button
                 className={s.glowOnHover}
                 onClick={() => {
-                  navigate("/signup");
+                  navigate("/login");
                 }}
               >
                 Login

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 const OptionToLogin = () => {
     const navigate=useNavigate();
     return (
-        <div style={{color:"white",display:"flex",justifyContent:"center",alignItems:"center",height:"80vh",gap:"100px"}} >
+        <div className='w-full' style={{color:"white",display:"flex",justifyContent:"center",alignItems:"center",height:"80vh",gap:"100px"}} >
             <div onClick={()=>{
                 navigate("/register/player");
             }}>
