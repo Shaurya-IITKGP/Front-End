@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
-import shauryaLogo from "../../assets/shauya22-.png";
+import shauryaLogo from "../../assets/logo-shaurya.png";
 import kgpLogo from "../../assets/kgp-logo.png";
 
 // TODO : Close Modal on clicking outside
@@ -63,13 +63,16 @@ export default function Navbar() {
           "sticky top-0 z-20 shadow-[#222] shadow-sm flex items-center w-full md:justify-between bg-black md:px-16 px-4 py-4 text-orange-500"
         }
       >
-        <div className="md:border-none md:pr-0 md:mr-0 pr-4 mr-4 border-r-2 border-white">
+        <Link
+          to="/"
+          className="md:border-none md:pr-0 md:mr-0 pr-4 mr-4 border-r-2 border-white cursor-pointer"
+        >
           <img
-            className={"w-12"}
+            className={"w-32"}
             src={shauryaLogo}
             alt="SHAURYA - IIT Kharagpur"
           />
-        </div>
+        </Link>
         <div className={"flex gap-10 items-center font-mono font-semibold"}>
           <Link
             className="transition-all hover:text-white hidden md:block"
@@ -96,13 +99,13 @@ export default function Navbar() {
             TEAM
           </Link>
         </div>
-        <div className="">
-          <img
-            className={"w-12"}
-            src={kgpLogo}
-            alt="SHAURYA - IIT Kharagpur"
-          />
-        </div>
+        <a
+          href="https://www.iitkgp.ac.in/"
+          className="cursor-pointer"
+          target="_blank"
+        >
+          <img className={"w-12"} src={kgpLogo} alt="SHAURYA - IIT Kharagpur" />
+        </a>
         <div className="md:hidden flex justify-end w-full">
           <RiMenu3Line
             onClick={() => {
