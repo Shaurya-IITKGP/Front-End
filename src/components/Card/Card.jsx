@@ -6,7 +6,7 @@ const Card = ({ cardImg, name, openModal, modalData }) => {
   return (
     <>
       <div
-        className={css.video_card}
+        className={`${css.video_card}`}
         style={{ backgroundImage: `url(${cardImg})` }}
       >
         <div className={css.video_card_content}>

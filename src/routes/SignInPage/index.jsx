@@ -24,18 +24,10 @@ const RegisterPage = () => {
 
   const onCollegeLogin = async (values, resetValues) => {
     try {
-      const response = await axios.post(
-        `${BASE_URL}/api/college/sign-in`,
-        {
-          username: values.username,
-          password: values.password,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
-      );
+      const response = await axios.post(`${BASE_URL}/api/college/login`, {
+        username: values.username,
+        password: values.password,
+      });
 
       // Check the HTTP status code here
       if (response.status === 200) {
@@ -56,74 +48,14 @@ const RegisterPage = () => {
       }
     } catch (error) {
       if (error.response) {
-        // Axios has caught a response with an HTTP status code
         if (error.response.status === 400) {
           console.log("Bad Request:", error.response.data.message);
-          // Handle the 400 response here
         } else {
           console.log("Error:", error.response);
-          // Handle other non-200 responses here
         }
       } else if (error.request) {
-        // Axios made the request, but no response was received (e.g., network error)
         console.log("Network Error:", error.message);
-        // Handle network errors here
       } else {
-        // Something else went wrong
-        console.log("Error:", error.message);
-      }
-      resetValues();
-    }
-  };
-
-  const onAddPlayer = async (values, resetValues) => {
-    try {
-      const response = await axios.post(
-        `${BASE_URL}/api/college/sign-in`,
-        {
-          username: values.user,
-          password: values.pass,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
-      );
-
-      // Check the HTTP status code here
-      if (response.status === 200) {
-        resetValues();
-        let userData = response.data.data;
-        let token = response.data.token;
-        console.log(userData, token);
-        login(userData, token);
-        navigate("/events");
-      } else if (response.status === 400) {
-        console.log("Bad Request:", response.data.message);
-        resetValues();
-        // Handle the 400 response here
-      } else {
-        console.log("Error:", response);
-        resetValues();
-        // Handle other non-200 responses here
-      }
-    } catch (error) {
-      if (error.response) {
-        // Axios has caught a response with an HTTP status code
-        if (error.response.status === 400) {
-          console.log("Bad Request:", error.response.data.message);
-          // Handle the 400 response here
-        } else {
-          console.log("Error:", error.response);
-          // Handle other non-200 responses here
-        }
-      } else if (error.request) {
-        // Axios made the request, but no response was received (e.g., network error)
-        console.log("Network Error:", error.message);
-        // Handle network errors here
-      } else {
-        // Something else went wrong
         console.log("Error:", error.message);
       }
       resetValues();

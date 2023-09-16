@@ -1,5 +1,5 @@
-import React, { useCallback, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import EVENT_DATA from "../../CardData/EventData.jsx";
@@ -9,6 +9,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const EventRegistration = () => {
   const { eventName, eventType } = useParams();
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const EVENT = useMemo(() => {
     return EVENT_DATA.find(
@@ -27,6 +28,14 @@ const EventRegistration = () => {
   const [teamMembers, setTeamMembers] = useState([
     { name: "", rollNo: "", email: "", phone: "" },
   ]);
+
+  useEffect(() => {
+    setTeamMembers(
+      Array.from({ length: minTeamSize }, () => ({
+        ...{ name: "", rollNo: "", email: "", phone: "" },
+      }))
+    );
+  }, [minTeamSize]);
 
   const handleAddMember = () => {
     if (teamMembers.length < maxTeamSize) {
@@ -73,39 +82,26 @@ const EventRegistration = () => {
             }
           );
 
-          // Check the HTTP status code here
           if (response.status === 200) {
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
-            let userData = response.data.data;
-            let token = response.data.token;
-            console.log(userData, token);
-            login(userData, token);
             navigate("/events");
           } else if (response.status === 400) {
             console.log("Bad Request:", response.data.message);
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
-            // Handle the 400 response here
           } else {
             console.log("Error:", response);
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
-            // Handle other non-200 responses here
           }
         } catch (error) {
           if (error.response) {
-            // Axios has caught a response with an HTTP status code
             if (error.response.status === 400) {
               console.log("Bad Request:", error.response.data.message);
-              // Handle the 400 response here
             } else {
               console.log("Error:", error.response);
-              // Handle other non-200 responses here
             }
           } else if (error.request) {
-            // Axios made the request, but no response was received (e.g., network error)
             console.log("Network Error:", error.message);
-            // Handle network errors here
           } else {
-            // Something else went wrong
             console.log("Error:", error.message);
           }
           setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
@@ -138,7 +134,7 @@ const EventRegistration = () => {
   };
 
   return (
-    <motion.div className="flex flex-col items-center justify-center w-full bg-black text-white">
+    <motion.div className="flex flex-col items-center justify-center py-4 px-4 h-full w-full bg-black text-white">
       <motion.div
         className="bg-gray-800 p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
         // variants={itemVariants}
