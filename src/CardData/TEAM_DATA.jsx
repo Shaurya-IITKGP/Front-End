@@ -1,3 +1,32 @@
+import sanyam from "../assets/team/sanyam.jpg"
+import sahithi from "../assets/team/sahithi.jpg"
+import siddharth from "../assets/team/siddharth.jpg"
+import akula from "../assets/team/akula.jpg"
+import anushka from "../assets/team/anushka.jpg"
+import archie from "../assets/team/archie.jpg"
+import himanshu from "../assets/team/himanshu.jpg"
+import atharva from "../assets/team/atharva.jpg"
+import bellam from "../assets/team/bellam.jpg"
+import chicku from "../assets/team/chicku.jpg"
+import dhiya from "../assets/team/dhiya.jpg"
+import gauransh from "../assets/team/gauransh.jpg"
+import grace from "../assets/team/grace.jpg"
+import jatin from "../assets/team/jatin.jpeg"
+import jay from "../assets/team/jay.jpg"
+import jayansh from "../assets/team/jayansh.jpg"
+import karanveer from "../assets/team/karanveer.jpg"
+import keerthy from "../assets/team/keerthy.jpg"
+import lokesh from "../assets/team/lokesh.jpg"
+import neeraj from "../assets/team/neeraj.jpg"
+import nikhil from "../assets/team/nikhil.jpg"
+import prashant from "../assets/team/prashant.jpg"
+import priyanshu from "../assets/team/priyanshu.jpg"
+import sumit from "../assets/team/sumit.jpeg"
+import shubham from "../assets/team/shubham.png"
+import ushashri from "../assets/team/ushashri.jpg"
+import vaibhav from "../assets/team/vaibhav.png"
+import yashwanth from "../assets/team/yashwanth.jpg"
+
 const TEAM_DATA = {
   "EXECUTIVE HEADS": [
     {
@@ -34,43 +63,43 @@ const TEAM_DATA = {
     },
     {
       name: "Akula Tejaswini",
-      image: null,
+      image: akula,
       designation: "Logistics Head",
       email: "akulatejaswini23@kgpian.iitkgp.ac.in",
     },
     {
       name: "Anushka Singh",
-      image: null,
+      image: anushka,
       designation: "Accomodation and Guest Reception Head",
       email: "anushkasingh@kgpian.iitkgp.ac.in",
     },
     {
       name: "Archie Avirati",
-      image: null,
+      image: archie,
       designation: "Events Head",
       email: "archieavirati@kgpian.iitkgp.ac.in",
     },
     {
       name: "Atharva chilwarwar",
-      image: null,
-      designation: "Publicity and Marketings Head",
+      image: atharva,
+      designation: "Publicity and Marketing Head",
       email: "Chilwarwar.atharva@kgpian.iitkgp.ac.in",
     },
     {
       name: "Chalamalla Sahithi",
-      image: null,
+      image: sahithi,
       designation: "Sponsorship Head",
       email: "sahithi@kgpian.iitkgp.ac.in",
     },
     {
       name: "Dhiya Mariam Thomas",
-      image: null,
+      image: dhiya,
       designation: "Accomodation and Guest Reception Head",
       email: "",
     },
     {
       name: "Gauransh Agarwal",
-      image: null,
+      image: gauransh,
       designation: "Design Head",
       email: "gauransh@kgpian.iitkgp.ac.in",
     },
@@ -82,31 +111,31 @@ const TEAM_DATA = {
     },
     {
       name: "Himanshu Saini",
-      image: null,
+      image: himanshu,
       designation: "Events Head",
       email: "golusaini786@kgpian.iitkgp.ac.in",
     },
     {
       name: "Jatin Motwani",
-      image: null,
+      image: jatin,
       designation: "Finance Head",
       email: "jatinmotwani@kgpian.iitkgp.ac.in",
     },
     {
       name: "Lokesh Agarwala",
-      image: null,
+      image: lokesh,
       designation: "Finance Head",
       email: "lokesh_agarwala@kgpian.iitkgp.ac.in",
     },
     {
       name: "Neeraj Patel",
-      image: null,
+      image: neeraj,
       designation: "Logistics Head",
       email: "neeraj.patel@kgpian.iitkgp.ac.in",
     },
     {
       name: "Nikhil Bharat Rajani",
-      image: null,
+      image: nikhil,
       designation: "Events Head",
       email: "nikhilrajani309@kgpian.iitkgp.ac.in",
     },
@@ -124,13 +153,13 @@ const TEAM_DATA = {
     },
     {
       name: "Prashant Tripathi",
-      image: null,
-      designation: "Publicity and Marketings Head",
+      image: prashant,
+      designation: "Publicity and Marketing Head",
       email: "prashant@kgpian.iitkgp.ac.in",
     },
     {
       name: "Priyanshu Shaw",
-      image: null,
+      image: priyanshu,
       designation: "Events Head",
       email: "priyanshushaw2807@kgpian.iitkgp.ac.in",
     },
@@ -154,13 +183,13 @@ const TEAM_DATA = {
     },
     {
       name: "S.Siddharth",
-      image: null,
-      designation: "Publicity and Marketings Head",
+      image: siddharth,
+      designation: "Publicity and Markenting Head",
       email: "siddharthsabhari@kgpian.iitkgp.ac.in",
     },
     {
       name: "Sanyam Jhuria",
-      image: null,
+      image: sanyam,
       designation: "Sponsorship Head",
       email: "sanyamjhuria807@kgpian.iitkgp.ac.in",
     },
@@ -172,25 +201,25 @@ const TEAM_DATA = {
     },
     {
       name: "Vaibhav Joshi",
-      image: null,
+      image: vaibhav,
       designation: "Design Head",
       email: "vaibhav.joshi@kgpian.iitkgp.ac.in",
     },
     {
       name: "Vijeta Singh",
       image: null,
-      designation: "Publicity and Marketings Head",
+      designation: "Publicity and Markenting Head",
       email: "Svijeta204@kgpian.iitkgp.ac.in",
     },
     {
       name: "Yashwanth Kumar Kallepalli",
-      image: null,
-      designation: "Publicity and Marketings Head",
+      image: yashwanth,
+      designation: "Publicity and Markenting Head",
       email: "kyashwanth30@kgpian.iitkgp.ac.in",
     },
     {
       name: "Shubham Dilawar",
-      image: null,
+      image: shubham,
       designation: "Design Head",
       email: "",
     },

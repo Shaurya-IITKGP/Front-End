@@ -5,6 +5,7 @@ import {
   RiMailFill,
 } from "react-icons/ri";
 import css from "./TeamsPage.module.css";
+import { Link } from "react-router-dom";
 
 export const TeamCard = ({ name, designation, image }) => {
   return (
@@ -31,13 +32,21 @@ export const TeamCard = ({ name, designation, image }) => {
   );
 };
 
-const Socials = () => {
+const Socials = ({linkedin, mail, facebook, instagram}) => {
   return (
     <>
-      <RiMailFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+    <Link to={mail}>
+      <RiMailFill className={"cursor-pointer " + css.icon} size={"1.5rem"}  />
+      </Link>
+      <Link to={linkedin}>
       <RiLinkedinBoxFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
+      </Link>
+      <Link to={facebook}>
       <RiFacebookBoxFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
+      </Link>
+      <Link to={instagram}>
       <RiInstagramFill className={"cursor-pointer " + css.icon}  size={"1.5rem"} />
+      </Link>
     </>
   );
 };
