@@ -38,6 +38,10 @@ const TeamsPage = () => {
               image={
                 person?.image || "https://i.ibb.co/JC4skS0/team-animate.jpg"
               }
+              linkedin={person?.linkedin}
+              facebook={person?.facebook}
+              mail={person?.email}
+              instagram={person?.instagram}
             />
           ))}
       </div>

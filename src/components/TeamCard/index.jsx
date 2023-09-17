@@ -7,7 +7,7 @@ import {
 import css from "./TeamsPage.module.css";
 import { Link } from "react-router-dom";
 
-export const TeamCard = ({ name, designation, image }) => {
+export const TeamCard = ({ name, designation, image, linkedin, mail, facebook, instagram}) => {
   return (
     <div className={`max-w-xs min-w-[150px] ${css.speakerBlock}`}>
       <div className={css.innerBox}>
@@ -16,7 +16,7 @@ export const TeamCard = ({ name, designation, image }) => {
             <img src={image} alt="" />
             <div className={css.socialLinks}>
               <ul className="flex justify-center items-center gap-2 wrap">
-                <Socials />
+                <Socials linkedin={linkedin}  mail={mail} facebook= {facebook} instagram= {instagram}/>
               </ul>
             </div>
           </div>
