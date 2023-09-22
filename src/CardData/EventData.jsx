@@ -131,7 +131,7 @@ const EVENT_DATA = [
   },
   {
     "id": "EVNT2E2A03",
-    "name": "table-tennis",
+    "name": "tabletennis",
     "min_players": 3,
     "max_players": 4,
     "reg_fee_per_player": 450,
@@ -144,7 +144,7 @@ const EVENT_DATA = [
   },
   {
     "id": "EVNT45CFC4",
-    "name": "table-tennis",
+    "name": "tabletennis",
     "min_players": 2,
     "max_players": 3,
     "reg_fee_per_player": 400,

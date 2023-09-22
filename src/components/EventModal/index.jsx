@@ -11,7 +11,7 @@ const EVENT_TYPE = {
   football: ["men's-team"],
   hockey: ["men's-team"],
   tennis: ["men's-team", "women's-team"],
-  "table-tennis": ["men's-team", "women's-team"],
+  "tabletennis": ["men's-team", "women's-team"],
   volleyball: ["men's-team", "women's-team"],
   squash: ["men's-team", "women's-team"],
   weightlifting: [
