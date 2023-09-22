@@ -34,8 +34,8 @@ const EVENT_TYPE = {
     "400m-men",
     "800m-men",
     "1500m-men",
-    "4x100m-men",
-    "4x400m-men",
+    "4x100m-relay-men",
+    "4x400m-relay-men",
     "110m-hurdles-men",
     "400m-hurdles-men",
     "long-jump-men",
@@ -48,14 +48,39 @@ const EVENT_TYPE = {
     "100m-women",
     "200m-women",
     "400m-women",
-    "4x100m-women",
-    "4x400m-women",
+    "4x100m-relay-women",
+    "4x400m-relay-women",
     "long-jump-women",
     "high-jump-women",
     "shotput-women",
     "javelin-women",
     "discuss-throw-women",
   ],
+  swimming: [
+    "freestyle-50m-women",
+    "freestyle-100m-women",
+    "freestyle-200m-women",
+    "freestyle-4x50m-relay-women",
+    "breaststroke-50m-women",
+    "backstroke-50m-women",
+    "butterfly-50m-women",
+    "medley-4x50m-relay-relay-women",
+    "freestyle-50m-men",
+    "freestyle-100m-men",
+    "freestyle-200m-men",
+    "freestyle-1500m-men",
+    "freestyle-4x100m-relay-men",
+    "breaststroke-50m-men",
+    "breaststroke-100m-men",
+    "breaststroke-200m-men",
+    "backstroke-50m-men",
+    "backstroke-100m-men",
+    "backstroke-200m-men",
+    "butterfly-100m-men",
+    "butterfly-50m-men",
+    "medley-200m-men",
+    "medley-4x100m-relay-relay-men"
+  ]
 };
 
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
@@ -86,21 +111,19 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
 
   return (
     <div
-      className={`fixed inset-0 px-10 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${
-        isAnimating
-          ? "pointer-events-auto opacity-100"
-          : "pointer-events-none opacity-0"
-      }`}
+      className={`fixed inset-0 px-10 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${isAnimating
+        ? "pointer-events-auto opacity-100"
+        : "pointer-events-none opacity-0"
+        }`}
       onClick={closeModalOnOverlayClick}
       ref={modalRef}
     >
       <div
         style={{ maxHeight: "80vh", overflow: "auto" }}
-        className={`bg-white p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto relative transform transition-transform ${
-          isAnimating
-            ? "scale-105 translate-y-0 duration-500 ease-in-out"
-            : "scale-0 translate-y-8 duration-500 ease-in-out"
-        }`}
+        className={`bg-white p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto relative transform transition-transform ${isAnimating
+          ? "scale-105 translate-y-0 duration-500 ease-in-out"
+          : "scale-0 translate-y-8 duration-500 ease-in-out"
+          }`}
       >
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition duration-400 transform rotate-0 hover:rotate-180"
