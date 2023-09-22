@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import css from "./EventModal.module.css";
-import { useNavigate } from "react-router-dom";
+import { matchPath, useNavigate } from "react-router-dom";
 import { useAuth } from "../../AppContext/AppContext";
 
 const EVENT_TYPE = {
@@ -11,7 +11,7 @@ const EVENT_TYPE = {
   football: ["men's-team"],
   hockey: ["men's-team"],
   tennis: ["men's-team", "women's-team"],
-  "tabletennis": ["men's-team", "women's-team"],
+  tabletennis: ["men's-team", "women's-team"],
   volleyball: ["men's-team", "women's-team"],
   squash: ["men's-team", "women's-team"],
   weightlifting: [
@@ -148,7 +148,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
         <div className="md:flex-row flex flex-col">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl md:text-7xl font-bold text-gray-800">
-              {modalData.name}
+              {modalData.name == "tabletennis" ? "Table Tennis" : modalData?.name}
             </h2>
             <div className={`max-w-md overflow-y-auto ${css.scroll}`}>
               {modalData.rules}

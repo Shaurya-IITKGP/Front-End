@@ -9,6 +9,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const EventRegistration = () => {
   const { eventName, eventType } = useParams();
   const { user } = useAuth();
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
   const EVENT = useMemo(() => {
@@ -69,6 +70,7 @@ const EventRegistration = () => {
         )
       ) {
         try {
+          setLoading(true)
           const response = await axios.post(
             `${BASE_URL}/api/team/register`,
             {
@@ -84,32 +86,40 @@ const EventRegistration = () => {
 
           if (response.status === 200) {
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+            setLoading(false)
             navigate("/events");
           } else if (response.status === 400) {
+            setLoading(false)
             alert("Bad Request:", response?.data?.message);
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           } else {
+            setLoading(false)
             alert("Some Error Occured, please try again or contact the respective point of contact");
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           }
         } catch (error) {
           if (error.response) {
             if (error.response.status === 400) {
+              setLoading(false)
               alert("Bad Request:", error?.response?.data?.message);
             } else {
+              setLoading(false)
               alert("Some Error Occured, please try again or contact the respective point of contact");
             }
           } else {
+            setLoading(false)
             alert("Some Error Occured, please try again or contact the respective point of contact");
           }
           setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
         }
       } else {
+        setLoading(false)
         alert(
           "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)"
         );
       }
     } else {
+      setLoading(false)
       alert(`Team size should be between ${minTeamSize} and ${maxTeamSize}`);
     }
   };
@@ -134,7 +144,6 @@ const EventRegistration = () => {
     <motion.div className="flex flex-col items-center justify-center py-4 px-4 h-full w-full bg-black text-white">
       <motion.div
         className="bg-gray-800 p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
-        // variants={itemVariants}
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -207,7 +216,7 @@ const EventRegistration = () => {
             className="p-2 ml-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
             variants={itemVariants}
           >
-            Submit
+            {loading ? "Submitting" : "Submit"}
           </motion.button>
         </div>
       </motion.div>

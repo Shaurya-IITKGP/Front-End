@@ -15,11 +15,15 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const RegisterPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [loading, setLoading] = useState(false)
 
   const { login, user } = useAuth();
 
   const onCollegeLogin = async (values, resetValues) => {
     try {
+      if (values.username.length != 9) { alert("Please enter a valid college id"); return resetValues() }
+      // if (values.password.length != 10) { alert("Please enter the 10 character password provided"); return resetValues() }
+      setLoading(true)
       const response = await axios.post(`${BASE_URL}/api/college/login`, {
         username: values.username,
         password: values.password,
@@ -31,12 +35,15 @@ const RegisterPage = () => {
         let userData = response.data.data;
         let token = response.data.token;
         login(userData, token);
+        setLoading(false)
         navigate("/events");
       } else if (response.status === 400) {
+        setLoading(false)
         alert("Bad Request:", response?.data?.message);
         resetValues();
         // Handle the 400 response here
       } else {
+        setLoading(false)
         alert("Some Error Occured, please try again or contact the respective point of contact");
         resetValues();
         // Handle other non-200 responses here
@@ -44,13 +51,17 @@ const RegisterPage = () => {
     } catch (error) {
       if (error.response) {
         if (error.response.status === 400) {
+          setLoading(false)
           alert("Bad Request:", error?.response?.data?.message);
         } else {
+          setLoading(false)
           alert("Some Error Occured, please try again or contact the respective point of contact");
         }
       } else if (error.request) {
+        setLoading(false)
         alert("Some Error Occured, please try again or contact the respective point of contact");
       } else {
+        setLoading(false)
         alert("Some Error Occured, please try again or contact the respective point of contact");
       }
       resetValues();
@@ -126,7 +137,7 @@ const RegisterPage = () => {
                 <input
                   type="submit"
                   className="btn block w-full h-[50px] bg-[#32be8f] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-[#32be8fad]"
-                  value="Login"
+                  value={loading ? "Logging In" : "Login"}
                 />
               </form>
             )}
