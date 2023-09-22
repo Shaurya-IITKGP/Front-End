@@ -40,11 +40,11 @@ const LandingPage = () => {
             )}
           </div>
           <div id="right-side " className=" flex ">
-            <img className={"   right-0   " + s.img1} src={fut} alt="" />
+            <img loading="lazy" className={"   right-0   " + s.img1} src={fut} alt="" />
           </div>
         </div>
         <div>
-          <img className="w-screen" src="" alt="" />
+          <img loading="lazy" className="w-screen" src="" alt="" />
         </div>
       </div>
     </>

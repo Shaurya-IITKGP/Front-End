@@ -65,7 +65,7 @@ const RegisterPage = () => {
       />
       <div className="container box-border m-0 p-0 overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
         <div className="img flex items-center justify-end max-[900px]:hidden">
-          <img src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
+          <img loading="lazy" src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
         </div>
         <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center max-[900px]:justify-center">
           <Formik
@@ -86,7 +86,7 @@ const RegisterPage = () => {
                 className="w-[360px] max-[1000px]:w-[290px]"
                 onSubmit={handleSubmit}
               >
-                <img src={avatar} className="h-[100px] block m-auto" />
+                <img loading="lazy" src={avatar} className="h-[100px] block m-auto" />
                 <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
                   College Login
                 </h2>
