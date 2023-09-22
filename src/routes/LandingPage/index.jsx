@@ -7,7 +7,6 @@ import { useAuth } from "../../AppContext/AppContext";
 const LandingPage = () => {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth()
-  console.log(isAuthenticated)
   return (
     <>
       <div className="w-full">

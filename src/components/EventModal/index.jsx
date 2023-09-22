@@ -179,7 +179,6 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
                 ].map((type) => (
                   <button
                     onClick={() => {
-                      console.log(modalData);
                       navigate(
                         `/register/event/${modalData.name
                           .split(" ")

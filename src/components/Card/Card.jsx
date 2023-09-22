@@ -13,7 +13,6 @@ const Card = ({ cardImg, name, openModal, modalData }) => {
           <Heading className={css.video_card_title}>{name}</Heading>
           <Button
             onClick={() => {
-              console.log(modalData);
               openModal(modalData);
             }}
             size="sm"

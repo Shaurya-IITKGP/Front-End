@@ -86,27 +86,24 @@ const EventRegistration = () => {
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
             navigate("/events");
           } else if (response.status === 400) {
-            console.log("Bad Request:", response.data.message);
+            alert("Bad Request:", response?.data?.message);
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           } else {
-            console.log("Error:", response);
+            alert("Some Error Occured, please try again or contact the respective point of contact");
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           }
         } catch (error) {
           if (error.response) {
             if (error.response.status === 400) {
-              console.log("Bad Request:", error.response.data.message);
+              alert("Bad Request:", error?.response?.data?.message);
             } else {
-              console.log("Error:", error.response);
+              alert("Some Error Occured, please try again or contact the respective point of contact");
             }
-          } else if (error.request) {
-            console.log("Network Error:", error.message);
           } else {
-            console.log("Error:", error.message);
+            alert("Some Error Occured, please try again or contact the respective point of contact");
           }
           setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
         }
-        console.log(teamMembers);
       } else {
         alert(
           "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)"

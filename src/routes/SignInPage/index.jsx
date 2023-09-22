@@ -18,10 +18,6 @@ const RegisterPage = () => {
 
   const { login, user } = useAuth();
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, []);
-
   const onCollegeLogin = async (values, resetValues) => {
     try {
       const response = await axios.post(`${BASE_URL}/api/college/login`, {
@@ -34,29 +30,28 @@ const RegisterPage = () => {
         resetValues();
         let userData = response.data.data;
         let token = response.data.token;
-        console.log(userData, token);
         login(userData, token);
         navigate("/events");
       } else if (response.status === 400) {
-        console.log("Bad Request:", response.data.message);
+        alert("Bad Request:", response?.data?.message);
         resetValues();
         // Handle the 400 response here
       } else {
-        console.log("Error:", response);
+        alert("Some Error Occured, please try again or contact the respective point of contact");
         resetValues();
         // Handle other non-200 responses here
       }
     } catch (error) {
       if (error.response) {
         if (error.response.status === 400) {
-          console.log("Bad Request:", error.response.data.message);
+          alert("Bad Request:", error?.response?.data?.message);
         } else {
-          console.log("Error:", error.response);
+          alert("Some Error Occured, please try again or contact the respective point of contact");
         }
       } else if (error.request) {
-        console.log("Network Error:", error.message);
+        alert("Some Error Occured, please try again or contact the respective point of contact");
       } else {
-        console.log("Error:", error.message);
+        alert("Some Error Occured, please try again or contact the respective point of contact");
       }
       resetValues();
     }

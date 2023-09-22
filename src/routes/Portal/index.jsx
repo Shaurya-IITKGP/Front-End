@@ -7,7 +7,6 @@ const Portal = () => {
   const [serviceList, setServiceList] = useState(
     [{ player: "" }]
   );
-  // console.log(serviceList);
   return (
     <>
       <div className="cont relative w-full min-h-screen bg-neutral-50 overflow-hidden flex items-center justify-center p-8">
@@ -55,8 +54,7 @@ function InputItem({ singleService, serviceList, setServiceList, index }) {
     setServiceList([...serviceList, { service: "" }]);
   };
 
-  const handleServiceSubmit = ()=>{
-    console.log(serviceList);
+  const handleServiceSubmit = () => {
   }
 
   const handleClick = (e, index) => {
