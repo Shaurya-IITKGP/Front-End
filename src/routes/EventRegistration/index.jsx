@@ -213,7 +213,7 @@ const EventRegistration = () => {
           {teamMembers.length < maxTeamSize && (
             <motion.button
               onClick={handleAddMember}
-              className="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+              className="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 mr-4"
               variants={itemVariants}
             >
               Add Team Member
@@ -222,7 +222,7 @@ const EventRegistration = () => {
 
           <motion.button
             onClick={handleSubmit}
-            className="p-2 ml-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
             variants={itemVariants}
           >
             {loading ? "Submitting" : "Submit"}
