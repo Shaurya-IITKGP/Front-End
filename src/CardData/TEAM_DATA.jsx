@@ -258,12 +258,12 @@ const TEAM_DATA = {
       instagram: "https://www.instagram.com/jaibhav_voshi",
       facebook: "https://www.facebook.com/profile.php?id=100075648814522"
     },
-    {
-      name: "Vijeta Singh",
-      image: null,
-      designation: "Publicity and Marketing Head",
-      email: "Svijeta204@kgpian.iitkgp.ac.in",
-    },
+    // {
+    //   name: "Vijeta Singh",
+    //   image: null,
+    //   designation: "Publicity and Marketing Head",
+    //   email: "Svijeta204@kgpian.iitkgp.ac.in",
+    // },
     {
       name: "Yashwanth Kumar Kallepalli",
       image: Yashwanth,

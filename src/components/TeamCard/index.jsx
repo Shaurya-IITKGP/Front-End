@@ -23,7 +23,7 @@ export const TeamCard = ({ name, designation, image, linkedin, mail, facebook, i
         </div>
         <div className={css.captionBox}>
           <h4 className={css.name}>
-            <a href="#">{name}</a>
+            {name}
           </h4>
           <span className={css.designation}>{designation}</span>
         </div>
@@ -35,18 +35,18 @@ export const TeamCard = ({ name, designation, image, linkedin, mail, facebook, i
 const Socials = ({ linkedin, mail, facebook, instagram }) => {
   return (
     <>
-      <Link to={mail}>
+      <a href={`mailto:${mail}`}>
         <RiMailFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
-      </Link>
-      <Link to={linkedin}>
+      </a>
+      <a href={linkedin} target="_blank">
         <RiLinkedinBoxFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
-      </Link>
-      <Link to={facebook}>
+      </a>
+      <a href={facebook} target="_blank">
         <RiFacebookBoxFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
-      </Link>
-      <Link to={instagram}>
+      </a>
+      <a href={instagram} target="_blank">
         <RiInstagramFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
-      </Link>
+      </a>
     </>
   );
 };
