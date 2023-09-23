@@ -1,4 +1,6 @@
 import Soujanya from '../assets/team/heads/soujanya.png'
+import Jyothiraditya from '../assets/team/heads/jyothiraditya.jpg'
+import Shreya from '../assets/team/heads/shreya.jpg'
 import AkulaTejaswini from '../assets/team/heads/tejaswini.jpg'
 import AnushkaSingh from '../assets/team/heads/anushka.jpg'
 import ArchieAvirati from '../assets/team/heads/archie.jpg'
@@ -32,13 +34,13 @@ const TEAM_DATA = {
     },
     {
       name: "SSVKSS Jyothiraditya",
-      image: null,
+      image: Jyothiraditya,
       designation: "General Secretary Sports and Games",
       email: "jyothiraditya29@gmail.com",
     },
     {
       name: "Shreya Mishra",
-      image: null,
+      image: Shreya,
       designation: "Institute Girl Sports Nominee",
       email: "mshreya1210@gmail.com",
       linkedin: "https://www.linkedin.com/in/shreyamishra1210",
