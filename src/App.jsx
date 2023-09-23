@@ -3,54 +3,59 @@ import {
   LandingPage,
   EventsPage,
   TeamsPage,
-  SignUpPage,
   ComingSoon,
   OptionToLogin,
   SignInPage,
 } from "./routes";
 
 //Importing External Libraries
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import EventRegistration from "./routes/EventRegistration";
-import { useEffect } from "react";
-
-const RoutingPaths = [
-  {
-    path: "/",
-    component: <LandingPage />,
-  },
-  {
-    path: "events",
-    component: <EventsPage />,
-  },
-  {
-    path: "teams",
-    component: <TeamsPage />,
-  },
-  {
-    path: "signup",
-    component: <OptionToLogin />,
-  },
-  {
-    path: "register/event/:eventName/:eventType",
-    component: <EventRegistration />
-  },
-  {
-    path: "login",
-    component: <SignInPage />,
-  },
-  {
-    path: "*",
-    component: <ComingSoon />,
-  },
-];
+import { useEffect, useMemo } from "react";
+import { useAuth } from "./AppContext/AppContext";
 
 function App() {
+  const { isAuthenticated } = useAuth()
+
+  const ROUTES = useMemo(() => {
+    const RoutingPaths = [
+      {
+        path: "/",
+        component: <LandingPage />,
+      },
+      {
+        path: "events",
+        component: <EventsPage />,
+      },
+      {
+        path: "teams",
+        component: <TeamsPage />,
+      },
+      {
+        path: "signup",
+        component: <OptionToLogin />,
+      },
+      {
+        path: "register/event/:eventName/:eventType",
+        component: isAuthenticated ? <EventRegistration /> : <Navigate to="/" />
+      },
+      {
+        path: "login",
+        component: <SignInPage />,
+      },
+      {
+        path: "*",
+        component: <ComingSoon />,
+      }
+    ];
+    return RoutingPaths
+  }, [])
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {RoutingPaths.map((route, index) => (
+        {ROUTES.map((route, index) => (
           <Route key={index} path={route.path} element={route.component} />
         ))}
       </Route>

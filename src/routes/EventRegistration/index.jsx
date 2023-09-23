@@ -153,7 +153,7 @@ const EventRegistration = () => {
         </h2>
         <div className="">
           {teamMembers.map((member, index) => (
-            <>
+            <React.Fragment key={index}>
               <div className="">Player {index + 1}</div>
               <motion.div
                 key={index}
@@ -200,7 +200,7 @@ const EventRegistration = () => {
                   Remove
                 </motion.button>
               </motion.div>
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className="mt-4">

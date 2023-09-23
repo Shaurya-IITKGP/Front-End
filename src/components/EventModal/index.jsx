@@ -176,8 +176,8 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
               <div className="flex gap-2 flex-col sm:flex-row sm:items-center flex-wrap">
                 {EVENT_TYPE[
                   modalData.name.split(" ").join("-").toLowerCase()
-                ].map((type) => (
-                  <button
+                ].map((type, index) => (
+                  <button key={index}
                     onClick={() => {
                       navigate(
                         `/register/event/${modalData.name

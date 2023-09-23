@@ -13,13 +13,18 @@ const TeamsPage = () => {
           .sort((a, b) =>
             a.name.toLowerCase().localeCompare(b.name.toLowerCase())
           )
-          .map((person) => (
+          .map((person, index) => (
             <TeamCard
               designation={person?.designation}
               name={person?.name}
               image={
                 person?.image || "https://i.ibb.co/JC4skS0/team-animate.jpg"
               }
+              key={index}
+              linkedin={person?.linkedin}
+              facebook={person?.facebook}
+              mail={person?.email}
+              instagram={person?.instagram}
             />
           ))}
       </div>
@@ -31,13 +36,14 @@ const TeamsPage = () => {
           .sort((a, b) =>
             a.name.toLowerCase().localeCompare(b.name.toLowerCase())
           )
-          .map((person) => (
+          .map((person, index) => (
             <TeamCard
               designation={person?.designation}
               name={person?.name}
               image={
                 person?.image || "https://i.ibb.co/JC4skS0/team-animate.jpg"
               }
+              key={index}
               linkedin={person?.linkedin}
               facebook={person?.facebook}
               mail={person?.email}
