@@ -228,7 +228,7 @@ const TEAM_DATA = {
     {
       name: "S.Siddharth",
       image: Siddharth,
-      designation: "Publicity and Markenting Head",
+      designation: "Publicity and Marketing Head",
       email: "siddharthsabhari@kgpian.iitkgp.ac.in",
       linkedin: "https://www.linkedin.com/in/siddharth-sabhari-shankar-144745214/",
       instagram: "https://www.instagram.com/siddharth.sabhari.shankar/",
@@ -261,13 +261,13 @@ const TEAM_DATA = {
     {
       name: "Vijeta Singh",
       image: null,
-      designation: "Publicity and Markenting Head",
+      designation: "Publicity and Marketing Head",
       email: "Svijeta204@kgpian.iitkgp.ac.in",
     },
     {
       name: "Yashwanth Kumar Kallepalli",
       image: Yashwanth,
-      designation: "Publicity and Markenting Head",
+      designation: "Publicity and Marketing Head",
       email: "kyashwanth30@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/yashwanthkumarkallepalli",
       linkedin: "https://www.linkedin.com/in/-yashwanth"
