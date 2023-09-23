@@ -33,7 +33,7 @@ const RoutingPaths = [
     component: <OptionToLogin />,
   },
   {
-    path: "register/event/:eventName",
+    path: "register/event/:eventName/:eventType",
     component: <EventRegistration />
   },
   {

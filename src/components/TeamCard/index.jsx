@@ -36,16 +36,16 @@ const Socials = ({ linkedin, mail, facebook, instagram }) => {
   return (
     <>
       <a href={`mailto:${mail}`}>
-        <RiMailFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+        <RiMailFill className={"cursor-pointer " + css.icon} />
       </a>
       <a href={linkedin} target="_blank">
-        <RiLinkedinBoxFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+        <RiLinkedinBoxFill className={"cursor-pointer " + css.icon} />
       </a>
       <a href={facebook} target="_blank">
-        <RiFacebookBoxFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+        <RiFacebookBoxFill className={"cursor-pointer " + css.icon} />
       </a>
       <a href={instagram} target="_blank">
-        <RiInstagramFill className={"cursor-pointer " + css.icon} size={"1.5rem"} />
+        <RiInstagramFill className={"cursor-pointer " + css.icon} />
       </a>
     </>
   );
