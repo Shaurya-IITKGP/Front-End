@@ -210,13 +210,16 @@ const EventRegistration = () => {
           ))}
         </div>
         <div className="mt-4">
-          <motion.button
-            onClick={handleAddMember}
-            className="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
-            variants={itemVariants}
-          >
-            Add Team Member
-          </motion.button>
+          {teamMembers.length < maxTeamSize && (
+            <motion.button
+              onClick={handleAddMember}
+              className="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+              variants={itemVariants}
+            >
+              Add Team Member
+            </motion.button>
+          )}
+
           <motion.button
             onClick={handleSubmit}
             className="p-2 ml-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
