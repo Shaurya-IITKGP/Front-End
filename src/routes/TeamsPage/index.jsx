@@ -11,7 +11,7 @@ const TeamsPage = () => {
         </Heading>
         {TEAM_DATA["EXECUTIVE HEADS"]
           .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+            a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
           )
           .map((person, index) => (
             <TeamCard
@@ -34,7 +34,7 @@ const TeamsPage = () => {
         </Heading>
         {TEAM_DATA["HEADS"]
           .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+            a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
           )
           .map((person, index) => (
             <TeamCard

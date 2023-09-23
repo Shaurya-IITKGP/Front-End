@@ -15,15 +15,18 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const RegisterPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const { login, user } = useAuth();
 
   const onCollegeLogin = async (values, resetValues) => {
     try {
-      if (values.username.length != 9) { alert("Please enter a valid college id"); return resetValues() }
+      if (values.username.length != 9) {
+        alert("Please enter a valid college id");
+        return resetValues();
+      }
       // if (values.password.length != 10) { alert("Please enter the 10 character password provided"); return resetValues() }
-      setLoading(true)
+      setLoading(true);
       const response = await axios.post(`${BASE_URL}/api/college/login`, {
         username: values.username,
         password: values.password,
@@ -35,34 +38,42 @@ const RegisterPage = () => {
         let userData = response.data.data;
         let token = response.data.token;
         login(userData, token);
-        setLoading(false)
+        setLoading(false);
         navigate("/events");
       } else if (response.status === 400) {
-        setLoading(false)
+        setLoading(false);
         alert("Bad Request:", response?.data?.message);
         resetValues();
         // Handle the 400 response here
       } else {
-        setLoading(false)
-        alert("Some Error Occured, please try again or contact the respective point of contact");
+        setLoading(false);
+        alert(
+          "Some Error Occured, please try again or contact the respective point of contact",
+        );
         resetValues();
         // Handle other non-200 responses here
       }
     } catch (error) {
       if (error.response) {
         if (error.response.status === 400) {
-          setLoading(false)
+          setLoading(false);
           alert("Bad Request:", error?.response?.data?.message);
         } else {
-          setLoading(false)
-          alert("Some Error Occured, please try again or contact the respective point of contact");
+          setLoading(false);
+          alert(
+            "Some Error Occured, please try again or contact the respective point of contact",
+          );
         }
       } else if (error.request) {
-        setLoading(false)
-        alert("Some Error Occured, please try again or contact the respective point of contact");
+        setLoading(false);
+        alert(
+          "Some Error Occured, please try again or contact the respective point of contact",
+        );
       } else {
-        setLoading(false)
-        alert("Some Error Occured, please try again or contact the respective point of contact");
+        setLoading(false);
+        alert(
+          "Some Error Occured, please try again or contact the respective point of contact",
+        );
       }
       resetValues();
     }
@@ -76,7 +87,11 @@ const RegisterPage = () => {
       />
       <div className="container box-border m-0 p-0 overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
         <div className="img flex items-center justify-end max-[900px]:hidden">
-          <img loading="lazy" src={bg} className="w-[500px] max-[1000px]:w-[400px]" />
+          <img
+            loading="lazy"
+            src={bg}
+            className="w-[500px] max-[1000px]:w-[400px]"
+          />
         </div>
         <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center max-[900px]:justify-center">
           <Formik
@@ -97,7 +112,11 @@ const RegisterPage = () => {
                 className="w-[360px] max-[1000px]:w-[290px]"
                 onSubmit={handleSubmit}
               >
-                <img loading="lazy" src={avatar} className="h-[100px] block m-auto" />
+                <img
+                  loading="lazy"
+                  src={avatar}
+                  className="h-[100px] block m-auto"
+                />
                 <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
                   College Login
                 </h2>

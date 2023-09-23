@@ -14,7 +14,8 @@ const Card = ({ cardImg, name, openModal, modalData }) => {
           <Button
             onClick={() => {
               // console.log(name)
-              if (name == "Table Tennis") return openModal({ ...modalData, name: "tabletennis" })
+              if (name == "Table Tennis")
+                return openModal({ ...modalData, name: "tabletennis" });
               openModal(modalData);
             }}
             size="sm"

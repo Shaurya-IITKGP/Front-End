@@ -79,8 +79,8 @@ const EVENT_TYPE = {
     "butterfly-100m-men",
     "butterfly-50m-men",
     "medley-200m-men",
-    "medley-4x100m-relay-relay-men"
-  ]
+    "medley-4x100m-relay-relay-men",
+  ],
 };
 
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
@@ -111,19 +111,21 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
 
   return (
     <div
-      className={`fixed inset-0 px-10 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${isAnimating
-        ? "pointer-events-auto opacity-100"
-        : "pointer-events-none opacity-0"
-        }`}
+      className={`fixed inset-0 px-10 flex items-center justify-center bg-black bg-opacity-80 z-50 modal-overlay transition-opacity ${
+        isAnimating
+          ? "pointer-events-auto opacity-100"
+          : "pointer-events-none opacity-0"
+      }`}
       onClick={closeModalOnOverlayClick}
       ref={modalRef}
     >
       <div
         style={{ maxHeight: "80vh", overflow: "auto" }}
-        className={`bg-white p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto relative transform transition-transform ${isAnimating
-          ? "scale-105 translate-y-0 duration-500 ease-in-out"
-          : "scale-0 translate-y-8 duration-500 ease-in-out"
-          }`}
+        className={`bg-white p-4 md:p-8 rounded-lg shadow-md w-full gap-5 max-w-screen-lg max-h-[70%] mx-auto relative transform transition-transform ${
+          isAnimating
+            ? "scale-105 translate-y-0 duration-500 ease-in-out"
+            : "scale-0 translate-y-8 duration-500 ease-in-out"
+        }`}
       >
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition duration-400 transform rotate-0 hover:rotate-180"
@@ -148,7 +150,9 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
         <div className="md:flex-row flex flex-col">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl md:text-7xl font-bold text-gray-800">
-              {modalData.name == "tabletennis" ? "Table Tennis" : modalData?.name}
+              {modalData.name == "tabletennis"
+                ? "Table Tennis"
+                : modalData?.name}
             </h2>
             <div className={`max-w-md overflow-y-auto ${css.scroll}`}>
               {modalData.rules}
@@ -177,13 +181,14 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
                 {EVENT_TYPE[
                   modalData.name.split(" ").join("-").toLowerCase()
                 ].map((type, index) => (
-                  <button key={index}
+                  <button
+                    key={index}
                     onClick={() => {
                       navigate(
                         `/register/event/${modalData.name
                           .split(" ")
                           .join("-")
-                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`
+                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`,
                       );
                     }}
                     className="text-white flex justify-center font-bold capitalize px-3 py-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 duration-200 text-md md:text-sm hover:bg-blue-600 hover:shadow-md"

@@ -9,12 +9,12 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const EventRegistration = () => {
   const { eventName, eventType } = useParams();
   const { user } = useAuth();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const EVENT = useMemo(() => {
     return EVENT_DATA.find(
-      (event) => event.name == eventName && event.category == eventType
+      (event) => event.name == eventName && event.category == eventType,
     );
   }, [eventName, eventType]);
 
@@ -34,7 +34,7 @@ const EventRegistration = () => {
     setTeamMembers(
       Array.from({ length: minTeamSize }, () => ({
         ...{ name: "", rollNo: "", email: "", phone: "" },
-      }))
+      })),
     );
   }, [minTeamSize]);
 
@@ -66,11 +66,11 @@ const EventRegistration = () => {
             member.name.trim() !== "" &&
             member.rollNo.trim() !== "" &&
             member.email.trim() !== "" &&
-            member.phone.trim() !== ""
+            member.phone.trim() !== "",
         )
       ) {
         try {
-          setLoading(true)
+          setLoading(true);
           const response = await axios.post(
             `${BASE_URL}/api/team/register`,
             {
@@ -81,45 +81,51 @@ const EventRegistration = () => {
               headers: {
                 Authorization: `Bearer ${user.token}`,
               },
-            }
+            },
           );
 
           if (response.status === 200) {
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
-            setLoading(false)
+            setLoading(false);
             navigate("/events");
           } else if (response.status === 400) {
-            setLoading(false)
+            setLoading(false);
             alert("Bad Request:", response?.data?.message);
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           } else {
-            setLoading(false)
-            alert("Some Error Occured, please try again or contact the respective point of contact");
+            setLoading(false);
+            alert(
+              "Some Error Occured, please try again or contact the respective point of contact",
+            );
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
           }
         } catch (error) {
           if (error.response) {
             if (error.response.status === 400) {
-              setLoading(false)
+              setLoading(false);
               alert("Bad Request:", error?.response?.data?.message);
             } else {
-              setLoading(false)
-              alert("Some Error Occured, please try again or contact the respective point of contact");
+              setLoading(false);
+              alert(
+                "Some Error Occured, please try again or contact the respective point of contact",
+              );
             }
           } else {
-            setLoading(false)
-            alert("Some Error Occured, please try again or contact the respective point of contact");
+            setLoading(false);
+            alert(
+              "Some Error Occured, please try again or contact the respective point of contact",
+            );
           }
           setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
         }
       } else {
-        setLoading(false)
+        setLoading(false);
         alert(
-          "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)"
+          "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)",
         );
       }
     } else {
-      setLoading(false)
+      setLoading(false);
       alert(`Team size should be between ${minTeamSize} and ${maxTeamSize}`);
     }
   };

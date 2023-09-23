@@ -6,7 +6,7 @@ import { useAuth } from "../../AppContext/AppContext";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated } = useAuth();
   return (
     <>
       <div className="w-full">
@@ -40,7 +40,12 @@ const LandingPage = () => {
             )}
           </div>
           <div id="right-side " className=" flex ">
-            <img loading="lazy" className={"   right-0   " + s.img1} src={fut} alt="" />
+            <img
+              loading="lazy"
+              className={"   right-0   " + s.img1}
+              src={fut}
+              alt=""
+            />
           </div>
         </div>
         <div>

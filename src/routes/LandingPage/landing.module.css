@@ -4,7 +4,7 @@
   0% {
     margin-right: 0;
   }
-  
+
   100% {
     margin-right: 20%;
   }
@@ -44,9 +44,9 @@
   animation: opa 2s;
   font-size: 115px;
   margin-left: 0;
-  
+
   font-family: "Roboto Slab", serif;
-  
+
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -62,7 +62,7 @@
 
 .p1 {
   display: grid;
-  margin-left:-5px;
+  margin-left: -5px;
   margin-top: 2%;
 
   font-size: 40px;
@@ -279,7 +279,7 @@
   }
   .img1 {
     margin-top: 3%;
-    height:500px;
+    height: 500px;
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -486,10 +486,8 @@
     visibility: hidden;
   }
 }
-.arrowdown{
+.arrowdown {
   animation: blink-animation 1s steps(5, start) infinite;
   display: flex;
   justify-content: center;
-
-  
 }

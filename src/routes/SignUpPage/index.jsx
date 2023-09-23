@@ -174,7 +174,9 @@ const SignUpPage = () => {
                 : "content text-white transition-transform duration-[0.9s] ease-[ease-in-out] delay-[0.6s] translate-x-[800px] max-[870px]:transition-transform max-[870px]:duration-[0.9s] max-[870px]:ease-[ease-in-out] max-[870px]:delay-[0.8s] max-[870px]:pr-[15%]  max-[570px]:pt-[0.5rem] max-[570px]:pr-[1rem] max-[870px]:translate-y-[300px]"
             }
           >
-            <h3 className="panel-h3 font-semibold leading-none text-2xl max-[870px]:text-[1.2rem]">Already Registered ?</h3>
+            <h3 className="panel-h3 font-semibold leading-none text-2xl max-[870px]:text-[1.2rem]">
+              Already Registered ?
+            </h3>
             {/* <p className="panel-p text-[0.95rem] px-0 py-[0.7rem] max-[870px]:text-[1rem] max-[870px]:pt-[25rem] max-[870px]:pr-[0rem] ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti.

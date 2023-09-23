@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
-import EventModal from '../EventModal';
-import CardData from "../../CardData/CardData"
+import EventModal from "../EventModal";
+import CardData from "../../CardData/CardData";
 
 const EventsCard = ({ event }) => {
-  const EVENTS=CardData.EVENTS;
+  const EVENTS = CardData.EVENTS;
   const [isModalOpen, setModalOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -15,7 +15,7 @@ const EventsCard = ({ event }) => {
     setModalOpen(false);
   };
 
-  const currentEvent = EVENTS.find(item => item.name === event.name);
+  const currentEvent = EVENTS.find((item) => item.name === event.name);
 
   const closeModalOnOutsideClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {

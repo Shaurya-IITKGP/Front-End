@@ -1,9 +1,12 @@
-import React from 'react';
-import { useAuth } from '../../AppContext/AppContext';
+import React from "react";
+import { useAuth } from "../../AppContext/AppContext";
 
 const ProfileDashboard = () => {
-  const { user } = useAuth()
-  const events = [{ name: "cricket", date: "13/10/2023" }, { name: "athletics", date: "14/10/2023" }]
+  const { user } = useAuth();
+  const events = [
+    { name: "cricket", date: "13/10/2023" },
+    { name: "athletics", date: "14/10/2023" },
+  ];
   return (
     <div className="min-h-screen w-full bg-black text-white p-6">
       <div className="container mx-auto px-4 py-8">

@@ -16,7 +16,7 @@ import { useEffect, useMemo } from "react";
 import { useAuth } from "./AppContext/AppContext";
 
 function App() {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated } = useAuth();
 
   const ROUTES = useMemo(() => {
     const RoutingPaths = [
@@ -38,7 +38,11 @@ function App() {
       },
       {
         path: "register/event/:eventName/:eventType",
-        component: isAuthenticated ? <EventRegistration /> : <Navigate to="/" />
+        component: isAuthenticated ? (
+          <EventRegistration />
+        ) : (
+          <Navigate to="/" />
+        ),
       },
       {
         path: "login",
@@ -47,10 +51,10 @@ function App() {
       {
         path: "*",
         component: <ComingSoon />,
-      }
+      },
     ];
-    return RoutingPaths
-  }, [])
+    return RoutingPaths;
+  }, []);
 
   return (
     <Routes>

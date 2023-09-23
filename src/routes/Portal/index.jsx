@@ -4,9 +4,7 @@ import "https://kit.fontawesome.com/64d58efce2.js";
 import { useState } from "react";
 
 const Portal = () => {
-  const [serviceList, setServiceList] = useState(
-    [{ player: "" }]
-  );
+  const [serviceList, setServiceList] = useState([{ player: "" }]);
   return (
     <>
       <div className="cont relative w-full min-h-screen bg-neutral-50 overflow-hidden flex items-center justify-center p-8">
@@ -54,8 +52,7 @@ function InputItem({ singleService, serviceList, setServiceList, index }) {
     setServiceList([...serviceList, { service: "" }]);
   };
 
-  const handleServiceSubmit = () => {
-  }
+  const handleServiceSubmit = () => {};
 
   const handleClick = (e, index) => {
     // 👇️ toggle isActive state on click

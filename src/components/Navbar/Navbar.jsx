@@ -104,7 +104,12 @@ export default function Navbar() {
           className="cursor-pointer"
           target="_blank"
         >
-          <img loading="lazy" className={"w-12"} src={kgpLogo} alt="SHAURYA - IIT Kharagpur" />
+          <img
+            loading="lazy"
+            className={"w-12"}
+            src={kgpLogo}
+            alt="SHAURYA - IIT Kharagpur"
+          />
         </a>
         <div className="md:hidden flex justify-end w-full">
           <RiMenu3Line
