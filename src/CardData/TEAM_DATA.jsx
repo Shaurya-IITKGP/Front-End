@@ -13,7 +13,7 @@ import Lokesh from "../assets/team/heads/lokesh.jpg";
 import Neeraj from "../assets/team/heads/neeraj.jpg";
 import Nikhil from "../assets/team/heads/nikhil.jpg";
 import Prashant from "../assets/team/heads/prashant.jpg";
-import Priyanshu from "../assets/team/heads/priyanshu.jpg";
+import Priyanshu from "../assets/team/heads/Priyanshu.jpg";
 import Sahithi from "../assets/team/heads/sahithi.jpg";
 import Sanyam from "../assets/team/heads/sanyam.jpg";
 import Shubham from "../assets/team/heads/shubham.png";
