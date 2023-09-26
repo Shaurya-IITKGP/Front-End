@@ -12,7 +12,7 @@ import Dhiya from "../assets/team/heads/dhiya.jpg";
 import Gauransh from "../assets/team/heads/gauransh.jpg";
 import Himanshu from "../assets/team/heads/himanshu.jpg";
 import Jatin from "../assets/team/heads/jatin.jpeg";
-import Lokesh from "../assets/team/heads/lokesh.jpg";
+import Lokesh from "../assets/team/heads/Lokesh.jpg";
 import Neeraj from "../assets/team/heads/neeraj.jpg";
 import Nikhil from "../assets/team/heads/nikhil.jpg";
 import Prashant from "../assets/team/heads/prashant.jpg";
@@ -165,7 +165,7 @@ const TEAM_DATA = {
     {
       name: "Jatin Motwani",
       image: Jatin,
-      designation: "Finance Head",
+      designation: "Finance, Publicity and Marketing Head",
       email: "jatinmotwani@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/hitesh.motwani.7127/",
       linkedin: "https://www.linkedin.com/in/jatin-motwani-684b2022a/",
@@ -181,7 +181,7 @@ const TEAM_DATA = {
     {
       name: "Lokesh Agarwala",
       image: Lokesh,
-      designation: "Finance Head",
+      designation: "Finance and Sponsorship Head",
       email: "lokesh_agarwala@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/profile.php?id=100074403405010",
       linkedin: "http://www.linkedin.com/in/lokeshagarwala",
