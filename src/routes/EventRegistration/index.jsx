@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import EVENT_DATA from "../../CardData/EventData.jsx";
 import { useAuth } from "../../AppContext/AppContext.jsx";
+
+
+
+import Loader from 'react-spinner-loader';
+import { Spinner } from "@chakra-ui/react";
+// import 'react-spinner-loader/dist/index.css';
+
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const EventRegistration = () => {
@@ -225,7 +232,13 @@ const EventRegistration = () => {
             className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
             variants={itemVariants}
           >
-            {loading ? "Submitting" : "Submit"}
+            {loading ?  <Spinner
+  thickness='4px'
+  speed='0.65s'
+  emptyColor='gray.200'
+  color='red.500'
+  size='xl'
+/> : "Submit" }
           </motion.button>
         </div>
       </motion.div>
