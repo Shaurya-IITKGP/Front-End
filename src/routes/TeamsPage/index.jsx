@@ -11,7 +11,30 @@ const TeamsPage = () => {
         </Heading>
         {TEAM_DATA["EXECUTIVE HEADS"]
           .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+          )
+          .map((person, index) => (
+            <TeamCard
+              designation={person?.designation}
+              name={person?.name}
+              image={
+                person?.image || "https://i.ibb.co/JC4skS0/team-animate.jpg"
+              }
+              key={index}
+              linkedin={person?.linkedin}
+              facebook={person?.facebook}
+              mail={person?.email}
+              instagram={person?.instagram}
+            />
+          ))}
+      </div>
+      <div className="grid md:grid-cols-3 mb-20 gap-8 justify-items-center">
+        <Heading className="md:col-span-3 -mb-4 text-3xl text-white text-bold text-center">
+          STEERING COMMITTEE
+        </Heading>
+        {TEAM_DATA["STEERING COMMITTEE"]
+          .sort((a, b) =>
+            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
           )
           .map((person, index) => (
             <TeamCard
@@ -34,7 +57,7 @@ const TeamsPage = () => {
         </Heading>
         {TEAM_DATA["HEADS"]
           .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
           )
           .map((person, index) => (
             <TeamCard
