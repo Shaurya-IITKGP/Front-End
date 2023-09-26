@@ -15,6 +15,7 @@ import Jatin from "../assets/team/heads/jatin.jpeg";
 import Lokesh from "../assets/team/heads/Lokesh.jpg";
 import Neeraj from "../assets/team/heads/neeraj.jpg";
 import Nikhil from "../assets/team/heads/nikhil.jpg";
+import Nimish from '../assets/team/heads/Nimish.jpeg'
 import Prashant from "../assets/team/heads/prashant.jpg";
 import Priyanshu from "../assets/team/heads/Priyanshu.jpg";
 import Sahithi from "../assets/team/heads/sahithi.jpg";
@@ -204,7 +205,7 @@ const TEAM_DATA = {
     },
     {
       name: "Nimish Gadge",
-      image: null,
+      image: Nimish,
       designation: "Sponsorship Head",
       email: "nimishgadge@kgpian.iitkgp.ac.in",
     },
