@@ -1,14 +1,12 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import EVENT_DATA from "../../CardData/EventData.jsx";
 import { useAuth } from "../../AppContext/AppContext.jsx";
 
-
-
-import Loader from 'react-spinner-loader';
-import { Spinner } from "@chakra-ui/react";
+import { Spinner, useDisclosure } from "@chakra-ui/react";
+import ErrorModal from "../../components/ErrorModal/index.jsx";
 // import 'react-spinner-loader/dist/index.css';
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
@@ -17,11 +15,14 @@ const EventRegistration = () => {
   const { eventName, eventType } = useParams();
   const { user } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({ title: "", text: "" });
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [registered, setRegisterd] = useState(false);
   const navigate = useNavigate();
 
   const EVENT = useMemo(() => {
     return EVENT_DATA.find(
-      (event) => event.name == eventName && event.category == eventType,
+      (event) => event.name == eventName && event.category == eventType
     );
   }, [eventName, eventType]);
 
@@ -41,7 +42,7 @@ const EventRegistration = () => {
     setTeamMembers(
       Array.from({ length: minTeamSize }, () => ({
         ...{ name: "", rollNo: "", email: "", phone: "" },
-      })),
+      }))
     );
   }, [minTeamSize]);
 
@@ -73,7 +74,7 @@ const EventRegistration = () => {
             member.name.trim() !== "" &&
             member.rollNo.trim() !== "" &&
             member.email.trim() !== "" &&
-            member.phone.trim() !== "",
+            member.phone.trim() !== ""
         )
       ) {
         try {
@@ -88,52 +89,55 @@ const EventRegistration = () => {
               headers: {
                 Authorization: `Bearer ${user.token}`,
               },
-            },
+            }
           );
 
           if (response.status === 200) {
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
             setLoading(false);
-            navigate("/events");
-          } else if (response.status === 400) {
-            setLoading(false);
-            alert("Bad Request:", response?.data?.message);
-            setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+            setMessage({
+              title: "Success",
+              text: "Team Registered Successfully!",
+            });
+            setRegisterd(true);
+            onOpen();
           } else {
-            setLoading(false);
-            alert(
-              "Some Error Occured, please try again or contact the respective point of contact",
-            );
             setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+            setLoading(false);
+            setMessage({
+              title: "Error",
+              text: "Some Error Occured, please try again or contact the respective point of contact",
+            });
+            setRegisterd(false);
+            onOpen();
           }
         } catch (error) {
-          if (error.response) {
-            if (error.response.status === 400) {
-              setLoading(false);
-              alert("Bad Request:", error?.response?.data?.message);
-            } else {
-              setLoading(false);
-              alert(
-                "Some Error Occured, please try again or contact the respective point of contact",
-              );
-            }
-          } else {
-            setLoading(false);
-            alert(
-              "Some Error Occured, please try again or contact the respective point of contact",
-            );
-          }
           setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+          setLoading(false);
+          setMessage({
+            title: "Error",
+            text: "Some Error Occured, please try again or contact the respective point of contact",
+          });
+          setRegisterd(false);
+          onOpen();
         }
       } else {
         setLoading(false);
-        alert(
-          "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)",
-        );
+        setMessage({
+          title: "Error",
+          text: "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)",
+        });
+        setRegisterd(false);
+        onOpen();
       }
     } else {
       setLoading(false);
-      alert(`Team size should be between ${minTeamSize} and ${maxTeamSize}`);
+      setMessage({
+        title: "Error",
+        text: `Team size should be between ${minTeamSize} and ${maxTeamSize}`
+      });
+      setRegisterd(false);
+      onOpen();
     }
   };
 
@@ -161,6 +165,18 @@ const EventRegistration = () => {
         animate="visible"
         variants={containerVariants}
       >
+        <ErrorModal
+          isOpen={isOpen}
+          onClose={() => {
+            if (registered) {
+              navigate("/events");
+              onClose();
+            } else {
+              onClose();
+            }
+          }}
+          message={message}
+        />
         <h2 className="text-2xl mb-4 capitalize">
           Event Registration - {`${EVENT.name} (${EVENT.category})`}
         </h2>
@@ -232,13 +248,17 @@ const EventRegistration = () => {
             className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
             variants={itemVariants}
           >
-            {loading ?  <Spinner
-  thickness='4px'
-  speed='0.65s'
-  emptyColor='gray.200'
-  color='red.500'
-  size='xl'
-/> : "Submit" }
+            {loading ? (
+              <Spinner
+                thickness="4px"
+                speed="0.65s"
+                emptyColor="gray.200"
+                color="red.500"
+                size="xl"
+              />
+            ) : (
+              "Submit"
+            )}
           </motion.button>
         </div>
       </motion.div>
