@@ -182,7 +182,7 @@ const TEAM_DATA = {
       name: "Lokesh Agarwala",
       image: Lokesh,
       designation: "Finance and Sponsorship Head",
-      email: "lokesh_agarwala@kgpian.iitkgp.ac.in",
+      email: "lokesh.agarwala@shaurya-iitkgp.org",
       facebook: "https://www.facebook.com/profile.php?id=100074403405010",
       linkedin: "http://www.linkedin.com/in/lokeshagarwala",
     },
