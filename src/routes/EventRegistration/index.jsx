@@ -158,7 +158,7 @@ const EventRegistration = () => {
   };
 
   return (
-    <motion.div className="flex flex-col items-center justify-center py-4 px-4 h-full w-full bg-black text-white">
+    <motion.div className="flex flex-col items-center justify-center py-4 px-4 h-full w-full text-white">
       <motion.div
         className="bg-gray-800 p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
         initial="hidden"
