@@ -33,10 +33,6 @@ function App() {
         component: <TeamsPage />,
       },
       {
-        path: "signup",
-        component: <OptionToLogin />,
-      },
-      {
         path: "register/event/:eventName/:eventType",
         component: isAuthenticated ? (
           <EventRegistration />
@@ -54,8 +50,7 @@ function App() {
       },
     ];
     return RoutingPaths;
-  }, []);
-
+  }, [isAuthenticated]);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

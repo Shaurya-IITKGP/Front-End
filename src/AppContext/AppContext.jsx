@@ -20,7 +20,13 @@ export const useAuth = () => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
 
-  const isAuthenticated = useMemo(() => !!user.token, [user.token]);
+  const isAuthenticated = useMemo(() => {
+    if (user.token) {
+      return true;
+    } else {
+      return false;
+    }
+  }, [user.token]);
 
   const login = (userData, token) => {
     const newUser = { ...userData, token: token };
