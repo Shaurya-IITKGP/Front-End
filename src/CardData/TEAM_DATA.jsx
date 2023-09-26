@@ -23,16 +23,16 @@ import Shubham from "../assets/team/heads/shubham.png";
 import Siddharth from "../assets/team/heads/siddharth.jpg";
 import Vaibhav from "../assets/team/heads/vaibhav.png";
 import Yashwanth from "../assets/team/heads/yashwanth.jpg";
-
+import Rohan from "../assets/team/heads/Rohan.jpg";
 // SComs
-import Tejesh from '../assets/team/scoms/Tejesh.jpg'
-import Grace from '../assets/team/scoms/Grace.jpg'
-import Jay from '../assets/team/scoms/Jay.jpg'
-import Karanveer from '../assets/team/scoms/Karanveer.jpg'
-import Keerthy from '../assets/team/scoms/Keerthy.jpg'
-import Sumit from '../assets/team/scoms/Sumit.jpeg'
-import Ushashri from '../assets/team/scoms/Ushashri.jpg'
-import Greeshma from '../assets/team/scoms/Greeshma.jpg'
+import Tejesh from "../assets/team/scoms/Tejesh.jpg";
+import Grace from "../assets/team/scoms/Grace.jpg";
+import Jay from "../assets/team/scoms/Jay.jpg";
+import Karanveer from "../assets/team/scoms/Karanveer.jpg";
+import Keerthy from "../assets/team/scoms/Keerthy.jpg";
+import Sumit from "../assets/team/scoms/Sumit.jpeg";
+import Ushashri from "../assets/team/scoms/Ushashri.jpg";
+import Greeshma from "../assets/team/scoms/Greeshma.jpg";
 
 const TEAM_DATA = {
   "EXECUTIVE HEADS": [
@@ -245,9 +245,12 @@ const TEAM_DATA = {
     },
     {
       name: "Rohan R. Barsagade",
-      image: null,
+      image: Rohan,
       designation: "Web Head",
       email: "rohan842@kgpian.iitkgp.ac.in",
+      linkedin: "https://www.linkedin.com/in/r-barsagade/",
+      instagram: "https://www.instagram.com/rohan_b_84/",
+      faceboook: "https://www.facebook.com/profile.php?id=100076243115527"
     },
     {
       name: "S.Siddharth",
