@@ -415,7 +415,7 @@ const TEAM_DATA = {
       instagram: null,
     },
     {
-      name: "Gangavarapu Greeshma Siri",
+      name: "Greeshma Siri Gangavarapu",
       image: Greeshma,
       designation: null,
       email: null,
