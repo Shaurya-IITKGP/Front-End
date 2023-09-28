@@ -6,6 +6,7 @@ import {
   ComingSoon,
   OptionToLogin,
   SignInPage,
+  SponsorPage,
 } from "./routes";
 
 //Importing External Libraries
@@ -27,6 +28,10 @@ function App() {
       {
         path: "events",
         component: <EventsPage />,
+      },
+      {
+        path: "sponsors",
+        component: <SponsorPage />,
       },
       {
         path: "teams",
