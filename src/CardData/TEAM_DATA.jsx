@@ -17,7 +17,7 @@ import Neeraj from "../assets/team/heads/neeraj.jpg";
 import Nikhil from "../assets/team/heads/nikhil.jpg";
 import Nimish from '../assets/team/heads/Nimish.jpeg'
 import Prashant from "../assets/team/heads/prashant.jpg";
-import Priyanshu from "../assets/team/heads/Priyanshu.jpg";
+import Priyanshu from "../assets/team/heads/priyanshu.png";
 import Sahithi from "../assets/team/heads/sahithi.jpg";
 import Sanyam from "../assets/team/heads/sanyam.jpg";
 import Shubham from "../assets/team/heads/shubham.png";
@@ -25,6 +25,14 @@ import Siddharth from "../assets/team/heads/siddharth.jpg";
 import Vaibhav from "../assets/team/heads/vaibhav.png";
 import Yashwanth from "../assets/team/heads/yashwanth.jpg";
 import Rohan from "../assets/team/heads/Rohan.jpg";
+import Aditya from "../assets/team/heads/Aditya.jpg";
+import Akshat from "../assets/team/heads/Akshat.jpg";
+import Raghuvar from "../assets/team/heads/Raghuvar.jpg";
+import jayansh from "../assets/team/heads/jayansh.jpg";
+import Somyajeet from "../assets/team/heads/Somyajeet.jpg";
+import rishi from "../assets/team/heads/rishi.jpg";
+import Prajay from "../assets/team/heads/Prajay.jpg";
+
 // SComs
 import Tejesh from "../assets/team/scoms/Tejesh.jpg";
 import Grace from "../assets/team/scoms/Grace.jpg";
@@ -34,6 +42,17 @@ import Keerthy from "../assets/team/scoms/Keerthy.jpg";
 import Sumit from "../assets/team/scoms/Sumit.jpeg";
 import Ushashri from "../assets/team/scoms/Ushashri.jpg";
 import Greeshma from "../assets/team/scoms/Greeshma.jpg";
+import pankaj from "../assets/team/scoms/pankaj.jpg";
+import Minal from "../assets/team/scoms/Minal.jpg";
+import Saurabh from "../assets/team/scoms/Saurabh.jpg";
+import Luv from "../assets/team/scoms/Luv.jpg";
+import Kaushal from "../assets/team/scoms/Kaushal.jpg";
+import Sanjeev from "../assets/team/scoms/Sanjeev.jpg";
+import Tanmay from "../assets/team/scoms/Tanmay.jpg";
+import Soham from "../assets/team/scoms/Soham.jpg";
+import Akshay from "../assets/team/scoms/Akshay.jpg";
+import Aman from "../assets/team/scoms/Aman.jpg";
+
 
 const TEAM_DATA = {
   "EXECUTIVE HEADS": [
@@ -51,6 +70,7 @@ const TEAM_DATA = {
       image: Jyothiraditya,
       designation: "General Secretary Sports and Games",
       email: "jyothiraditya29@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ssvkss-jyothiraditya-21200322b/",
     },
     {
       name: "Shreya Mishra",
@@ -66,7 +86,7 @@ const TEAM_DATA = {
   HEADS: [
     {
       name: "Aditya G Gaikwad",
-      image: null,
+      image: Aditya,
       designation: "Sponsorship Head",
       email: "adityagaikwad@kgpian.iitkgp.ac.in",
       facebook:
@@ -75,9 +95,12 @@ const TEAM_DATA = {
     },
     {
       name: "Akshat Dilip Lade",
-      image: null,
+      image: Akshat,
       designation: "Sponsorship Head",
       email: "akshatlade@kgpian.iitkgp.ac.in",
+      instagram : "https://www.instagram.com/akshatlade/",
+      facebook : "https://m.facebook.com/p/Akshat-Lade-100074776411502/",
+      linkedin : "https://www.linkedin.com/in/akshat-lade-0b3a33223",
     },
     {
       name: "Akula Tejaswini",
@@ -97,6 +120,7 @@ const TEAM_DATA = {
       facebook: "https://www.facebook.com/profile.php?id=100075405404571",
       linkedin:
         "https://www.linkedin.com/in/anushka-singh-285482227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVTWzVMydQAyj14D61CR7eA%3D%3D",
+        instagram:"https://www.instagram.com/anushkaa_.singh/",
     },
     {
       name: "Archie Avirati",
@@ -106,6 +130,7 @@ const TEAM_DATA = {
       facebook:
         "https://www.facebook.com/profile.php?id=100074750037795&mibextid=b06tZ0",
       linkedin: "https://www.linkedin.com/in/archieavirati",
+      instagram:"https://www.instagram.com/archie__13/",
     },
     {
       name: "Atharva chilwarwar",
@@ -173,11 +198,12 @@ const TEAM_DATA = {
     },
     {
       name: "Jayansh Maheshwari",
-      image: null,
+      image: jayansh,
       designation: "Accomodation and Guest Reception Head",
       email: "jayanshmaheshwari@gmail.com",
-      facebook: "",
-      linkedin: "",
+      facebook: "https://www.facebook.com/jayansh.maheshwari/",
+      linkedin: "https://www.linkedin.com/in/jayansh-maheshwari",
+      instagram:"",
     },
     {
       name: "Lokesh Agarwala",
@@ -208,11 +234,14 @@ const TEAM_DATA = {
       image: Nimish,
       designation: "Sponsorship Head",
       email: "nimishgadge@kgpian.iitkgp.ac.in",
+      linkedin: "https://www.linkedin.com/in/nimish-gadge-b49a57215",
+      facebook:"https://www.facebook.com/profile.php?id=100075423192873",
     },
     {
       name: "Prajay",
-      image: null,
+      image: Prajay,
       designation: "Sponsorship Head",
+      instagram : "https://instagram.com/prajaymudavath?igshid=NzZhOTFlYzFmZQ",
       email: "mudavathprajay@kgpian.iitkgp.ac.in",
     },
     {
@@ -234,13 +263,15 @@ const TEAM_DATA = {
     },
     {
       name: "Raghuvar Srivastava",
-      image: null,
+      image: Raghuvar,
       designation: "Sponsorship Head",
       email: "raghuvarsrivastava@kgpian.iitkgp.ac.in",
+      instagram:"",
+      linkedin: "https://www.linkedin.com/in/aditya-g-gaikwad-155a67229",
     },
     {
       name: "Rishi Dhoble",
-      image: null,
+      image: rishi,
       designation: "Events Head",
       email: "Rishisd@kgpian.iitkgp.ac.in",
     },
@@ -263,7 +294,7 @@ const TEAM_DATA = {
       instagram: "https://www.instagram.com/siddharth.sabhari.shankar/",
       facebook: "https://www.facebook.com/siddharth.sabharishankar/",
     },
-    {
+    /*{
       name: "Sanyam Jhuria",
       image: Sanyam,
       designation: "Sponsorship Head",
@@ -273,10 +304,10 @@ const TEAM_DATA = {
         "https://instagram.com/sanyam_jhuria?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
       facebook:
         "https://www.facebook.com/profile.php?id=100077283706839&mibextid=ZbWKwL",
-    },
+    },*/
     {
       name: "Somyajeet Gupta Chowdhury",
-      image: null,
+      image: Somyajeet,
       designation: "Web Head",
       email: "somya.chowdhury@kgpian.iitkgp.ac.in",
     },
@@ -317,18 +348,18 @@ const TEAM_DATA = {
   "STEERING COMMITTEE": [
     {
       name: "Tanmay Malatkar",
-      image: null,
+      image: Tanmay,
       designation: null,
       email: null,
-      facebook: null,
-      linkedin: null,
-      instagram: null,
+      facebook: "https://www.facebook.com/tanmay.malatkar",
+      linkedin: "https://www.linkedin.com/in/tanmay-malatkar-ba023a1b9/",
+      instagram: "https://www.instagram.com/tanmay_malatkar/",
     },
     {
       name: "Sumit Chaudhari",
       image: Sumit,
       designation: null,
-      email: null,
+      email: "sumitchaudhari942@gmail.com",
       facebook: null,
       linkedin: null,
       instagram: null,
@@ -344,9 +375,9 @@ const TEAM_DATA = {
     },
     {
       name: "Ganji Sanjeev Raj",
-      image: null,
+      image: Sanjeev,
       designation: null,
-      email: null,
+      email: "sanjeevrajganji@gmail.com",
       facebook: null,
       linkedin: null,
       instagram: null,
@@ -362,9 +393,9 @@ const TEAM_DATA = {
     },
     {
       name: "Soham Sen",
-      image: null,
+      image: Soham,
       designation: null,
-      email: null,
+      email: "sohamsendev@gmail.com",
       facebook: null,
       linkedin: null,
       instagram: null,
@@ -373,7 +404,7 @@ const TEAM_DATA = {
       name: "Jay Chaudhari",
       image: Jay,
       designation: null,
-      email: null,
+      email: "jaychaudhari2407@gmail.com",
       facebook: null,
       linkedin: null,
       instagram: null,
@@ -382,34 +413,34 @@ const TEAM_DATA = {
       name: "Karanveer",
       image: Karanveer,
       designation: null,
-      email: null,
+      email: "karanveer@kgpian.iitkgp.ac.in",
       facebook: null,
       linkedin: null,
       instagram: null,
     },
     {
       name: "Aman Sagar",
-      image: null,
+      image: Aman,
       designation: null,
-      email: null,
-      facebook: null,
-      linkedin: null,
-      instagram: null,
+      email: "amansagarziddy@gmail.com",
+      facebook: "https://www.facebook.com/profile.php?id=100073504737330&mibextid=ZbWKwL",
+      linkedin: "https://www.linkedin.com/in/aman-sagar-96b24022a/",
+      instagram: "https://www.instagram.com/invites/contact/?i=hpbpry33424d&utm_content=fdqvjzr",
     },
     {
       name: "Pankaj guriyan",
-      image: null,
+      image: pankaj,
       designation: null,
-      email: null,
-      facebook: null,
-      linkedin: null,
-      instagram: null,
+      email: "guriyanpankaj@gmail.com",
+      facebook: "https://www.facebook.com/pankaj.guriyan.90",
+      linkedin: "https://www.linkedin.com/in/pankaj-guriyan-2343481b7",
+      instagram: "https://instagram.com/pankaj__guriyan?igshid=MzMyNGUyNmU2YQ==",
     },
     {
       name: "Akshaay",
-      image: null,
+      image: Akshay,
       designation: null,
-      email: null,
+      email: "akshay1234avi@gmail.com",
       facebook: null,
       linkedin: null,
       instagram: null,
@@ -452,39 +483,39 @@ const TEAM_DATA = {
     },
     {
       name: "Luv Singh",
-      image: null,
+      image: Luv,
       designation: null,
-      email: null,
+      email: "luvasingh@gmail.com",
       facebook: null,
       linkedin: null,
-      instagram: null,
+      instagram: "https://instagram.com/_luvingh_?igshid=NzZhOTFlYzFmZQ",
     },
     {
       name: "Saurabh Nagarkoti",
-      image: null,
+      image: Saurabh,
       designation: null,
-      email: null,
+      email: "saurabhnagarkoti.iitkgp@gmail.com",
       facebook: null,
-      linkedin: null,
-      instagram: null,
+      linkedin: "https://www.linkedin.com/in/saurabh-nagarkoti/",
+      instagram: "https://instagram.com/saurabh_nagarkoti_03?igshid=NzZhOTFlYzFmZQ==",
     },
     {
       name: "Kaushal",
-      image: null,
+      image: Kaushal,
       designation: null,
-      email: null,
+      email: "kaushalbharadia1@gmail.com",
       facebook: null,
-      linkedin: null,
+      linkedin: "https://www.linkedin.com/in/kaushalhere/",
       instagram: null,
     },
     {
       name: "Minal Moon",
-      image: null,
+      image: Minal,
       designation: null,
-      email: null,
+      email: "minalajaymoon@kgpian.iitkgp.ac.in",
       facebook: null,
-      linkedin: null,
-      instagram: null,
+      linkedin: "https://www.linkedin.com/in/minal-moon-119884200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      instagram: "https://instagram.com/minal__moon_?igshid=NzZhOTFlYzFmZQ==",
     },
   ],
 };
