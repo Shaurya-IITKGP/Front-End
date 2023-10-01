@@ -2,6 +2,10 @@ import React from "react";
 import avatar from "./assets/avatar.svg";
 import bg from "./assets/bg.svg";
 import wave from "./assets/wave.png";
+import ball from "./assets/soccer.svg";
+import college from "./assets/school.png";
+import bk from "./assets/bk.png";
+
 import "https://kit.fontawesome.com/a81368914c.js";
 import { useState } from "react";
 import { Formik } from "formik";
@@ -76,24 +80,24 @@ const RegisterPage = () => {
     <>
       <img
         className="wave box-border m-0 p-0 overflow-hidden fixed h-full z-[-1] left-0 bottom-0 max-[900px]:hidden"
-        src={wave}
+        src={bk}
       />
       <ErrorModal isOpen={isOpen} onClose={onClose} message={message} />
       <div className="container box-border m-0 p-0 overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
         <div className="img flex items-center justify-end max-[900px]:hidden">
-          <img
+          {/* <img
             loading="lazy"
-            src={bg}
-            className="w-[500px] max-[1000px]:w-[400px]"
-          />
+            src={ball}
+            className="w-[500px] max-[1000px]:w-[400px] animate-bounce w-[250px] mr-[10rem] mt-[5rem] overflow-hidden"
+          /> */}
         </div>
-        <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center max-[900px]:justify-center">
+        <div className="login-content flex min-[900px]:ml-[5rem] justify-start items-center max-[900px]:justify-center">
           <Formik
             initialValues={{ username: "", password: "" }}
             onSubmit={async (values, { resetForm }) => {
               onCollegeLogin(values, resetForm);
             }}
-          >
+          > 
             {({
               values,
               errors,
@@ -106,11 +110,11 @@ const RegisterPage = () => {
                 className="w-[360px] max-[1000px]:w-[290px]"
                 onSubmit={handleSubmit}
               >
-                <img
+                {/* <img
                   loading="lazy"
-                  src={avatar}
+                  src={college}
                   className="h-[100px] block m-auto"
-                />
+                /> */}
                 <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
                   College Login
                 </h2>
@@ -118,14 +122,14 @@ const RegisterPage = () => {
                   <input
                     type="text"
                     id="username"
-                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[#32be8f] peer"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[orange] peer"
                     placeholder=" "
                     onChange={handleChange}
                     value={values.username}
                   />
                   <label
                     htmlFor="username"
-                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[#32be8f] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     College ID
                   </label>
@@ -135,14 +139,14 @@ const RegisterPage = () => {
                   <input
                     type="password"
                     id="password"
-                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#32be8f] focus:outline-none focus:ring-0 focus:border-[#32be8f] peer"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[orange] focus:outline-none focus:ring-0 focus:border-[orange] peer"
                     placeholder=" "
                     onChange={handleChange}
                     value={values.password}
                   />
                   <label
                     htmlFor="password"
-                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[#32be8f] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Password
                   </label>
@@ -151,7 +155,7 @@ const RegisterPage = () => {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="btn block w-full h-[50px] items-center flex justify-center bg-[#32be8f] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-[#32be8fad]"
+                  className=""
                 >
                   {loading ? (
                     <Spinner
@@ -162,7 +166,13 @@ const RegisterPage = () => {
                       size="lg"
                     />
                   ) : (
-                    "Login"
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+<span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+</span>
+<span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Login</span>
+<span class="relative invisible">Login</span>
+</a>
                   )}
                 </button>
               </form>

@@ -3,6 +3,7 @@ import s from "./landing.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../AppContext/AppContext";
+import Highlights from "../../components/highlights";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const LandingPage = () => {
         <div>
           <img loading="lazy" className="w-screen" src="" alt="" />
         </div>
+      <Highlights/>
       </div>
     </>
   );

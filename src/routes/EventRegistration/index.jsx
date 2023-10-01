@@ -7,6 +7,13 @@ import { useAuth } from "../../AppContext/AppContext.jsx";
 
 import { Spinner, useDisclosure } from "@chakra-ui/react";
 import ErrorModal from "../../components/ErrorModal/index.jsx";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+import { BsPlusLg } from 'react-icons/bs'
+import { BsFillPlusCircleFill } from 'react-icons/bs'
+
+
+
+
 // import 'react-spinner-loader/dist/index.css';
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
@@ -160,7 +167,7 @@ const EventRegistration = () => {
   return (
     <motion.div className="flex flex-col items-center justify-center py-4 px-4 h-full w-full text-white">
       <motion.div
-        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
+        className="bg-zinc-800 bg-linear-gradient(#141e30, #2a6c56) p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -173,79 +180,123 @@ const EventRegistration = () => {
               onClose();
             } else {
               onClose();
-            }
+            } a
           }}
           message={message}
         />
-        <h2 className="text-2xl mb-4 capitalize">
-          Event Registration - {`${EVENT.name} (${EVENT.category})`}
+        <div className="text-4xl mb-4  text-center capital uppercase text-green-500">
+          Event Registration
+        </div>
+
+        <h2 className="text-2xl mb-4  text-center capital uppercase text-green-500">
+          {`${EVENT.name} (${EVENT.category})`}
         </h2>
         <div className="">
           {teamMembers.map((member, index) => (
             <React.Fragment key={index}>
-              <div className="">Player {index + 1}</div>
+              <div className="mb-[20px] text-green-500">Player {index + 1}</div>
               <motion.div
                 key={index}
                 className="grid grid-cols-1 mb-8 md:grid-cols-2 gap-4"
                 variants={itemVariants}
               >
-                <input
-                  type="text"
-                  placeholder="Enter Name"
-                  name="name"
-                  value={member.name}
-                  onChange={(e) => handleInputChange(index, e)}
-                  className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-                />
-                <input
-                  type="text"
-                  placeholder="Enter Roll Number"
-                  name="rollNo"
-                  value={member.rollNo}
-                  onChange={(e) => handleInputChange(index, e)}
-                  className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-                />
-                <input
-                  type="email"
-                  placeholder="Enter Email"
-                  name="email"
-                  value={member.email}
-                  onChange={(e) => handleInputChange(index, e)}
-                  className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-                />
-                <input
-                  type="tel"
-                  placeholder="Enter Phone Number"
-                  name="phone"
-                  value={member.phone}
-                  onChange={(e) => handleInputChange(index, e)}
-                  className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-                />
+
+                <div className="relative z-0 mb-8">
+                  <input
+                    type="text"
+                    id={"name-" + index}
+                    name="name"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[orange] peer"
+                    placeholder=" "
+                    onChange={(e) => handleInputChange(index, e)}
+                    value={member.name}
+                  />
+                  <label
+                    htmlFor={"name-" + index}
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Player Name
+                  </label>
+                </div>
+                <div className="relative z-0 mb-8">
+                  <input
+                    type="text"
+                    id={"rollNo-" + index}
+                    name="rollNo"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[orange] peer"
+                    placeholder=" "
+                    onChange={(e) => handleInputChange(index, e)}
+                    value={member.rollNo}
+                  />
+                  <label
+                    htmlFor={"rollNo-" + index}
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Roll No
+                  </label>
+                </div>
+                <div className="relative z-0 mb-8">
+                  <input
+                    type="text"
+                    id={"email-" + index}
+                    name="email"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[orange] peer"
+                    placeholder=" "
+                    onChange={(e) => handleInputChange(index, e)}
+                    value={member.email}
+                  />
+                  <label
+                    htmlFor={"email-" + index}
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Email
+                  </label>
+                </div>
+                <div className="relative z-0 mb-8">
+                  <input
+                    type="text"
+                    id={"phone-" + index}
+                    name="phone"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[orange] peer"
+                    placeholder=" "
+                    onChange={(e) => handleInputChange(index, e)}
+                    value={member.phone}
+                  />
+                  <label
+                    htmlFor={"phone-" + index}
+                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[orange] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Phone No
+                  </label>
+                </div>
+
+                
                 <motion.button
                   onClick={() => handleRemoveMember(index)}
-                  className="p-2 w-[100px] bg-red-500 text-white rounded-lg hover:bg-red-600"
+                  className="p-2 w-[100px] hover:text-red-600 duration-[0.5s] ease-in-out"
                   variants={itemVariants}
                 >
-                  Remove
+                  <RiDeleteBin2Fill className="inline mr-[5px]" />Remove
                 </motion.button>
               </motion.div>
             </React.Fragment>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-4 ">
           {teamMembers.length < maxTeamSize && (
             <motion.button
               onClick={handleAddMember}
-              className="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 mr-4"
+              className="text-white mr-4 hover:text-yellow-600 duration-[0.5s] ease-in-out"
               variants={itemVariants}
             >
-              Add Team Member
+
+              <BsPlusLg className="inline mr-[5px]" />Add Player
             </motion.button>
           )}
 
           <motion.button
             onClick={handleSubmit}
-            className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className=""
             variants={itemVariants}
           >
             {loading ? (
@@ -257,8 +308,16 @@ const EventRegistration = () => {
                 size="xl"
               />
             ) : (
-              "Submit"
+              <a href="#_" class="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-500 rounded-full shadow-md group">
+                <span class="absolute inset-0 flex items-center justify-center w
+                .................0-full h-full text-white duration-300 -translate-x-full bg-green-500 group-hover:translate-x-0 ease">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </span>
+                <span class="absolute flex items-center justify-center w-full h-full text-green-500 transition-all duration-300 transform group-hover:translate-x-full ease">SUBMIT</span>
+                <span class="relative invisible">SUBMIT</span>
+              </a>
             )}
+
           </motion.button>
         </div>
       </motion.div>
