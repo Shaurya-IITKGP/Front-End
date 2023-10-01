@@ -282,7 +282,7 @@ const TEAM_DATA = {
       email: "rohan842@kgpian.iitkgp.ac.in",
       linkedin: "https://www.linkedin.com/in/r-barsagade/",
       instagram: "https://www.instagram.com/rohan_b_84/",
-      faceboook: "https://www.facebook.com/profile.php?id=100076243115527"
+      facebook: "https://www.facebook.com/profile.php?id=100076243115527"
     },
     {
       name: "S.Siddharth",
