@@ -60,7 +60,7 @@ export default function Navbar() {
       )}
       <div
         className={
-          "sticky top-0 z-20 shadow-[#222] shadow-sm flex items-center w-full md:justify-between bg-black md:px-16 px-4 py-4 text-orange-500"
+          "sticky top-0 z-20 flex items-center w-full md:justify-between backdrop-blur-sm md:px-16 px-4 py-4 text-white"
         }
       >
         <Link
@@ -73,27 +73,27 @@ export default function Navbar() {
             alt="SHAURYA - IIT Kharagpur"
           />
         </Link>
-        <div className={"flex gap-10 items-center font-mono font-semibold"}>
+        <div className={"flex gap-10 items-center font-semibold"}>
           <Link
-            className="transition-all hover:text-white hidden md:block"
+            className="hover:text-white hover:text-xl hidden md:block text-l transition-allg"
             to="/"
           >
             HOME
           </Link>
           <Link
-            className={"transition-all hover:text-white hidden md:block"}
+            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
             to="/events"
           >
             EVENTS
           </Link>
           <Link
-            className={"transition-all hover:text-white hidden md:block"}
+            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
             to="/sponsors"
           >
             SPONSORS
           </Link>
           <Link
-            className={"transition-all hover:text-white hidden md:block"}
+            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
             to="/teams"
           >
             TEAM

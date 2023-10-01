@@ -1,0 +1,37 @@
+.homePage {
+  background: url("../../assets/landing-page.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: bottom;
+  background-position-x: right;
+}
+
+@media screen and (max-width: 768px) {
+  .homePage {
+    background-position-x: 65%;
+  }
+}
+
+.eventsPage {
+  background: url("../../assets/events-page.jpg");
+  background-size: cover;
+  background-position-y: top;
+}
+
+.teamsPage {
+  background: url("../../assets/team-page.jpg");
+  background-size: cover;
+  background-position-y: center;
+}
+
+.sponsPage {
+  background: url("../../assets/spons-page.jpg");
+  background-size: cover;
+  background-position-y: center;
+}
+
+.loginPage {
+  background: url("../../assets/login-page.jpg");
+  background-size: cover;
+  background-position-y: bottom;
+}

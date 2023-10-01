@@ -4,9 +4,9 @@
   background-color: black;
 }
 
-.about_p {
+/* .about_p {
   font-family: "Roboto Slab", serif;
-}
+} */
 
 .about_flex {
   display: flex;
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
 
-  font-family: "Roboto Slab", serif;
+  /* font-family: "Roboto Slab", serif; */
 }
 @media only screen and (max-width: 1200px) {
   .about_head {

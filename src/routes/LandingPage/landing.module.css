@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Vina+Sans&family=Work+Sans&display=swap");
-
 @keyframes rightout {
   0% {
     margin-right: 0;
@@ -43,10 +41,6 @@
 .head {
   animation: opa 2s;
   font-size: 115px;
-  margin-left: 0;
-
-  font-family: "Roboto Slab", serif;
-
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -62,14 +56,10 @@
 
 .p1 {
   display: grid;
-  margin-left: -5px;
-  margin-top: 2%;
-
   font-size: 40px;
-  font-family: "Courier New", Courier, monospace;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid;
+  /* border-right: 2px solid; */
   width: 0;
   animation-delay: 2s;
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
@@ -80,9 +70,6 @@
     blinking 1s infinite;
 }
 .p2 {
-  font-family: "Times New Roman", Times, serif;
-
-  margin-top: 3%;
   animation: opa 2s;
 }
 .animate-charcter {
@@ -274,9 +261,6 @@
     width: 180px;
     left: 10px;
   }
-  .leftSide {
-    margin-left: -5rem;
-  }
   .img1 {
     margin-top: 3%;
     height: 500px;
@@ -297,9 +281,6 @@
     width: 180px;
     left: 10px;
   }
-  .leftSide {
-    margin-left: -5rem;
-  }
   .img1 {
     margin-top: 10%;
   }
@@ -307,9 +288,6 @@
 @media only screen and (max-width: 920px) {
   .head {
     font-size: 4rem;
-  }
-  .leftSide {
-    margin-left: -7rem;
   }
   .p1 {
     font-size: 1.5rem;
@@ -335,14 +313,6 @@
   .head {
     font-size: 5.2rem;
   }
-  .leftSide {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heading {
-    margin-left: 310px;
-  }
   .p1 {
     font-size: 2.2rem;
   }
@@ -366,14 +336,6 @@
 @media only screen and (max-width: 730px) {
   .head {
     font-size: 4.2rem;
-  }
-  .leftSide {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heading {
-    margin-left: 310px;
   }
   .p1 {
     font-size: 1.8rem;
@@ -399,15 +361,6 @@
   .head {
     font-size: 4.6rem;
   }
-  .leftSide {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heading {
-    margin-top: 5%;
-    margin-left: 230px;
-  }
   .p1 {
     font-size: 2rem;
   }
@@ -428,15 +381,6 @@
   .head {
     font-size: 4rem;
   }
-  .leftSide {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heading {
-    margin-top: 5%;
-    margin-left: 230px;
-  }
   .p1 {
     font-size: 1.8rem;
   }
@@ -456,15 +400,6 @@
 @media only screen and (max-width: 472px) {
   .head {
     font-size: 3.5rem;
-  }
-  .leftSide {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heading {
-    margin-top: 2%;
-    margin-left: 180px;
   }
   .p1 {
     font-size: 1.5rem;
@@ -491,3 +426,4 @@
   display: flex;
   justify-content: center;
 }
+

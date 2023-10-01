@@ -1,13 +1,13 @@
 .shining_text_animation {
   position: relative;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   text-transform: uppercase;
   font-size: 5em;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, #fff, #000);
+  background: linear-gradient(90deg, #0000, #fff, #0000);
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: animate 3s linear infinite;
+  animation: animate 5s alternate linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -20,9 +20,9 @@
 
 @keyframes animate {
   0% {
-    background-position: -500%;
+    background-position: -300%;
   }
   100% {
-    background-position: 500%;
+    background-position: 300%;
   }
 }
