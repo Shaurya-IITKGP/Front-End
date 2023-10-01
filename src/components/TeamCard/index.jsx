@@ -18,9 +18,9 @@ export const TeamCard = ({
 }) => {
   return (
     <div className={`max-w-xs min-w-[150px] ${css.speakerBlock}`}>
-      <div className={css.innerBox}>
-        <div className={css.imageBox}>
-          <div className={css.image}>
+      <div className={`rounded-xl ${css.innerBox}`}>
+        <div className={`rounded-xl ${css.imageBox}`}>
+          <div className={`rounded-xl ${css.image}`}>
             <img loading="lazy" src={image} alt={name} />
             <div className={css.socialLinks}>
               <ul className="flex justify-center items-center gap-2 wrap">
