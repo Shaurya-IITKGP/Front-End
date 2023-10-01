@@ -10,9 +10,17 @@ const TeamsPage = () => {
           EXECUTIVE HEADS
         </Heading>
         {TEAM_DATA["EXECUTIVE HEADS"]
-          .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
-          )
+          .sort((a, b) => {
+            const designationComparison = a.designation.localeCompare(
+              b.designation
+            );
+
+            if (designationComparison === 0) {
+              return a.name.localeCompare(b.name);
+            }
+
+            return designationComparison;
+          })
           .map((person, index) => (
             <TeamCard
               designation={person?.designation}
@@ -33,9 +41,16 @@ const TeamsPage = () => {
           STEERING COMMITTEE
         </Heading>
         {TEAM_DATA["STEERING COMMITTEE"]
-          .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
-          )
+          .sort((a, b) => {
+            let parity = 0;
+            if (a.designation && b.designation) {
+              const parity = a?.designation.localeCompare(b?.designation);
+            }
+            if (parity === 0) {
+              return a.name.localeCompare(b.name);
+            }
+            return parity;
+          })
           .map((person, index) => (
             <TeamCard
               designation={person?.designation}
@@ -56,9 +71,13 @@ const TeamsPage = () => {
           HEADS
         </Heading>
         {TEAM_DATA["HEADS"]
-          .sort((a, b) =>
-            a.name.toLowerCase().localeCompare(b.name.toLowerCase())
-          )
+          .sort((a, b) => {
+            const parity = a.designation.localeCompare(b.designation);
+            if (parity === 0) {
+              return a.name.localeCompare(b.name);
+            }
+            return parity;
+          })
           .map((person, index) => (
             <TeamCard
               designation={person?.designation}
