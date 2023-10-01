@@ -1,5 +1,10 @@
 .homePage {
-  background: url("../../assets/landing-page.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../assets/landing-page.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position-y: bottom;
@@ -8,7 +13,7 @@
 
 @media screen and (max-width: 768px) {
   .homePage {
-    background-position-x: 65%;
+    background-position-x: 80%;
   }
 }
 

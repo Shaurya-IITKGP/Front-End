@@ -3,12 +3,14 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Montserrat"],
-      display: ["Teko", "sans-serif"],
-      "badger-valley": ["Badger Valley", "sans-serif"],
+      logo: ["Keomot", "sans-serif"],
+      mont: ["Montserrat"],
+      badger: ["Badger Valley", "sans-serif"],
       caghen: ["Caghen Demo", "sans-serif"],
       cangste: ["Cangste", "sans-serif"],
-      "munich-sans": ["Munich Sans", "sans-serif"],
+      munich: ["Munich Sans", "sans-serif"],
+      bebas: ["BebasNeue", "sans-serif"],
+      helvetica: ['Helvetica']
     },
   },
   fontSize: {

@@ -75,7 +75,7 @@ export default function Navbar() {
         </Link>
         <div className={"flex gap-10 items-center font-semibold"}>
           <Link
-            className="hover:text-white hover:text-xl hidden md:block text-l transition-allg"
+            className="hover:text-white hover:text-xl hidden md:block text-lg transition-allg"
             to="/"
           >
             HOME

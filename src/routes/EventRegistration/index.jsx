@@ -35,7 +35,7 @@ const EventRegistration = () => {
   }, [EVENT]);
 
   const [teamMembers, setTeamMembers] = useState([
-    { name: "", rollNo: "", email: "", phone: "" },
+    { name: "", rollNo: "", email: "", phone: "", gender: EVENT.gender },
   ]);
 
   useEffect(() => {
@@ -134,7 +134,7 @@ const EventRegistration = () => {
       setLoading(false);
       setMessage({
         title: "Error",
-        text: `Team size should be between ${minTeamSize} and ${maxTeamSize}`
+        text: `Team size should be between ${minTeamSize} and ${maxTeamSize}`,
       });
       setRegisterd(false);
       onOpen();
