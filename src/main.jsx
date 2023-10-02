@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import "./input.css";
+import "./fonts.css";
+import "./main.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProvider } from "./AppContext/AppContext.jsx";
 
@@ -15,5 +16,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </BrowserRouter>
       </AppProvider>
     </ChakraProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

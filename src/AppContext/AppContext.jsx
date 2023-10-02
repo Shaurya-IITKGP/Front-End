@@ -20,7 +20,7 @@ export const useAuth = () => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
 
-  // const isAuthenticated = useMemo(() => {
+  // const iscated = useMemo(() => {
   //   if (user.token) {
   //     return true;
   //   } else {

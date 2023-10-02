@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Bricolage+Grotesque:opsz@10..48&family=Bungee&family=Lugrasimo&family=Roboto+Slab&family=Rubik+Wet+Paint&family=Special+Elite&family=Teko&family=Vina+Sans&family=Work+Sans&display=swap");
+
+.about_main {
+  background-color: black;
+}
+
+/* .about_p {
+  font-family: "Roboto Slab", serif;
+} */
+
+.about_flex {
+  display: flex;
+}
+.about {
+  background: linear-gradient(
+    to right,
+    hsl(193, 100%, 51%),
+    hsl(108, 88%, 48%)
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+
+  /* font-family: "Roboto Slab", serif; */
+}
+@media only screen and (max-width: 1200px) {
+  .about_head {
+    font-size: 90px;
+  }
+  .about {
+    font-size: 50px;
+  }
+
+  .about_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .about_head {
+    font-size: 5.2rem;
+    margin-left: 4rem;
+  }
+
+  .about_p {
+    font-size: 2.3rem;
+    margin-left: 30px;
+  }
+  .about_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about_head {
+    font-size: 3.5rem;
+    margin-left: 4rem;
+  }
+  .about {
+    font-size: 30px;
+    margin-left: 4rem;
+  }
+  .about_p {
+    font-size: 2.3rem;
+    margin-left: 30px;
+  }
+  .about_flex {
+    flex-direction: column;
+  }
+}

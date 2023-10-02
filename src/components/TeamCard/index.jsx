@@ -37,8 +37,8 @@ export const TeamCard = ({
           </div>
         </div>
         <div className={css.captionBox}>
-          <h4 className={css.name}>{name}</h4>
-          <span className={css.designation}>{designation}</span>
+          <h4 className={`font-bold ${css.name}`}>{name}</h4>
+          <span className={`font-bold ${css.designation}`}>{designation}</span>
         </div>
       </div>
     </div>
