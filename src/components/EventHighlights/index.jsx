@@ -69,7 +69,7 @@ export default function EventHighlights() {
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
             KNUCKLE PUSHUPS CHALLENGE
           </div>
-          <div className="px-10 pb-[10rem] text-xl max-[768px]:px-0">
+          <div className="px-10 text-xl max-[768px]:px-0">
             Ready to test your strength? 💪 Introducing the
             #ShauryaKnucklesChallenge – show us your power by conquering 10-15
             knuckles pushups! It's the perfect blend of challenge and
@@ -148,7 +148,7 @@ export default function EventHighlights() {
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
             SHAURYA YOGA QUEST CHALLENGE
           </div>
-          <div className="px-10 pb-[10rem] text-xl max-[768px]:px-0">
+          <div className="px-10 text-xl max-[768px]:px-0">
             Show us your strength, balance, and flexibility by performing any
             challenging yoga pose, and we'll feature it on our social media
             handles. 📸 Don't forget to tag us Shaurya, IIT Kharagpur and use
