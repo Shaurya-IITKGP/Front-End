@@ -33,7 +33,7 @@ import Somyajeet from "../assets/team/heads/Somyajeet.jpg";
 import rishi from "../assets/team/heads/rishi.jpg";
 import Prajay from "../assets/team/heads/Prajay.jpg";
 import Harsh from "../assets/team/heads/Harsh.jpg";
-
+import Prabodh from "../assets/team/scoms/Prabodh.jpg";
 // SComs
 import Tejesh from "../assets/team/scoms/Tejesh.jpg";
 import Grace from "../assets/team/scoms/Grace.jpg";
@@ -496,7 +496,7 @@ const TEAM_DATA = {
     },
     {
       name: "Prabodh kumar Singh",
-      image: null,
+      image:Prabodh,
       designation: "Logistics",
       email: "prabodhkumarsingh2000@gmail.com",
       facebook:"https://www.facebook.com/prabodhkumar.singh.50",
