@@ -28,7 +28,7 @@ export const useAuth = () => {
   //   }
   // }, [user.token]);
 
-  const isAuthenticated = true
+  const isAuthenticated = true;
 
   const login = (userData, token) => {
     const newUser = { ...userData, token: token };
@@ -51,5 +51,11 @@ export const useAuth = () => {
 };
 
 export function AppProvider({ children }) {
-  return <AppContext.Provider value={""}>{children}</AppContext.Provider>;
+  const [chevVisible, setChevVisible] = useState(true);
+  
+  return (
+    <AppContext.Provider value={{ chevVisible, setChevVisible }}>
+      {children}
+    </AppContext.Provider>
+  );
 }

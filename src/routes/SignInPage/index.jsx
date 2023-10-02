@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../AppContext/AppContext";
 import { Spinner, useDisclosure } from "@chakra-ui/react";
 import ErrorModal from "../../components/ErrorModal";
+import { BsArrowRight } from "react-icons/bs";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const RegisterPage = () => {
@@ -126,23 +127,34 @@ const RegisterPage = () => {
                   </label>
                 </div>
 
-                <button
-                  disabled={loading}
-                  type="submit"
-                  className="btn block w-full h-[50px] items-center flex justify-center border-[#0EA5E9] border-2 text-[1.2rem] text-[#0EA5E9] uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:text-white transition-all hover:bg-[#0EA5E9]"
-                >
+                <div className="flex justify-center">
                   {loading ? (
                     <Spinner
                       thickness="4px"
                       speed="0.65s"
                       emptyColor="gray.200"
-                      color="#E36914"
+                      color="#0EA5E9"
                       size="lg"
                     />
                   ) : (
-                    "Login"
+                    <>
+                      <button
+                        disabled={loading}
+                        type="submit"
+                        className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden transition-all transition-[0.5s] group border-[#0EA5E9] 
+                      border-2 text-[1.2rem] text-[#0EA5E9] uppercase cursor-pointer rounded-[25px] duration-300"
+                      >
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full text-white bg-[#0EA5E9] group-hover:translate-x-0 ease">
+                        <BsArrowRight className="text-3xl" />
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-[#0EA5E9] transition-all duration-300 transform group-hover:translate-x-full ease">
+                          LOGIN
+                        </span>
+                        <span class="relative invisible">LOGIN </span>
+                      </button>
+                    </>
                   )}
-                </button>
+                </div>
               </form>
             )}
           </Formik>

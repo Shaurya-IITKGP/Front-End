@@ -1,11 +1,14 @@
 import Navbar from "../Navbar/Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 import s from "./LayoutStyle.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { AppContext } from "../../AppContext/AppContext";
 
 export default function Layout() {
   const [clx, setClx] = useState(s.homePage);
   const location = useLocation();
+  const scrollRef = useRef(null);
+  const {setChevVisible} = useContext(AppContext);
 
   useEffect(() => {
     if (location.pathname == "/") {
@@ -21,8 +24,28 @@ export default function Layout() {
     }
   }, [location]);
 
+  useEffect(() => {
+    scrollRef?.current?.addEventListener("scroll", handleScroll);
+    return () => {
+      scrollRef?.current?.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  function handleScroll() {
+    const scrollPosition = scrollRef.current.scrollTop;
+    const disableHeight = 100;
+    if (scrollPosition > disableHeight) {
+      setChevVisible(false);
+    } else {
+      setChevVisible(true);
+    }
+  }
+
   return (
-    <div className={"flex flex-col h-screen overflow-scroll " + clx}>
+    <div
+      ref={scrollRef}
+      className={"flex flex-col h-screen overflow-auto " + clx}
+    >
       <Navbar />
       <div className="h-full flex-auto flex justify-stretch items-stretch">
         <Outlet />
