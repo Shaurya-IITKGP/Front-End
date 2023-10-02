@@ -113,12 +113,7 @@ export default function EventHighlights() {
             technology and sporting passion, the Technology Students' Gymkhana
             played host to an electrifying live stream of the Dutch Grand Prix.
             The event was hosted jointly by Shaurya, the Sports Fest of IIT
-            Kharagpur, and TeamKART. As the sun set, the Gymkhana foyer turned
-            into the sidelines of a racetrack as the screen was put up for the
-            stream. Under the watchful eyes of Rudra, the mascot of Shaurya
-            2023, the stream commenced at 6 PM as students, professors, staff,
-            and all curious passers-by joined us for the one-of-a-kind event. An
-            added attraction was the display of the official car of TeamKART,
+            Kharagpur, and TeamKART.An added attraction was the display of the official car of TeamKART,
             the K6, which bagged overall 8th in Formula Bharat 2023 and placed
             third in the Cost and Manufacturing event.
           </div>
