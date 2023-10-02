@@ -1,9 +1,9 @@
 .speakerBlock {
-  --social-bg: rgba(0, 0, 0, 0.9);
+  --social-bg: rgb(255, 255, 255);
   --image-overlay: #02013c;
   --border-clr: #fff;
-  --icon-clr: #fff;
-  --icon-hover-clr: #ed8936;
+  --icon-clr: #000000;
+  --icon-hover-clr: rgb(186,8,8);
 }
 
 .speakerBlock .imageBox {
@@ -74,6 +74,7 @@
   position: relative;
   padding: 20px 20px;
   text-align: center;
+  border-radius: 0.5rem;
   background-color: var(--social-bg);
 }
 
@@ -88,9 +89,11 @@
 }
 .socialLinks .icon {
   color: var(--icon-clr);
+  font-size: 2rem;
 }
 .socialLinks .icon:hover {
   color: var(--icon-hover-clr);
+  transition: all 0.4s ease;
 }
 .speakerBlock .captionBox .name {
   position: relative;
@@ -98,7 +101,6 @@
   font-size: 1.5rem;
   line-height: 1em;
   color: #ffffff;
-  font-weight: 400;
   margin-bottom: 0px;
 }
 
@@ -121,8 +123,7 @@
   display: block;
   font-size: 17px;
   line-height: 26px;
-  color: #ffffff;
-  font-weight: 400;
+  color: #fef08a;
   opacity: 0.7;
 }
 ul {

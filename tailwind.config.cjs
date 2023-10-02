@@ -3,7 +3,14 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      display: ["Teko", "sans-serif"],
+      logo: ["Keomot", "sans-serif"],
+      mont: ["Montserrat"],
+      badger: ["Badger Valley", "sans-serif"],
+      caghen: ["Caghen Demo", "sans-serif"],
+      cangste: ["Cangste", "sans-serif"],
+      munich: ["Munich Sans", "sans-serif"],
+      bebas: ["BebasNeue", "sans-serif"],
+      helvetica: ["Helvetica"],
     },
   },
   fontSize: {
@@ -22,4 +29,22 @@ module.exports = {
     },
   },
   plugins: [],
+  // theme: {
+  //   extend: {
+  //     keyframes: {
+  //       bounce: {
+  //         "0%, 100%": {
+  //           transform: "translateY(-25%)",
+  //         },
+  //         "50%": {
+  //           transform: "translateY(0)",
+  //         },
+  //       },
+  //     },
+  //     animation: {
+  //       bounce: "bounce 5s ease-in-out infinite ",
+  //     },
+  //   },
+  // },
+  // variants: {},
 };

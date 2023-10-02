@@ -18,25 +18,27 @@ export const TeamCard = ({
 }) => {
   return (
     <div className={`max-w-xs min-w-[150px] ${css.speakerBlock}`}>
-      <div className={css.innerBox}>
-        <div className={css.imageBox}>
-          <div className={css.image}>
+      <div className={`rounded-xl ${css.innerBox}`}>
+        <div className={`rounded-xl ${css.imageBox}`}>
+          <div className={`rounded-xl ${css.image}`}>
             <img loading="lazy" src={image} alt={name} />
-            <div className={css.socialLinks}>
-              <ul className="flex justify-center items-center gap-2 wrap">
-                <Socials
-                  linkedin={linkedin}
-                  mail={mail}
-                  facebook={facebook}
-                  instagram={instagram}
-                />
-              </ul>
-            </div>
+            {(mail || linkedin || instagram || facebook) && (
+              <div className={css.socialLinks}>
+                <ul className="flex justify-center items-center gap-2 wrap">
+                  <Socials
+                    linkedin={linkedin}
+                    mail={mail}
+                    facebook={facebook}
+                    instagram={instagram}
+                  />
+                </ul>
+              </div>
+            )}
           </div>
         </div>
         <div className={css.captionBox}>
-          <h4 className={css.name}>{name}</h4>
-          <span className={css.designation}>{designation}</span>
+          <h4 className={`font-bold ${css.name}`}>{name}</h4>
+          <span className={`font-bold ${css.designation}`}>{designation}</span>
         </div>
       </div>
     </div>
@@ -46,18 +48,30 @@ export const TeamCard = ({
 const Socials = ({ linkedin, mail, facebook, instagram }) => {
   return (
     <>
-      <a href={`mailto:${mail}`}>
-        <RiMailFill className={"text-2xl cursor-pointer " + css.icon} />
-      </a>
-      <a href={linkedin} target="_blank">
-        <RiLinkedinBoxFill className={"text-2xl cursor-pointer " + css.icon} />
-      </a>
-      <a href={facebook} target="_blank">
-        <RiFacebookBoxFill className={"text-2xl cursor-pointer " + css.icon} />
-      </a>
-      <a href={instagram} target="_blank">
-        <RiInstagramFill className={"text-2xl cursor-pointer " + css.icon} />
-      </a>
+      {mail && (
+        <a href={`mailto:${mail}`}>
+          <RiMailFill className={"text-2xl cursor-pointer " + css.icon} />
+        </a>
+      )}
+      {linkedin && (
+        <a href={linkedin} target="_blank">
+          <RiLinkedinBoxFill
+            className={"text-2xl cursor-pointer " + css.icon}
+          />
+        </a>
+      )}
+      {facebook && (
+        <a href={facebook} target="_blank">
+          <RiFacebookBoxFill
+            className={"text-2xl cursor-pointer " + css.icon}
+          />
+        </a>
+      )}
+      {instagram && (
+        <a href={instagram} target="_blank">
+          <RiInstagramFill className={"text-2xl cursor-pointer " + css.icon} />
+        </a>
+      )}
     </>
   );
 };

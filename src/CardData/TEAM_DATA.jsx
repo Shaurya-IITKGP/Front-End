@@ -32,8 +32,9 @@ import jayansh from "../assets/team/heads/jayansh.jpg";
 import Somyajeet from "../assets/team/heads/Somyajeet.jpg";
 import rishi from "../assets/team/heads/rishi.jpg";
 import Prajay from "../assets/team/heads/Prajay.jpg";
-import Harsh from "../assets/team/heads/Harsh.jpg";
 import Prabodh from "../assets/team/scoms/Prabodh.jpg";
+import Harshavardhan from "../assets/team/heads/harshavardhan.png";
+
 // SComs
 import Tejesh from "../assets/team/scoms/Tejesh.jpg";
 import Grace from "../assets/team/scoms/Grace.jpg";
@@ -174,8 +175,8 @@ const TEAM_DATA = {
       facebook: "https://www.facebook.com/gauransh.agarwal.50",
     },
     {
-      name: "Harshvardhan Malla",
-      image: Harsh,
+      name: "Harshavardhan Malla",
+      image: Harshavardhan,
       designation: "Design Head",
       email: "harshavardhanmalla1729@gmail.com",
       linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADuW71cBr9X1LFsQgYirVJZeumCEkAiAFY4&keywords=harshavardhan%20malla&origin=RICH_QUERY_SUGGESTION&position=0&searchId=513bd739-d3ea-4082-8ff4-c0aac778cd1f&sid=M!J&spellCorrectionEnabled=false",
@@ -300,7 +301,7 @@ const TEAM_DATA = {
       email: "rohan842@kgpian.iitkgp.ac.in",
       linkedin: "https://www.linkedin.com/in/r-barsagade/",
       instagram: "https://www.instagram.com/rohan_b_84/",
-      faceboook: "https://www.facebook.com/profile.php?id=100076243115527"
+      facebook: "https://www.facebook.com/profile.php?id=100076243115527"
     },
     {
       name: "S.Siddharth",
