@@ -165,9 +165,9 @@ const EventRegistration = () => {
   };
 
   return (
-    <motion.div className="flex flex-col items-center  py-4 px-4 h-full w-full text-white">
+    <motion.div className="flex flex-col items-center  py-4  px-4 h-full w-full text-white">
       <motion.div
-        className="bg-zinc-800 bg-linear-gradient(#141e30, #2a6c56) p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2"
+        className="bg-zinc-800 bg-linear-gradient(#141e30, #2a6c56) p-8 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2  scroll-smooth"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
