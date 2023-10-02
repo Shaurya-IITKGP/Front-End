@@ -4,7 +4,6 @@ import {
   EventsPage,
   TeamsPage,
   ComingSoon,
-  OptionToLogin,
   SignInPage,
   SponsorPage,
 } from "./routes";
@@ -15,6 +14,8 @@ import Layout from "./components/Layout/Layout";
 import EventRegistration from "./routes/EventRegistration";
 import { useEffect, useMemo } from "react";
 import { useAuth } from "./AppContext/AppContext";
+import DashboardProfile from "./routes/DashboardHome";
+import DashboardPlayers from "./routes/DashboardPlayers";
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -52,6 +53,14 @@ function App() {
       {
         path: "*",
         component: <ComingSoon />,
+      },
+      {
+        path: "dashboard",
+        component: <DashboardProfile />,
+      },
+      {
+        path: "dashboard/:sport",
+        component: <DashboardPlayers />,
       },
     ];
     return RoutingPaths;
