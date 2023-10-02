@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import "https://kit.fontawesome.com/64d58efce2.js";
 import { useState } from "react";
 
 const Portal = () => {

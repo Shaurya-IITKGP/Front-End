@@ -1,7 +1,4 @@
 import React from "react";
-import avatar from "./assets/avatar.svg";
-import bg from "./assets/bg.svg";
-import wave from "./assets/wave.png";
 import "https://kit.fontawesome.com/a81368914c.js";
 import { useState } from "react";
 import { Formik } from "formik";
@@ -74,20 +71,9 @@ const RegisterPage = () => {
 
   return (
     <>
-      <img
-        className="wave box-border m-0 p-0 overflow-hidden fixed h-full z-[-1] left-0 bottom-0 max-[900px]:hidden"
-        src={wave}
-      />
       <ErrorModal isOpen={isOpen} onClose={onClose} message={message} />
-      <div className="container box-border m-0 p-0 overflow-hidden w-screen h-[100%] grid grid-cols-[repeat(2,1fr)] gap-28 px-8 py-0 max-[1050px]:gap-20 max-[900px]:grid-cols-[1fr] pt-9">
-        <div className="img flex items-center justify-end max-[900px]:hidden">
-          <img
-            loading="lazy"
-            src={bg}
-            className="w-[500px] max-[1000px]:w-[400px]"
-          />
-        </div>
-        <div className="login-content flex min-[900px]:ml-[12rem] justify-start items-center max-[900px]:justify-center">
+      <div className="w-full flex items-center justify-center md:justify-end md:px-20">
+        <div className="backdrop-blur-md sm:p-20 p-10 bg-[#0004] rounded-3xl">
           <Formik
             initialValues={{ username: "", password: "" }}
             onSubmit={async (values, { resetForm }) => {
@@ -102,30 +88,22 @@ const RegisterPage = () => {
               handleBlur,
               handleSubmit,
             }) => (
-              <form
-                className="w-[360px] max-[1000px]:w-[290px]"
-                onSubmit={handleSubmit}
-              >
-                <img
-                  loading="lazy"
-                  src={avatar}
-                  className="h-[100px] block m-auto"
-                />
-                <h2 className="title text-center text-[#ffff] uppercase text-[2.9rem] mx-0 my-[15px]  max-[1000px]:text-[2.4rem] max-[1000px]:mx-0 max-[1000px]:my-2">
+              <form className="max-w-[20rem]" onSubmit={handleSubmit}>
+                <h2 className="title font-badger tracking-[0.3rem] text-center text-[#ffff] uppercase sm:text-[3rem] text-[2rem] mb-8">
                   College Login
                 </h2>
                 <div className="relative z-0 mb-8">
                   <input
                     type="text"
                     id="username"
-                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[#32be8f] peer"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 appearance-none text-white border-gray-300 focus:outline-none focus:ring-0 focus:border-[#0EA5E9] peer font-helvetica tracking-wider"
                     placeholder=" "
                     onChange={handleChange}
                     value={values.username}
                   />
                   <label
                     htmlFor="username"
-                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[#32be8f] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="absolute text-xl text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0EA5E9] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 font-helvetica font-bold"
                   >
                     College ID
                   </label>
@@ -135,14 +113,14 @@ const RegisterPage = () => {
                   <input
                     type="password"
                     id="password"
-                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#32be8f] focus:outline-none focus:ring-0 focus:border-[#32be8f] peer"
+                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 appearance-none text-white border-gray-300 focus:outline-none focus:ring-0 focus:border-[#0EA5E9] peer font-helvetica tracking-wider"
                     placeholder=" "
                     onChange={handleChange}
                     value={values.password}
                   />
                   <label
                     htmlFor="password"
-                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#32be8f] peer-focus:dark:text-[#32be8f] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="absolute text-xl text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#0EA5E9] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 font-helvetica font-bold"
                   >
                     Password
                   </label>
@@ -151,7 +129,7 @@ const RegisterPage = () => {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="btn block w-full h-[50px] items-center flex justify-center bg-[#32be8f] text-[1.2rem] text-white uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:bg-[#32be8fad]"
+                  className="btn block w-full h-[50px] items-center flex justify-center border-[#0EA5E9] border-2 text-[1.2rem] text-[#0EA5E9] uppercase cursor-pointer transition-[0.5s] mx-0 my-4 rounded-[25px] border-[none] hover:text-white transition-all hover:bg-[#0EA5E9]"
                 >
                   {loading ? (
                     <Spinner
