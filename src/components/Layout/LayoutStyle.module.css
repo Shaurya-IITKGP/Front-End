@@ -22,12 +22,14 @@
   /* background: url("../../assets/events-page.jpg"); */
   background-size: cover;
   background-position-y: center;
+  background-position-x: center;
 }
 
 .teamsPage {
   background: url("../../assets/team-page.jpg");
   background-size: cover;
   background-position-y: center;
+  background-position-x: center;
 }
 
 .sponsPage {
