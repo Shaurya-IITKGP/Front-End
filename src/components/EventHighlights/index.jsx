@@ -14,9 +14,9 @@ export default function EventHighlights() {
       <h2 className="text-white text-[2.5rem] font-badger tracking-wider text-center">
         Highlights
       </h2>
-      <div className="flex px-20 pt-20 max-[768px]:flex-col max-[850px]:px-5">
+      <div className="flex px-20 pt-20 max-[768px]:flex-col max-[850px]:px-5 ">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] max-[1100px]:w-[25rem]">
-          <img src={cube} className="w-full rounded-2xl object-fill"></img>
+          <img src={cube} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent  px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0 max-[1400px]:px-0 ">
           <h2 className="text-center font-bebas font-bold pb-[1rem] text-4xl ">
@@ -40,7 +40,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 flex-row-reverse  max-[850px]:px-5 max-[768px]:flex-col ">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] max-[1100px]:w-[25rem]">
-          <img src={wall} className="w-full rounded-2xl object-fill"></img>
+          <img src={wall} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent  px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0  max-[1400px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
@@ -63,7 +63,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 max-[768px]:flex-col max-[850px]:px-5">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] ">
-          <img src={knuckle} className="w-full rounded-2xl object-fill"></img>
+          <img src={knuckle} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent py-10 px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
@@ -83,7 +83,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 flex-row-reverse  max-[850px]:px-5 max-[768px]:flex-col ">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] max-[1100px]:w-[25rem]">
-          <img src={skipathon} className="w-full rounded-2xl object-fill"></img>
+          <img src={skipathon} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent  px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0  max-[1400px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">SKIPATHON</div>
@@ -102,7 +102,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 max-[768px]:flex-col max-[850px]:px-5">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] ">
-          <img src={prix} className="w-full rounded-2xl object-fill"></img>
+          <img src={prix} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent py-10 px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
@@ -126,7 +126,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 flex-row-reverse  max-[850px]:px-5 max-[768px]:flex-col ">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] max-[1100px]:w-[25rem]">
-          <img src={india} className="w-full rounded-2xl object-fill"></img>
+          <img src={india} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent  px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0  max-[1400px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
@@ -142,7 +142,7 @@ export default function EventHighlights() {
       </div>
       <div className="flex px-20 pt-20 max-[768px]:flex-col max-[850px]:px-5">
         <div className=" flex h-fit w-1/4 max-[768px]:w-1/2 max-[768px]:m-auto max-[768px]:w-[15rem] max-[850px]:w-[20rem] ">
-          <img src={yoga} className="w-full rounded-2xl object-fill"></img>
+          <img src={yoga} className="w-full rounded-2xl object-fill object-cover transform hover:scale-110 transition-transform duration-300"></img>
         </div>
         <div className="rounded-3xl flex flex-col justify-center w-2/3 text-white bg-transparent py-10 px-10 max-[768px]:m-auto max-[768px]:px-0 max-[768px]:w-full max-[850px]:w-full max-[850px]:px-0 ">
           <div className="text-center font-bebas font-bold pb-[1rem] text-4xl">
