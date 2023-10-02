@@ -6,3 +6,5 @@ export { default as ComingSoon } from "./ComingSoon/index.jsx";
 export { default as OptionToLogin } from "./OptionToLogin/index.jsx";
 export { default as SignInPage } from "./SignInPage/index.jsx";
 export { default as Portal } from "./Portal/index.jsx";
+export { default as ProfileDashboard } from "./ProfileDashboard/index.jsx";
+export { default as Cricket } from "./Cricket/index.jsx";

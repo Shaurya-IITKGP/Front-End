@@ -6,6 +6,9 @@ import {
   ComingSoon,
   OptionToLogin,
   SignInPage,
+  ProfileDashboard,
+  Portal,
+  Cricket,
 } from "./routes";
 
 //Importing External Libraries
@@ -43,6 +46,18 @@ function App() {
       {
         path: "login",
         component: <SignInPage />,
+      },
+      {
+        path: "ProfileDashboard",
+        component: <ProfileDashboard />,
+      },
+      {
+        path: "Cricket",
+        component: <Cricket />,
+      },
+      {
+        path: "Portal",
+        component: <Portal />,
       },
       {
         path: "*",
