@@ -45,7 +45,7 @@ export default function DashboardLayout({ children }) {
         </DrawerContent>
       </Drawer>
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box w={{ md: "calc(100% - 15rem)", base: "100%" }} className="md:ml-60 h-full overflow-scroll w-full bg-gray-900 px-10 py-10">
+      <Box w={{ md: "calc(100% - 15rem)", base: "100%" }} className="md:ml-60 h-full overflow-scroll w-full px-10">
         {children}
       </Box>
     </Box>
@@ -54,8 +54,8 @@ export default function DashboardLayout({ children }) {
 
 const SidebarContent = ({ onClose, ...rest }) => {
   return (
-    <Box className="bg-black text-white fixed md:w-60 w-full h-full" {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+    <Box className="bg-black md:mt-20 md:rounded-r-[4rem] text-white fixed md:w-60 w-full py-20 h-full" {...rest}>
+      <Flex h="20" display={{ base: "flex", md: "none" }} alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
       <div>
@@ -114,7 +114,7 @@ const NavItem = ({ icon, children, ...rest }) => {
 const MobileNav = ({ onOpen, ...rest }) => {
   return (
     <Flex
-      className="bg-black text-white text-3xl"
+      className=" text-white text-3xl"
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 24 }}
       height="20"

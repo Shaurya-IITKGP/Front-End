@@ -1,17 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DashboardLayout from "../../components/Dashboard";
-import {
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
-  Tfoot,
-  Th,
-  Thead,
-  Tr,
-} from "@chakra-ui/react";
 
 export default function DashboardPlayers() {
   return (
@@ -73,14 +62,29 @@ function PlayerDetails() {
       email: "player@gmail.com",
       phone: "+91 12345 67890",
       eventCategory: "Women",
+    },    {
+      id: "SH12345",
+      name: "Player Name",
+      rollNo: "PL12345",
+      email: "player@gmail.com",
+      phone: "+91 12345 67890",
+      eventCategory: "Women",
+    },
+    {
+      id: "SH12345",
+      name: "Player Name",
+      rollNo: "PL12345",
+      email: "player@gmail.com",
+      phone: "+91 12345 67890",
+      eventCategory: "Women",
     },
   ];
 
   return (
     <>
       <div className="p-10 h-screen">
-        <h1 className="text-[2.5rem] mb-8 text-white capitalize">
-          Team Details : {sport}
+        <h1 className="text-[2rem] text-center tracking-wider font-badger mb-8 text-white capitalize">
+          Team Details
         </h1>
 
         <div className="overflow-auto rounded-lg shadow hidden md:block">
