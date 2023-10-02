@@ -39,11 +39,11 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div class="text-white">
+      <div className="text-white">
         <h4 className="text-white font-bold font-bebas text-3xl mb-8">
           Follow us
         </h4>
-        <div class="flex gap-8">
+        <div className="flex gap-8">
           <a href="https://www.facebook.com/shauryaiitkgp/">
             <i className="fab text-3xl text-white hover:text-yellow-500 fa-facebook-f"></i>
           </a>

@@ -32,6 +32,7 @@ import jayansh from "../assets/team/heads/jayansh.jpg";
 import Somyajeet from "../assets/team/heads/Somyajeet.jpg";
 import rishi from "../assets/team/heads/rishi.jpg";
 import Prajay from "../assets/team/heads/Prajay.jpg";
+import Prabodh from "../assets/team/scoms/Prabodh.jpg";
 import Harshavardhan from "../assets/team/heads/harshavardhan.png";
 
 // SComs
@@ -496,7 +497,7 @@ const TEAM_DATA = {
     },
     {
       name: "Prabodh kumar Singh",
-      image: null,
+      image:Prabodh,
       designation: "Logistics",
       email: "prabodhkumarsingh2000@gmail.com",
       facebook:"https://www.facebook.com/prabodhkumar.singh.50",

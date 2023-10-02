@@ -85,7 +85,7 @@ const SponsorPage = () => {
         {sponsors.map((sponsor, index) => (
           <div className="relative mb-6 transform hover:scale-105 transition-transform" key={index}>
             <a href={sponsor.website} target="_blank" rel="noopener noreferrer">
-              <div className="bg-black h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
                 <img src={sponsor.logo} className="w-full h-full object-cover" alt="" />
               </div>
             </a>
