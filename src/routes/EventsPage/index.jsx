@@ -27,7 +27,7 @@ const EventsPage = () => {
         <h2 className="py-9 text-white text-[4rem] font-badger tracking-wider text-center px-3">
           EVENTS
         </h2>
-        <div className="w-fit grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto">
+        <div className="w-fit grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto pb-20">
           {EVENTS.map((event, index) => (
             <Card
               key={index}

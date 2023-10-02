@@ -1,7 +1,4 @@
 import React from "react";
-import avatar from "./assets/avatar.svg";
-import bg from "./assets/bg.svg";
-import wave from "./assets/wave.png";
 import "https://kit.fontawesome.com/a81368914c.js";
 import { useState } from "react";
 import { Formik } from "formik";
@@ -91,10 +88,7 @@ const RegisterPage = () => {
               handleBlur,
               handleSubmit,
             }) => (
-              <form
-                className="max-w-[20rem]"
-                onSubmit={handleSubmit}
-              >
+              <form className="max-w-[20rem]" onSubmit={handleSubmit}>
                 <h2 className="title font-badger tracking-[0.3rem] text-center text-[#ffff] uppercase sm:text-[3rem] text-[2rem] mb-8">
                   College Login
                 </h2>
