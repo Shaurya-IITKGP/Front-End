@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../AppContext/AppContext";
 import Shaurya from "../../assets/shaurya-landing.png";
+import EventHighlights from "../../components/EventHighlights";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -53,6 +54,8 @@ const LandingPage = () => {
         {/* <div>
           <img loading="lazy" className="w-screen" src="" alt="" />
         </div> */}
+
+        <EventHighlights />
       </div>
     </>
   );
