@@ -435,7 +435,7 @@ const TEAM_DATA = {
     {
       name: "Karanveer",
       image: Karanveer,
-      designation: "Karanveer",
+      designation: "Publicity And Marketing",
       email: "karanveer@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/karanveer.ghorela",
       linkedin: "https://www.linkedin.com/in/karanveer2907/",
