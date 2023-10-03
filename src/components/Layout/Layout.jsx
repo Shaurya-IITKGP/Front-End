@@ -19,7 +19,7 @@ export default function Layout() {
       setClx(s.teamsPage);
     } else if (location.pathname == "/sponsors") {
       setClx(s.sponsPage);
-    } else if (location.pathname == "/login") {
+    } else if (location.pathname == "/login" || location.pathname == "/dashboard") {
       setClx(s.loginPage);
     }
   }, [location]);
