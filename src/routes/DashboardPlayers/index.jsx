@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DashboardLayout from "../../components/Dashboard";
+import axios from "axios";
+import { Spinner } from "@chakra-ui/react";
+import { AppContext } from "../../AppContext/AppContext";
+
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export default function DashboardPlayers() {
   return (
@@ -14,71 +19,32 @@ export default function DashboardPlayers() {
 
 function PlayerDetails() {
   const { sport } = useParams();
-  const teamData = [
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Men",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Men",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Men",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Men",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Women",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Women",
-    },    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Women",
-    },
-    {
-      id: "SH12345",
-      name: "Player Name",
-      rollNo: "PL12345",
-      email: "player@gmail.com",
-      phone: "+91 12345 67890",
-      eventCategory: "Women",
-    },
-  ];
+  const [teamData, setTeamData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { user } = useContext(AppContext);
+
+  useEffect(() => {
+    const onCollegeLogin = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get(
+          `${BASE_URL}/api/college/${user.id}/events/${sport}`,
+          {
+            headers: {
+              Authorization: `Bearer ${user.token}`,
+            },
+          }
+        );
+
+        setTeamData(response?.data?.data || []);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    };
+    onCollegeLogin();
+  }, []);
 
   return (
     <>
@@ -109,15 +75,6 @@ function PlayerDetails() {
                 <th className="p-3 text-sm font-semibold tracking-wide text-left">
                   Event Category
                 </th>
-                {/* <th className="w-24 p-3 text-sm font-semibold tracking-wide text-left">
-                  Status
-                </th>
-                <th className="w-24 p-3 text-sm font-semibold tracking-wide text-left">
-                  Date
-                </th>
-                <th className="w-32 p-3 text-sm font-semibold tracking-wide text-left">
-                  Total
-                </th> */}
               </tr>
             </thead>
 
@@ -140,7 +97,7 @@ function PlayerDetails() {
                     {player.phone}
                   </td>
                   <td className="p-3 text-sm font-bold text-gray-700 whitespace-nowrap">
-                    {player.eventCategory}
+                    {player.eventCategories.join(", ")}
                   </td>
                 </tr>
               ))}

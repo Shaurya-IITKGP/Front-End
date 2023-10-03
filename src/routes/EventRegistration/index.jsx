@@ -178,7 +178,6 @@ const EventRegistration = () => {
             } else {
               onClose();
             }
-            a;
           }}
           message={message}
         />
