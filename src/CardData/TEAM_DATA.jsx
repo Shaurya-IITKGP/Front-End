@@ -15,7 +15,7 @@ import Jatin from "../assets/team/heads/jatin.jpeg";
 import Lokesh from "../assets/team/heads/Lokesh.jpg";
 import Neeraj from "../assets/team/heads/neeraj.jpg";
 import Nikhil from "../assets/team/heads/nikhil.jpg";
-import Nimish from '../assets/team/heads/Nimish.jpeg'
+import Nimish from "../assets/team/heads/Nimish.jpeg";
 import Prashant from "../assets/team/heads/prashant.jpg";
 import Priyanshu from "../assets/team/heads/priyanshu.png";
 import Sahithi from "../assets/team/heads/sahithi.jpg";
@@ -55,7 +55,6 @@ import Soham from "../assets/team/scoms/Soham.jpg";
 import Akshay from "../assets/team/scoms/Akshay.jpg";
 import Aman from "../assets/team/scoms/Aman.jpg";
 
-
 const TEAM_DATA = {
   "EXECUTIVE HEADS": [
     {
@@ -73,7 +72,7 @@ const TEAM_DATA = {
       designation: "General Secretary Sports and Games",
       email: "jyothiraditya29@gmail.com",
       instagram: "https://www.instagram.com/ssvkss_jyothiraditya/",
-      facebook:"https://www.facebook.com/profile.php?id=100082880005752",
+      facebook: "https://www.facebook.com/profile.php?id=100082880005752",
       linkedin: "https://www.linkedin.com/in/ssvkss-jyothiraditya-21200322b/",
     },
     {
@@ -93,7 +92,7 @@ const TEAM_DATA = {
       image: Aditya,
       designation: "Sponsorship Head",
       email: "adityagaikwad@kgpian.iitkgp.ac.in",
-      instagram:"https://www.instagram.com/_aditya_gaikwad/",
+      instagram: "https://www.instagram.com/_aditya_gaikwad/",
       facebook:
         "https://www.facebook.com/profile.php?id=100024188513667&mibextid=ZbWKwL",
       linkedin: "https://www.linkedin.com/in/aditya-g-gaikwad-155a67229",
@@ -103,9 +102,9 @@ const TEAM_DATA = {
       image: Akshat,
       designation: "Sponsorship Head",
       email: "akshatlade@kgpian.iitkgp.ac.in",
-      instagram : "https://www.instagram.com/akshatlade/",
-      facebook : "https://m.facebook.com/p/Akshat-Lade-100074776411502/",
-      linkedin : "https://www.linkedin.com/in/akshat-lade-0b3a33223",
+      instagram: "https://www.instagram.com/akshatlade/",
+      facebook: "https://m.facebook.com/p/Akshat-Lade-100074776411502/",
+      linkedin: "https://www.linkedin.com/in/akshat-lade-0b3a33223",
     },
     {
       name: "Akula Tejaswini",
@@ -125,7 +124,7 @@ const TEAM_DATA = {
       facebook: "https://www.facebook.com/profile.php?id=100075405404571",
       linkedin:
         "https://www.linkedin.com/in/anushka-singh-285482227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVTWzVMydQAyj14D61CR7eA%3D%3D",
-        instagram:"https://www.instagram.com/anushkaa_.singh/",
+      instagram: "https://www.instagram.com/anushkaa_.singh/",
     },
     {
       name: "Archie Avirati",
@@ -135,14 +134,14 @@ const TEAM_DATA = {
       facebook:
         "https://www.facebook.com/profile.php?id=100074750037795&mibextid=b06tZ0",
       linkedin: "https://www.linkedin.com/in/archieavirati",
-      instagram:"https://www.instagram.com/archie__13/",
+      instagram: "https://www.instagram.com/archie__13/",
     },
     {
       name: "Atharva chilwarwar",
       image: Atharva,
       designation: "Publicity and Marketing Head",
       email: "Chilwarwar.atharva@kgpian.iitkgp.ac.in",
-      instagram:"https://www.instagram.com/atharva__chilwarwar/",
+      instagram: "https://www.instagram.com/atharva__chilwarwar/",
       facebook: "https://www.facebook.com/profile.php?id=100074784741856",
       linkedin: "https://www.linkedin.com/in/atharva-chilwarwar-91899822b/",
     },
@@ -179,7 +178,8 @@ const TEAM_DATA = {
       image: Harshavardhan,
       designation: "Design Head",
       email: "harshavardhanmalla1729@gmail.com",
-      linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADuW71cBr9X1LFsQgYirVJZeumCEkAiAFY4&keywords=harshavardhan%20malla&origin=RICH_QUERY_SUGGESTION&position=0&searchId=513bd739-d3ea-4082-8ff4-c0aac778cd1f&sid=M!J&spellCorrectionEnabled=false",
+      linkedin:
+        "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADuW71cBr9X1LFsQgYirVJZeumCEkAiAFY4&keywords=harshavardhan%20malla&origin=RICH_QUERY_SUGGESTION&position=0&searchId=513bd739-d3ea-4082-8ff4-c0aac778cd1f&sid=M!J&spellCorrectionEnabled=false",
       instagram: "https://www.instagram.com/harshavardhan_malla/",
       facebook: "https://www.facebook.com/profile.php?id=100077762296230",
     },
@@ -199,7 +199,7 @@ const TEAM_DATA = {
       image: Jatin,
       designation: "Finance, Publicity and Marketing Head",
       email: "jatinmotwani@kgpian.iitkgp.ac.in",
-      instagram:"https://www.instagram.com/_jatinmotwani_/",
+      instagram: "https://www.instagram.com/_jatinmotwani_/",
       facebook: "https://www.facebook.com/hitesh.motwani.7127/",
       linkedin: "https://www.linkedin.com/in/jatin-motwani-684b2022a/",
     },
@@ -210,7 +210,7 @@ const TEAM_DATA = {
       email: "jayanshmaheshwari@gmail.com",
       facebook: "https://www.facebook.com/jayansh.maheshwari/",
       linkedin: "https://www.linkedin.com/in/jayansh-maheshwari",
-      instagram:"https://www.instagram.com/jayansh.7/",
+      instagram: "https://www.instagram.com/jayansh.7/",
     },
     {
       name: "Lokesh Agarwala",
@@ -245,14 +245,14 @@ const TEAM_DATA = {
       designation: "Sponsorship Head",
       email: "nimishgadge@kgpian.iitkgp.ac.in",
       linkedin: "https://www.linkedin.com/in/nimish-gadge-b49a57215",
-      facebook:"https://www.facebook.com/profile.php?id=100075423192873",
-      instagram : "https://www.instagram.com/nimi_1363/",
+      facebook: "https://www.facebook.com/profile.php?id=100075423192873",
+      instagram: "https://www.instagram.com/nimi_1363/",
     },
     {
       name: "Prajay",
       image: Prajay,
       designation: "Sponsorship Head",
-      instagram : "https://instagram.com/prajaymudavath?igshid=NzZhOTFlYzFmZQ",
+      instagram: "https://instagram.com/prajaymudavath?igshid=NzZhOTFlYzFmZQ",
       email: "mudavathprajay@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/profile.php?id=100073647487906",
       linkedin: "https://www.linkedin.com/in/prajay-mudavath-01b080237/",
@@ -282,7 +282,7 @@ const TEAM_DATA = {
       designation: "Sponsorship Head",
       email: "raghuvarsrivastava@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/raghuvar.srivastava",
-      instagram:"https://www.instagram.com/raghuvarsrivastava/",
+      instagram: "https://www.instagram.com/raghuvarsrivastava/",
       linkedin: "https://www.linkedin.com/in/aditya-g-gaikwad-155a67229",
     },
     {
@@ -290,9 +290,9 @@ const TEAM_DATA = {
       image: rishi,
       designation: "Events Head",
       email: "Rishisd@kgpian.iitkgp.ac.in",
-      linkedin:"https://www.linkedin.com/in/rishi-dhoble-966727225/",
-      facebook:"https://www.facebook.com/profile.php?id=100075536916586",
-      instagram:"https://www.instagram.com/rishi_dhoble/",
+      linkedin: "https://www.linkedin.com/in/rishi-dhoble-966727225/",
+      facebook: "https://www.facebook.com/profile.php?id=100075536916586",
+      instagram: "https://www.instagram.com/rishi_dhoble/",
     },
     {
       name: "Rohan R. Barsagade",
@@ -301,7 +301,7 @@ const TEAM_DATA = {
       email: "rohan842@kgpian.iitkgp.ac.in",
       linkedin: "https://www.linkedin.com/in/r-barsagade/",
       instagram: "https://www.instagram.com/rohan_b_84/",
-      facebook: "https://www.facebook.com/profile.php?id=100076243115527"
+      facebook: "https://www.facebook.com/profile.php?id=100076243115527",
     },
     {
       name: "S.Siddharth",
@@ -329,8 +329,8 @@ const TEAM_DATA = {
       image: Somyajeet,
       designation: "Web Head",
       email: "somya.chowdhury@kgpian.iitkgp.ac.in",
-      linkedin:"https://www.linkedin.com/in/somya-chowdhury-078464222/",
-      facebook:"https://www.facebook.com/somya.chowdhury.3",
+      linkedin: "https://www.linkedin.com/in/somya-chowdhury-078464222/",
+      facebook: "https://www.facebook.com/somya.chowdhury.3",
       instagram: "https://www.instagram.com/somya_13/",
     },
     {
@@ -355,7 +355,7 @@ const TEAM_DATA = {
       email: "kyashwanth30@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/yashwanthkumarkallepalli",
       linkedin: "https://www.linkedin.com/in/-yashwanth",
-      instagram:"https://www.instagram.com/yashwanthkallepalli/",
+      instagram: "https://www.instagram.com/yashwanthkallepalli/",
     },
     {
       name: "Shubham Dilawar",
@@ -372,7 +372,7 @@ const TEAM_DATA = {
     {
       name: "Tanmay Malatkar",
       image: Tanmay,
-      designation:"Sponsorship" ,
+      designation: "Sponsorship",
       email: "tmalatkar14@gmail.com",
       facebook: "https://www.facebook.com/tanmay.malatkar",
       linkedin: "https://www.linkedin.com/in/tanmay-malatkar-ba023a1b9/",
@@ -446,9 +446,11 @@ const TEAM_DATA = {
       image: Aman,
       designation: "Events",
       email: "amansagarziddy@gmail.com",
-      facebook: "https://www.facebook.com/profile.php?id=100073504737330&mibextid=ZbWKwL",
+      facebook:
+        "https://www.facebook.com/profile.php?id=100073504737330&mibextid=ZbWKwL",
       linkedin: "https://www.linkedin.com/in/aman-sagar-96b24022a/",
-      instagram: "https://www.instagram.com/invites/contact/?i=hpbpry33424d&utm_content=fdqvjzr",
+      instagram:
+        "https://www.instagram.com/invites/contact/?i=hpbpry33424d&utm_content=fdqvjzr",
     },
     {
       name: "Pankaj guriyan",
@@ -457,7 +459,8 @@ const TEAM_DATA = {
       email: "guriyanpankaj@gmail.com",
       facebook: "https://www.facebook.com/pankaj.guriyan.90",
       linkedin: "https://www.linkedin.com/in/pankaj-guriyan-2343481b7",
-      instagram: "https://instagram.com/pankaj__guriyan?igshid=MzMyNGUyNmU2YQ==",
+      instagram:
+        "https://instagram.com/pankaj__guriyan?igshid=MzMyNGUyNmU2YQ==",
     },
     {
       name: "Akshaay",
@@ -497,12 +500,12 @@ const TEAM_DATA = {
     },
     {
       name: "Prabodh kumar Singh",
-      image:Prabodh,
+      image: Prabodh,
       designation: "Logistics",
       email: "prabodhkumarsingh2000@gmail.com",
-      facebook:"https://www.facebook.com/prabodhkumar.singh.50",
+      facebook: "https://www.facebook.com/prabodhkumar.singh.50",
       linkedin: "https://www.linkedin.com/in/prabodh-singh-2b1a281ba/",
-      instagram:"https://www.instagram.com/prabodhkumarsingh3/",
+      instagram: "https://www.instagram.com/prabodhkumarsingh3/",
     },
     {
       name: "Luv Singh",
@@ -520,7 +523,8 @@ const TEAM_DATA = {
       email: "saurabhnagarkoti.iitkgp@gmail.com",
       facebook: "https://www.facebook.com/saurabh.nagarkoti.1",
       linkedin: "https://www.linkedin.com/in/saurabh-nagarkoti/",
-      instagram: "https://instagram.com/saurabh_nagarkoti_03?igshid=NzZhOTFlYzFmZQ==",
+      instagram:
+        "https://instagram.com/saurabh_nagarkoti_03?igshid=NzZhOTFlYzFmZQ==",
     },
     {
       name: "Kaushal",
@@ -537,7 +541,8 @@ const TEAM_DATA = {
       designation: "Advisor Sports and Games",
       email: "minalajaymoon@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/minal.moon.102",
-      linkedin: "https://www.linkedin.com/in/minal-moon-119884200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      linkedin:
+        "https://www.linkedin.com/in/minal-moon-119884200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       instagram: "https://instagram.com/minal__moon_?igshid=NzZhOTFlYzFmZQ==",
     },
   ],

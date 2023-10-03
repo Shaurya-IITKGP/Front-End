@@ -81,19 +81,25 @@ export default function Navbar() {
             HOME
           </Link>
           <Link
-            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
+            className={
+              "hover:text-white hover:text-xl hidden md:block text-lg transition-all"
+            }
             to="/events"
           >
             EVENTS
           </Link>
           <Link
-            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
+            className={
+              "hover:text-white hover:text-xl hidden md:block text-lg transition-all"
+            }
             to="/sponsors"
           >
             SPONSORS
           </Link>
           <Link
-            className={"hover:text-white hover:text-xl hidden md:block text-lg transition-all"}
+            className={
+              "hover:text-white hover:text-xl hidden md:block text-lg transition-all"
+            }
             to="/teams"
           >
             TEAM

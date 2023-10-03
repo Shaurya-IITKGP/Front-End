@@ -33,7 +33,7 @@ function PlayerDetails() {
             headers: {
               Authorization: `Bearer ${user.token}`,
             },
-          }
+          },
         );
 
         setTeamData(response?.data?.data || []);

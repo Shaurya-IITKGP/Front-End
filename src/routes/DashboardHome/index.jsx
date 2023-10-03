@@ -24,7 +24,8 @@ function DashboardCard({ sport }) {
     >
       <h3 className="text-2xl font-bold mb-3 capitalize">{sport.sportName}</h3>
       <p className="mb-4">
-        <span className="font-bold">Players Registed</span> : {sport.playerCount}
+        <span className="font-bold">Players Registed</span> :{" "}
+        {sport.playerCount}
       </p>
       <button
         onClick={() => {
@@ -54,7 +55,7 @@ function DashboardHome() {
             headers: {
               Authorization: `Bearer ${user.token}`,
             },
-          }
+          },
         );
 
         console.log(response.data.data.sports);

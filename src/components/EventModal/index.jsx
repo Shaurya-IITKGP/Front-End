@@ -188,7 +188,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
                         `/events/${modalData.name
                           .split(" ")
                           .join("-")
-                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`
+                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`,
                       );
                     }}
                     className="text-white flex justify-center font-bold capitalize px-3 py-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 duration-200 text-md md:text-sm hover:bg-blue-600 hover:shadow-md"

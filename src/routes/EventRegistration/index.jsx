@@ -26,7 +26,7 @@ const EventRegistration = () => {
 
   const EVENT = useMemo(() => {
     return EVENT_DATA.find(
-      (event) => event.name == eventName && event.category == eventType
+      (event) => event.name == eventName && event.category == eventType,
     );
   }, [eventName, eventType]);
 
@@ -46,7 +46,7 @@ const EventRegistration = () => {
     setTeamMembers(
       Array.from({ length: minTeamSize }, () => ({
         ...{ name: "", rollNo: "", email: "", phone: "" },
-      }))
+      })),
     );
   }, [minTeamSize]);
 
@@ -78,7 +78,7 @@ const EventRegistration = () => {
             member.name.trim() !== "" &&
             member.rollNo.trim() !== "" &&
             member.email.trim() !== "" &&
-            member.phone.trim() !== ""
+            member.phone.trim() !== "",
         )
       ) {
         try {
@@ -93,7 +93,7 @@ const EventRegistration = () => {
               headers: {
                 Authorization: `Bearer ${user.token}`,
               },
-            }
+            },
           );
 
           if (response.status === 200) {

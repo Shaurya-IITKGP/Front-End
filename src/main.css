@@ -31,6 +31,6 @@ body::-webkit-scrollbar-thumb {
 
 body {
   /* No need to set background on each page */
-  background-color: #090a0b !important; 
-  font-family: "Montserrat", 'sans-serif' !important;
+  background-color: #090a0b !important;
+  font-family: "Montserrat", "sans-serif" !important;
 }
