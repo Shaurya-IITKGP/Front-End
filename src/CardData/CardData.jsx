@@ -8,7 +8,7 @@ import footballCard from "../assets/event/card/football.jpg";
 import hockeyCard from "../assets/event/card/hockey.jpeg";
 import weightliftingCard from "../assets/event/card/weightlifting.jpeg";
 import squashCard from "../assets/event/card/squash.webp";
-import swimmingCard from "../assets/event/card/swimming.jpeg";
+// import swimmingCard from "../assets/event/card/swimming.jpeg";
 import tabletennisCard from "../assets/event/card/tabletennis.jpeg";
 import tennisCard from "../assets/event/card/tennis.jpg";
 import volleyballCard from "../assets/event/card/volleyball.jpeg";
@@ -23,7 +23,7 @@ import footballModal from "../assets/event/modal/football.jpg";
 import hockeyModal from "../assets/event/modal/hockey.jpg";
 import weightliftingModal from "../assets/event/modal/weightlifting.jpg";
 import squashModal from "../assets/event/modal/squash.jpg";
-import swimmingModal from "../assets/event/modal/swimming.jpg";
+// import swimmingModal from "../assets/event/modal/swimming.jpg";
 import tabletennisModal from "../assets/event/modal/tabletennis.jpg";
 import tennisModal from "../assets/event/modal/tennis.jpg";
 import volleyballModal from "../assets/event/modal/volleyball.jpg";
@@ -313,48 +313,48 @@ const EVENTS = [
     modalImg: squashModal,
     cardImg: squashCard,
   },
-  {
-    name: "Swimming",
-    rules: (
-      <div>
-        <h1>
-          <strong>Rules:</strong>
-        </h1>
-        <p>
-          Maximum of 2 participants for each event from a single college. Each
-          player can participate in not more than 3 events (except Relay)
-        </p>
-        <p>
-          <strong>Women's Events:</strong> Freestyle 50m, Freestyle 100m,
-          Freestyle Relay 4X50, Breaststroke 50m, Backstroke 50m, Butterfly 50m,
-          Medley Relay 4X50
-        </p>
-        <p>
-          <strong>Men's Events:</strong> Freestyle 50m, Freestyle 100m,
-          Freestyle 200m, Freestyle 1500m, Freestyle Relay 4X100, Breaststroke
-          50m, Breaststroke 100m, Breaststroke 200m, Backstroke 50m, Backstroke
-          100m, Backstroke 200m, Butterfly 100m, Butterfly 50m, Medley Relay
-          4X100, Individual Medley 200m.
-        </p>
-        <ul>
-          <li>
-            <strong>Individual Reg. Per Head Rs.250 (500 if 3 events)</strong>
-          </li>
-          <li>
-            <strong>For Relay Per Head Rs.100</strong>
-          </li>
-          <li>
-            <strong>Prize money worth Rs.54,000</strong>
-          </li>
-          <li>
-            <strong>Contact: Nikhil Bharat- 7020096806</strong>
-          </li>
-        </ul>
-      </div>
-    ),
-    modalImg: swimmingModal,
-    cardImg: swimmingCard,
-  },
+  // {
+  //   name: "Swimming",
+  //   rules: (
+  //     <div>
+  //       <h1>
+  //         <strong>Rules:</strong>
+  //       </h1>
+  //       <p>
+  //         Maximum of 2 participants for each event from a single college. Each
+  //         player can participate in not more than 3 events (except Relay)
+  //       </p>
+  //       <p>
+  //         <strong>Women's Events:</strong> Freestyle 50m, Freestyle 100m,
+  //         Freestyle Relay 4X50, Breaststroke 50m, Backstroke 50m, Butterfly 50m,
+  //         Medley Relay 4X50
+  //       </p>
+  //       <p>
+  //         <strong>Men's Events:</strong> Freestyle 50m, Freestyle 100m,
+  //         Freestyle 200m, Freestyle 1500m, Freestyle Relay 4X100, Breaststroke
+  //         50m, Breaststroke 100m, Breaststroke 200m, Backstroke 50m, Backstroke
+  //         100m, Backstroke 200m, Butterfly 100m, Butterfly 50m, Medley Relay
+  //         4X100, Individual Medley 200m.
+  //       </p>
+  //       <ul>
+  //         <li>
+  //           <strong>Individual Reg. Per Head Rs.250 (500 if 3 events)</strong>
+  //         </li>
+  //         <li>
+  //           <strong>For Relay Per Head Rs.100</strong>
+  //         </li>
+  //         <li>
+  //           <strong>Prize money worth Rs.54,000</strong>
+  //         </li>
+  //         <li>
+  //           <strong>Contact: Nikhil Bharat- 7020096806</strong>
+  //         </li>
+  //       </ul>
+  //     </div>
+  //   ),
+  //   modalImg: swimmingModal,
+  //   cardImg: swimmingCard,
+  // },
   {
     name: "Table Tennis",
     rules: (
