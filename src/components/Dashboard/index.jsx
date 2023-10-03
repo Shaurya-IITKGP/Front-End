@@ -45,7 +45,7 @@ export default function DashboardLayout({ children }) {
         </DrawerContent>
       </Drawer>
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box w={{ md: "calc(100% - 15rem)", base: "100%" }} className="md:ml-60 h-full overflow-scroll w-full px-10">
+      <Box w={{ md: "calc(100% - 20rem)", base: "100%" }} className="md:ml-[20rem] h-full overflow-scroll w-full px-10">
         {children}
       </Box>
     </Box>
@@ -54,7 +54,7 @@ export default function DashboardLayout({ children }) {
 
 const SidebarContent = ({ onClose, ...rest }) => {
   return (
-    <Box className="bg-black md:mt-20 md:rounded-r-[4rem] text-white fixed md:w-60 w-full py-20 h-full" {...rest}>
+    <Box className="bg-black md:mt-20 md:rounded-r-[4rem] text-white fixed md:w-[20rem] w-full py-10 h-full" {...rest}>
       <Flex h="20" display={{ base: "flex", md: "none" }} alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
@@ -66,21 +66,20 @@ const SidebarContent = ({ onClose, ...rest }) => {
             </NavItem>
           ))}
         </div>
-        <div>
-          <NavItem icon={BiLogOut}>Logout</NavItem>
+        <div className="mt-8">
+          <NavItem hvr={true} icon={BiLogOut}>Logout</NavItem>
         </div>
       </div>
     </Box>
   );
 };
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ icon, children, hvr, ...rest }) => {
   return (
     <Box
-      as="a"
-      href="#"
       style={{ textDecoration: "none" }}
       _focus={{ boxShadow: "none" }}
+      className="font-helvetica font-bold uppercase"
     >
       <Flex
         align="center"
@@ -90,7 +89,7 @@ const NavItem = ({ icon, children, ...rest }) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: "cyan.400",
+          bg: hvr ? "gray.800" : "",
           color: "white",
         }}
         {...rest}
