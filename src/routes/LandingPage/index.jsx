@@ -1,14 +1,17 @@
 import s from "./landing.module.css";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../AppContext/AppContext";
+import { AppContext, useAuth } from "../../AppContext/AppContext";
 import Shaurya from "../../assets/shaurya-landing.png";
 import EventHighlights from "../../components/EventHighlights";
 import Footer from "../Footer/Footer";
 import About from "../AboutPage/About";
+import { BiChevronDown } from "react-icons/bi";
+import { useContext } from "react";
 
 const LandingPage = () => {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+  const { chevVisible } = useContext(AppContext);
   return (
     <>
       <div className={"w-full "}>
@@ -42,21 +45,13 @@ const LandingPage = () => {
             </button>
           )}
 
-          <div
-            className={s.arrow}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </div>
+          {
+            <BiChevronDown
+              className={
+                `text-white text-[3rem] fixed top-[90vh] left-1/2 -translate-x-1/2 ${s.animateBounce} transition-opacity duration-300 ${!chevVisible ? "opacity-0":""}`
+              }
+            />
+          }
         </div>
 
         <div className="py-20 ">

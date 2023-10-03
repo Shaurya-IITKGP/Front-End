@@ -10,7 +10,7 @@ import prix from "./assets/grand prix.jpg";
 
 export default function EventHighlights() {
   return (
-    <div>
+    <div className="">
       <h2 className="text-white text-[2.5rem] font-badger tracking-wider text-center">
         Highlights
       </h2>

@@ -78,8 +78,8 @@ const SponsorPage = () => {
 
   return (
     <div className="container mx-auto p-6 text-center">
-      <h2 className="text-2xl font-bold mb-6 text-white">Previous Sponsors</h2>
-      <p className="text-2xl font-bold mb-16 text-white">We extend our heartfelt thanks to our previous sponsors for their invaluable support in making our past events a success. Their dedication to promoting sports and education has been instrumental. We look forward to continued collaboration and welcome new partners to join us in shaping the future of sports at our institution</p>
+      <h2 className="text-[2.5rem] font-bold mb-6 text-white font-badger tracking-wider ">OUR PREVIOUS SPONSORS</h2>
+      <p className="text-xl max-w-[60rem] px-10 mx-auto font-mont mb-16 text-white">We extend our heartfelt thanks to our previous sponsors for their invaluable support in making our past events a success. Their dedication to promoting sports and education has been instrumental. We look forward to continued collaboration and welcome new partners to join us in shaping the future of sports at our institution</p>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
         {sponsors.map((sponsor, index) => (

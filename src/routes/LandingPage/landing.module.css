@@ -97,11 +97,13 @@
 
 .animate-charcter {
   text-transform: uppercase;
-  background-image: linear-gradient(-225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -295,39 +297,23 @@
   }
 }
 
-
-.arrow {
-  position: sticky;
-  top: 90vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 30px solid #fff;
-  animation: bounceFade 1.5s infinite;
+.animateBounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
-@keyframes bounceFade {
-
+@keyframes bounce {
   0%,
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translate(-50%, -25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
-
   50% {
-    transform: translateY(-20px);
-    opacity: 0;
+    transform: translate(-50%, 0%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-
-
-
-
-
-
 /* @media only screen and (max-width: 1400px) {
   .head {
     font-size: 4.5rem;
