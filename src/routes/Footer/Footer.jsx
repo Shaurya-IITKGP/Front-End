@@ -4,7 +4,7 @@ import s from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className=" flex py-10 justify-evenly md:flex-row flex-col items-center text-center gap-20 wrap bg-gray-900">
+    <footer className="flex py-10 justify-evenly md:flex-row flex-col items-center text-center gap-20 wrap bg-gradient-to-t from-gray-900 from-20% via-gray-900 via-50%">
       <div className="w-60 md:w-80 flex items-center">
         <img className="block w-full" src={footer_logo} alt="" />
       </div>
