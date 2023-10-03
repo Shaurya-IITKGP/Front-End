@@ -1,8 +1,9 @@
 import { createContext, useEffect, useMemo, useState } from "react";
-
 export const AppContext = createContext();
 
-export const useAuth = () => {
+export function AppProvider({ children }) {
+  const [chevVisible, setChevVisible] = useState(true);
+
   const [user, setUser] = useState(() => {
     const userData = localStorage.getItem("user");
     return userData
@@ -20,15 +21,13 @@ export const useAuth = () => {
     localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
 
-  // const iscated = useMemo(() => {
-  //   if (user.token) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }, [user.token]);
-
-  const isAuthenticated = true
+  const isAuthenticated = useMemo(() => {
+    if (user.token) {
+      return true;
+    } else {
+      return false;
+    }
+  }, [user.token]);
 
   const login = (userData, token) => {
     const newUser = { ...userData, token: token };
@@ -47,9 +46,18 @@ export const useAuth = () => {
     });
   };
 
-  return { isAuthenticated, login, logout, user };
-};
-
-export function AppProvider({ children }) {
-  return <AppContext.Provider value={""}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider
+      value={{
+        chevVisible,
+        setChevVisible,
+        isAuthenticated,
+        login,
+        logout,
+        user,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 }

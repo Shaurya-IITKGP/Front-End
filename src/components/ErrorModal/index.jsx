@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 
 const ErrorModal = ({ isOpen, onClose, message }) => {
-  
   return (
     <>
       <Modal isCentered isOpen={isOpen} onClose={onClose}>

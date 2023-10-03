@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import css from "./EventModal.module.css";
 import { matchPath, useNavigate } from "react-router-dom";
-import { useAuth } from "../../AppContext/AppContext";
+import { AppContext } from "../../AppContext/AppContext";
 
 const EVENT_TYPE = {
   badminton: ["men's-team", "women's-team"],
@@ -56,37 +56,37 @@ const EVENT_TYPE = {
     "javelin-women",
     "discuss-throw-women",
   ],
-  swimming: [
-    "freestyle-50m-women",
-    "freestyle-100m-women",
-    "freestyle-200m-women",
-    "freestyle-4x50m-relay-women",
-    "breaststroke-50m-women",
-    "backstroke-50m-women",
-    "butterfly-50m-women",
-    "medley-4x50m-relay-relay-women",
-    "freestyle-50m-men",
-    "freestyle-100m-men",
-    "freestyle-200m-men",
-    "freestyle-1500m-men",
-    "freestyle-4x100m-relay-men",
-    "breaststroke-50m-men",
-    "breaststroke-100m-men",
-    "breaststroke-200m-men",
-    "backstroke-50m-men",
-    "backstroke-100m-men",
-    "backstroke-200m-men",
-    "butterfly-100m-men",
-    "butterfly-50m-men",
-    "medley-200m-men",
-    "medley-4x100m-relay-relay-men",
-  ],
+  // swimming: [
+  //   "freestyle-50m-women",
+  //   "freestyle-100m-women",
+  //   "freestyle-200m-women",
+  //   "freestyle-4x50m-relay-women",
+  //   "breaststroke-50m-women",
+  //   "backstroke-50m-women",
+  //   "butterfly-50m-women",
+  //   "medley-4x50m-relay-relay-women",
+  //   "freestyle-50m-men",
+  //   "freestyle-100m-men",
+  //   "freestyle-200m-men",
+  //   "freestyle-1500m-men",
+  //   "freestyle-4x100m-relay-men",
+  //   "breaststroke-50m-men",
+  //   "breaststroke-100m-men",
+  //   "breaststroke-200m-men",
+  //   "backstroke-50m-men",
+  //   "backstroke-100m-men",
+  //   "backstroke-200m-men",
+  //   "butterfly-100m-men",
+  //   "butterfly-50m-men",
+  //   "medley-200m-men",
+  //   "medley-4x100m-relay-relay-men",
+  // ],
 };
 
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useContext(AppContext);
 
   useEffect(() => {
     if (isOpen) {
@@ -185,7 +185,7 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
                     key={index}
                     onClick={() => {
                       navigate(
-                        `/register/event/${modalData.name
+                        `/events/${modalData.name
                           .split(" ")
                           .join("-")
                           .toLowerCase()}/${type.split("'")[0].toLowerCase()}`,

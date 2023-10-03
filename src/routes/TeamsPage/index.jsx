@@ -12,7 +12,7 @@ const TeamsPage = () => {
         {TEAM_DATA["EXECUTIVE HEADS"]
           .sort((a, b) => {
             const designationComparison = a.designation.localeCompare(
-              b.designation
+              b.designation,
             );
 
             if (designationComparison === 0) {
