@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   CloseButton,
@@ -16,13 +16,14 @@ import {
   BiPhone,
   BiMenu,
 } from "react-icons/bi";
+import { AppContext } from "../../AppContext/AppContext";
 
-const LinkItems = [
-  { name: "IIT Madras", icon: BiBuilding },
-  { name: "CLG12345", icon: BiHash },
-  { name: "college@email.com", icon: BiEnvelope },
-  { name: "+91 12345 67890", icon: BiPhone },
-];
+const userProperties = ["name", "id", "email", "phone"];
+
+function getIconForProperty(index) {
+  const icons = [BiBuilding, BiHash, BiEnvelope, BiPhone];
+  return icons[index] || null;
+}
 
 export default function DashboardLayout({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,7 +46,10 @@ export default function DashboardLayout({ children }) {
         </DrawerContent>
       </Drawer>
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
-      <Box w={{ md: "calc(100% - 20rem)", base: "100%" }} className="md:ml-[20rem] h-full overflow-scroll w-full px-10">
+      <Box
+        w={{ md: "calc(100% - 20rem)", base: "100%" }}
+        className="md:ml-[20rem] h-full overflow-scroll w-full px-10"
+      >
         {children}
       </Box>
     </Box>
@@ -53,9 +57,23 @@ export default function DashboardLayout({ children }) {
 }
 
 const SidebarContent = ({ onClose, ...rest }) => {
+  const { logout, user } = useContext(AppContext);
+  const LinkItems = userProperties.map((property, index) => ({
+    name: user[property],
+    icon: getIconForProperty(index),
+  }));
   return (
-    <Box className="bg-black md:mt-20 md:rounded-r-[4rem] text-white fixed md:w-[20rem] w-full py-10 h-full" {...rest}>
-      <Flex h="20" display={{ base: "flex", md: "none" }} alignItems="center" mx="8" justifyContent="space-between">
+    <Box
+      className="bg-black md:mt-20 md:rounded-r-[4rem] text-white fixed md:w-[20rem] w-full py-10 h-full"
+      {...rest}
+    >
+      <Flex
+        h="20"
+        display={{ base: "flex", md: "none" }}
+        alignItems="center"
+        mx="8"
+        justifyContent="space-between"
+      >
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
       <div>
@@ -67,7 +85,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
           ))}
         </div>
         <div className="mt-8">
-          <NavItem hvr={true} icon={BiLogOut}>Logout</NavItem>
+          <NavItem onClick={logout} hvr={true} icon={BiLogOut}>
+            Logout
+          </NavItem>
         </div>
       </div>
     </Box>

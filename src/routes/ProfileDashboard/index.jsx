@@ -1,8 +1,7 @@
-import React from "react";
-import { useAuth } from "../../AppContext/AppContext";
+import React, { useContext } from "react";
 
 const ProfileDashboard = () => {
-  const { user } = useAuth();
+  const { user } = useContext();
   const events = [
     { name: "cricket", date: "13/10/2023" },
     { name: "athletics", date: "14/10/2023" },

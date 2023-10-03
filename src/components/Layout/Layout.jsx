@@ -8,7 +8,7 @@ export default function Layout() {
   const [clx, setClx] = useState(s.homePage);
   const location = useLocation();
   const scrollRef = useRef(null);
-  const {setChevVisible} = useContext(AppContext);
+  const { setChevVisible } = useContext(AppContext);
 
   useEffect(() => {
     if (location.pathname == "/") {
@@ -19,7 +19,10 @@ export default function Layout() {
       setClx(s.teamsPage);
     } else if (location.pathname == "/sponsors") {
       setClx(s.sponsPage);
-    } else if (location.pathname == "/login" || location.pathname == "/dashboard") {
+    } else if (
+      location.pathname == "/login" ||
+      location.pathname == "/dashboard"
+    ) {
       setClx(s.loginPage);
     }
   }, [location]);

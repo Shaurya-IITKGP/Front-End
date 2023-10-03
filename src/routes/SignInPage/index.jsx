@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "https://kit.fontawesome.com/a81368914c.js";
 import { useState } from "react";
 import { Formik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../AppContext/AppContext";
 import { Spinner, useDisclosure } from "@chakra-ui/react";
 import ErrorModal from "../../components/ErrorModal";
 import { BsArrowRight } from "react-icons/bs";
+import { AppContext } from "../../AppContext/AppContext";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const RegisterPage = () => {
@@ -16,7 +16,7 @@ const RegisterPage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [message, setMessage] = useState({ title: "", text: "" });
 
-  const { login, user } = useAuth();
+  const { login, user } = useContext(AppContext);
 
   const onCollegeLogin = async (values, resetValues) => {
     if (!loading) {
@@ -34,9 +34,20 @@ const RegisterPage = () => {
           return;
         }
 
+        if (values?.password?.length <= 0) {
+          setMessage({
+            text: "Please enter password",
+            title: "Error",
+          });
+          onOpen();
+          resetValues();
+          setLoading(false);
+          return;
+        }
+
         const response = await axios.post(`${BASE_URL}/api/college/login`, {
-          username: values.username,
-          password: values.password,
+          username: values?.username,
+          password: values?.password,
         });
 
         // Check the HTTP status code here
@@ -48,10 +59,9 @@ const RegisterPage = () => {
 
           resetValues();
           setLoading(false);
-          navigate("/events");
         } else {
           setMessage({
-            text: "Something went wrong. Please Try Again",
+            text: response.data.message,
             title: "Failed",
           });
           onOpen();
@@ -144,13 +154,13 @@ const RegisterPage = () => {
                         className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden transition-all transition-[0.5s] group border-[#0EA5E9] 
                       border-2 text-[1.2rem] text-[#0EA5E9] uppercase cursor-pointer rounded-[25px] duration-300"
                       >
-                        <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full text-white bg-[#0EA5E9] group-hover:translate-x-0 ease">
-                        <BsArrowRight className="text-3xl" />
+                        <span className="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full text-white bg-[#0EA5E9] group-hover:translate-x-0 ease">
+                          <BsArrowRight className="text-3xl" />
                         </span>
-                        <span class="absolute flex items-center justify-center w-full h-full text-[#0EA5E9] transition-all duration-300 transform group-hover:translate-x-full ease">
+                        <span className="absolute flex items-center justify-center w-full h-full text-[#0EA5E9] transition-all duration-300 transform group-hover:translate-x-full ease">
                           LOGIN
                         </span>
-                        <span class="relative invisible">LOGIN </span>
+                        <span className="relative invisible">LOGIN </span>
                       </button>
                     </>
                   )}

@@ -1,6 +1,6 @@
 import s from "./landing.module.css";
 import { useNavigate } from "react-router-dom";
-import { AppContext, useAuth } from "../../AppContext/AppContext";
+import { AppContext } from "../../AppContext/AppContext";
 import Shaurya from "../../assets/shaurya-landing.png";
 import EventHighlights from "../../components/EventHighlights";
 import Footer from "../Footer/Footer";
@@ -10,8 +10,8 @@ import { useContext } from "react";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  const { chevVisible } = useContext(AppContext);
+  const { chevVisible, isAuthenticated } = useContext(AppContext);
+  console.log(isAuthenticated);
   return (
     <>
       <div className={"w-full "}>
@@ -32,7 +32,21 @@ const LandingPage = () => {
             Uniting students nationwide in the spirit of competition and
             sportsmanship
           </p>
-          {isAuthenticated && (
+
+          {isAuthenticated ? (
+            <>
+              <button
+                className={
+                  "text-white border-white border-2 mt-10 px-8 py-3 rounded-3xl hover:text-black hover:bg-white font-bold transition-all"
+                }
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
+                Dashboard
+              </button>
+            </>
+          ) : (
             <button
               className={
                 "text-white border-white border-2 mt-10 px-8 py-3 rounded-3xl hover:text-black hover:bg-white font-bold transition-all"
@@ -47,9 +61,11 @@ const LandingPage = () => {
 
           {
             <BiChevronDown
-              className={
-                `text-white text-[3rem] fixed top-[90vh] left-1/2 -translate-x-1/2 ${s.animateBounce} transition-opacity duration-300 ${!chevVisible ? "opacity-0":""}`
-              }
+              className={`text-white text-[3rem] fixed top-[90vh] left-1/2 -translate-x-1/2 ${
+                s.animateBounce
+              } transition-opacity duration-300 ${
+                !chevVisible ? "opacity-0" : ""
+              }`}
             />
           }
         </div>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import css from "./EventModal.module.css";
 import { matchPath, useNavigate } from "react-router-dom";
-import { useAuth } from "../../AppContext/AppContext";
+import { AppContext } from "../../AppContext/AppContext";
 
 const EVENT_TYPE = {
   badminton: ["men's-team", "women's-team"],
@@ -86,7 +86,7 @@ const EVENT_TYPE = {
 const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useContext(AppContext);
 
   useEffect(() => {
     if (isOpen) {
@@ -185,10 +185,10 @@ const EventModal = ({ isOpen, onClose, modalData, modalRef }) => {
                     key={index}
                     onClick={() => {
                       navigate(
-                        `/register/event/${modalData.name
+                        `/events/${modalData.name
                           .split(" ")
                           .join("-")
-                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`,
+                          .toLowerCase()}/${type.split("'")[0].toLowerCase()}`
                       );
                     }}
                     className="text-white flex justify-center font-bold capitalize px-3 py-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 duration-200 text-md md:text-sm hover:bg-blue-600 hover:shadow-md"

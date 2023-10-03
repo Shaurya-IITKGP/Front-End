@@ -1,15 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import EVENT_DATA from "../../CardData/EventData.jsx";
-import { useAuth } from "../../AppContext/AppContext.jsx";
 
 import { Spinner, useDisclosure } from "@chakra-ui/react";
 import ErrorModal from "../../components/ErrorModal/index.jsx";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { BsArrowRight, BsPlusLg } from "react-icons/bs";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import { AppContext } from "../../AppContext/AppContext.jsx";
 
 // import 'react-spinner-loader/dist/index.css';
 
@@ -17,7 +17,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const EventRegistration = () => {
   const { eventName, eventType } = useParams();
-  const { user } = useAuth();
+  const { user } = useContext(AppContext);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ title: "", text: "" });
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -312,13 +312,13 @@ const EventRegistration = () => {
                   className="relative inline-flex items-center justify-center px-4 py-2 overflow-hidden transition-all transition-[0.5s] group border-green-500 
                       border-2 text-[1.2rem] text-green-500 uppercase cursor-pointer rounded-[25px] duration-300"
                 >
-                  <span class="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full text-white bg-green-500 group-hover:translate-x-0 ease">
+                  <span className="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full text-white bg-green-500 group-hover:translate-x-0 ease">
                     <BsArrowRight className="text-3xl" />
                   </span>
-                  <span class="absolute flex items-center justify-center w-full h-full text-green-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+                  <span className="absolute flex items-center justify-center w-full h-full text-green-500 transition-all duration-300 transform group-hover:translate-x-full ease">
                     SUBMIT
                   </span>
-                  <span class="relative invisible">SUBMIT </span>
+                  <span className="relative invisible">SUBMIT </span>
                 </div>
               </>
             )}
