@@ -67,9 +67,6 @@ function PlayerDetails() {
                   Roll Number
                 </th>
                 <th className="p-3 text-sm font-semibold tracking-wide text-left">
-                  Email
-                </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
                   Phone Number
                 </th>
                 <th className="p-3 text-sm font-semibold tracking-wide text-left">
@@ -89,9 +86,6 @@ function PlayerDetails() {
                   </td>
                   <td className="p-3 text-sm font-bold text-gray-700 whitespace-nowrap">
                     {player.rollNo}
-                  </td>
-                  <td className="p-3 text-sm font-bold text-gray-700 whitespace-nowrap">
-                    {player.email}
                   </td>
                   <td className="p-3 text-sm font-bold text-gray-700 whitespace-nowrap">
                     {player.phone}
@@ -119,9 +113,6 @@ function PlayerDetails() {
               </div>
               <div className="text-sm font-medium text-gray-600">
                 {player.rollNo}
-              </div>
-              <div className="text-sm font-medium text-gray-600">
-                {player.email}
               </div>
               <div className="text-sm font-medium text-gray-600">
                 {player.phone}

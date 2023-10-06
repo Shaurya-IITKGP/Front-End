@@ -87,14 +87,6 @@ const SignUpPage = () => {
               />
             </div>
             <div className="input-field max-w-[380px] w-full bg-[#f0f0f0] h-[55px] grid grid-cols-[15%_85%] relative mx-0 my-2.5 px-[0.4rem] py-0 rounded-[55px]">
-              <i className="fas fa-envelope text-center py-4 leading-[55px] text-[#acacac] transition-[0.5s] text-[1.1rem]"></i>
-              <input
-                type="email"
-                className="bg-none leading-none font-semibold text-[1.1rem] text-[#333] border-none outline-none bg-[#f3f0f0] rounded-r-[6rem] placeholder-[#aaa] placeholder-[font-black]"
-                placeholder="Email"
-              />
-            </div>
-            <div className="input-field max-w-[380px] w-full bg-[#f0f0f0] h-[55px] grid grid-cols-[15%_85%] relative mx-0 my-2.5 px-[0.4rem] py-0 rounded-[55px]">
               <i className="fas fa-lock text-center leading-[55px] py-4 text-[#acacac] transition-[0.5s] text-[1.1rem]"></i>
               <input
                 type="password"

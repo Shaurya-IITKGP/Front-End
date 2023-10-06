@@ -23,7 +23,7 @@ const RegisterPage = () => {
       try {
         setLoading(true);
 
-        if (values.username.length != 9) {
+        if (values.username.length != 12) {
           setMessage({
             text: "Please enter a valid college id",
             title: "Error",

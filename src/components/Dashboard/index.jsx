@@ -18,7 +18,7 @@ import {
 } from "react-icons/bi";
 import { AppContext } from "../../AppContext/AppContext";
 
-const userProperties = ["name", "id", "email", "phone"];
+const userProperties = ["name", "id", "phone"];
 
 function getIconForProperty(index) {
   const icons = [BiBuilding, BiHash, BiEnvelope, BiPhone];
@@ -26,7 +26,7 @@ function getIconForProperty(index) {
 }
 
 export default function DashboardLayout({ children }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure(); 
   return (
     <Box className="w-full h-full">
       <SidebarContent

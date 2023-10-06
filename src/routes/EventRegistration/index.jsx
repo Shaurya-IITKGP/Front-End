@@ -11,9 +11,22 @@ import { BsArrowRight, BsPlusLg } from "react-icons/bs";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { AppContext } from "../../AppContext/AppContext.jsx";
 
-// import 'react-spinner-loader/dist/index.css';
-
 const BASE_URL = import.meta.env.VITE_BASE_URL;
+
+function getGender(eventname, eventype) {
+  const male = "male";
+  const female = "female";
+
+  if (eventname === "weightlifting" || eventname === "powerlifting") {
+    return male;
+  }
+
+  const parts = eventype.split("-");
+
+  const result = parts[parts.length - 1];
+  if (result.length > 3) return female;
+  return male;
+}
 
 const EventRegistration = () => {
   const { eventName, eventType } = useParams();
@@ -23,10 +36,12 @@ const EventRegistration = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [registered, setRegisterd] = useState(false);
   const navigate = useNavigate();
+  const gender = getGender(eventName, eventType);
+  const isChess = eventName === "chess";
 
   const EVENT = useMemo(() => {
     return EVENT_DATA.find(
-      (event) => event.name == eventName && event.category == eventType,
+      (event) => event.name == eventName && event.category == eventType
     );
   }, [eventName, eventType]);
 
@@ -39,14 +54,14 @@ const EventRegistration = () => {
   }, [EVENT]);
 
   const [teamMembers, setTeamMembers] = useState([
-    { name: "", rollNo: "", email: "", phone: "", gender: EVENT.gender },
+    { name: "", rollNo: "", phone: "", gender: isChess ? "" : gender },
   ]);
 
   useEffect(() => {
     setTeamMembers(
       Array.from({ length: minTeamSize }, () => ({
-        ...{ name: "", rollNo: "", email: "", phone: "" },
-      })),
+        ...{ name: "", rollNo: "", phone: "", gender: isChess ? "" : gender },
+      }))
     );
   }, [minTeamSize]);
 
@@ -54,7 +69,7 @@ const EventRegistration = () => {
     if (teamMembers.length < maxTeamSize) {
       setTeamMembers([
         ...teamMembers,
-        { name: "", rollNo: "", email: "", phone: "" },
+        { name: "", rollNo: "", phone: "", gender: isChess ? "" : gender },
       ]);
     }
   };
@@ -77,8 +92,7 @@ const EventRegistration = () => {
           (member) =>
             member.name.trim() !== "" &&
             member.rollNo.trim() !== "" &&
-            member.email.trim() !== "" &&
-            member.phone.trim() !== "",
+            member.phone.trim() !== ""
         )
       ) {
         try {
@@ -93,11 +107,18 @@ const EventRegistration = () => {
               headers: {
                 Authorization: `Bearer ${user.token}`,
               },
-            },
+            }
           );
 
           if (response.status === 200) {
-            setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+            setTeamMembers([
+              {
+                name: "",
+                rollNo: "",
+                phone: "",
+                gender: isChess ? "" : gender,
+              },
+            ]);
             setLoading(false);
             setMessage({
               title: "Success",
@@ -106,7 +127,14 @@ const EventRegistration = () => {
             setRegisterd(true);
             onOpen();
           } else {
-            setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+            setTeamMembers([
+              {
+                name: "",
+                rollNo: "",
+                phone: "",
+                gender: isChess ? "" : gender,
+              },
+            ]);
             setLoading(false);
             setMessage({
               title: "Error",
@@ -116,7 +144,9 @@ const EventRegistration = () => {
             onOpen();
           }
         } catch (error) {
-          setTeamMembers([{ name: "", rollNo: "", email: "", phone: "" }]);
+          setTeamMembers([
+            { name: "", rollNo: "", phone: "", gender: isChess ? "" : gender },
+          ]);
           setLoading(false);
           setMessage({
             title: "Error",
@@ -129,7 +159,7 @@ const EventRegistration = () => {
         setLoading(false);
         setMessage({
           title: "Error",
-          text: "Please fill in all team member details (Name, Roll Number, Email, and Phone Number)",
+          text: "Please fill in all team member details (Name, Roll Number, and Phone Number)",
         });
         setRegisterd(false);
         onOpen();
@@ -234,23 +264,6 @@ const EventRegistration = () => {
                 <div className="relative z-0 mb-8">
                   <input
                     type="text"
-                    id={"email-" + index}
-                    name="email"
-                    className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[white] peer"
-                    placeholder=" "
-                    onChange={(e) => handleInputChange(index, e)}
-                    value={member.email}
-                  />
-                  <label
-                    htmlFor={"email-" + index}
-                    className="absolute text-xl text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 peer-focus:dark:text-[white] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >
-                    Email
-                  </label>
-                </div>
-                <div className="relative z-0 mb-8">
-                  <input
-                    type="text"
                     id={"phone-" + index}
                     name="phone"
                     className="block py-2.5 px-0 w-full text-xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[] focus:outline-none focus:ring-0 focus:border-[white] peer"
@@ -265,7 +278,18 @@ const EventRegistration = () => {
                     Phone No
                   </label>
                 </div>
-
+                {isChess && (
+                  <select
+                    name="gender"
+                    value={member.gender}
+                    onChange={(e) => handleInputChange(index, e)}
+                    className="p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+                  >
+                    <option value="">Select Gender</option>
+                    <option value="male">MALE</option>
+                    <option value="female">FEMALE</option>
+                  </select>
+                )}
                 <motion.button
                   onClick={() => handleRemoveMember(index)}
                   className="p-2 w-[100px] hover:text-red-600 duration-[0.5s] ease-in-out"

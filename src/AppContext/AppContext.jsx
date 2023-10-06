@@ -11,7 +11,6 @@ export function AppProvider({ children }) {
       : {
           token: null,
           college: null,
-          email: null,
           id: null,
           phone: null,
         };
@@ -40,7 +39,6 @@ export function AppProvider({ children }) {
     setUser({
       token: null,
       college: null,
-      email: null,
       id: null,
       phone: null,
     });

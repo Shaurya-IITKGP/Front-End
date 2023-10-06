@@ -1,6 +1,6 @@
 const EVENT_DATA = [
   {
-    id: "EVNTEAA1A6",
+    id: "EVNT135178762",
     name: "badminton",
     min_players: 4,
     max_players: 5,
@@ -8,7 +8,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT2A0EAC",
+    id: "EVNT915392287",
     name: "badminton",
     min_players: 2,
     max_players: 3,
@@ -16,7 +16,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNT76E4CD",
+    id: "EVNT884995589",
     name: "basketball",
     min_players: 7,
     max_players: 12,
@@ -24,7 +24,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT6C30C5",
+    id: "EVNT962049832",
     name: "basketball",
     min_players: 7,
     max_players: 12,
@@ -32,7 +32,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNT672ED6",
+    id: "EVNT520282880",
     name: "cricket",
     min_players: 11,
     max_players: 16,
@@ -40,7 +40,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT9FACCC",
+    id: "EVNT578218667",
     name: "chess",
     min_players: 4,
     max_players: 6,
@@ -48,7 +48,7 @@ const EVENT_DATA = [
     category: "team",
   },
   {
-    id: "EVNT12758E",
+    id: "EVNT420375988",
     name: "football",
     min_players: 11,
     max_players: 16,
@@ -56,7 +56,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT0CA9E8",
+    id: "EVNT745843142",
     name: "hockey",
     min_players: 11,
     max_players: 16,
@@ -64,7 +64,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNTDE095E",
+    id: "EVNT282071123",
     name: "squash",
     min_players: 1,
     max_players: 99,
@@ -72,7 +72,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNTD2B483",
+    id: "EVNT767186105",
     name: "squash",
     min_players: 1,
     max_players: 99,
@@ -80,7 +80,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNT3312D7",
+    id: "EVNT942856972",
     name: "tabletennis",
     min_players: 3,
     max_players: 4,
@@ -88,7 +88,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT1A91FF",
+    id: "EVNT492290904",
     name: "tabletennis",
     min_players: 2,
     max_players: 3,
@@ -96,7 +96,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNT677D7A",
+    id: "EVNT964651538",
     name: "tennis",
     min_players: 3,
     max_players: 4,
@@ -104,7 +104,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNTF6B6BE",
+    id: "EVNT358075802",
     name: "tennis",
     min_players: 2,
     max_players: 3,
@@ -112,7 +112,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNT1D7B44",
+    id: "EVNT375355142",
     name: "volleyball",
     min_players: 6,
     max_players: 12,
@@ -120,7 +120,7 @@ const EVENT_DATA = [
     category: "men",
   },
   {
-    id: "EVNT2D6AC1",
+    id: "EVNT861365721",
     name: "volleyball",
     min_players: 6,
     max_players: 12,
@@ -128,7 +128,7 @@ const EVENT_DATA = [
     category: "women",
   },
   {
-    id: "EVNTF8A3D3",
+    id: "EVNT737518826",
     name: "weightlifting",
     min_players: 1,
     max_players: 2,
@@ -136,7 +136,7 @@ const EVENT_DATA = [
     category: "under-56-kg",
   },
   {
-    id: "EVNT50FF08",
+    id: "EVNT932005841",
     name: "weightlifting",
     min_players: 1,
     max_players: 2,
@@ -144,7 +144,7 @@ const EVENT_DATA = [
     category: "57-to-62-kg",
   },
   {
-    id: "EVNT4D8738",
+    id: "EVNT133276591",
     name: "weightlifting",
     min_players: 1,
     max_players: 2,
@@ -152,7 +152,7 @@ const EVENT_DATA = [
     category: "63-to-69-kg",
   },
   {
-    id: "EVNTBDC91D",
+    id: "EVNT130030218",
     name: "weightlifting",
     min_players: 1,
     max_players: 2,
@@ -160,7 +160,7 @@ const EVENT_DATA = [
     category: "70-to-77-kg",
   },
   {
-    id: "EVNT61654E",
+    id: "EVNT377926454",
     name: "weightlifting",
     min_players: 1,
     max_players: 2,
@@ -168,7 +168,7 @@ const EVENT_DATA = [
     category: "above-77-kg",
   },
   {
-    id: "EVNTE023FD",
+    id: "EVNT907091780",
     name: "powerlifting",
     min_players: 1,
     max_players: 99,
@@ -176,7 +176,7 @@ const EVENT_DATA = [
     category: "under-56-kg",
   },
   {
-    id: "EVNTFCE003",
+    id: "EVNT468873987",
     name: "powerlifting",
     min_players: 1,
     max_players: 99,
@@ -184,7 +184,7 @@ const EVENT_DATA = [
     category: "57-to-62-kg",
   },
   {
-    id: "EVNT0E233A",
+    id: "EVNT221040226",
     name: "powerlifting",
     min_players: 1,
     max_players: 99,
@@ -192,7 +192,7 @@ const EVENT_DATA = [
     category: "63-to-69-kg",
   },
   {
-    id: "EVNT6FABE0",
+    id: "EVNT776727293",
     name: "powerlifting",
     min_players: 1,
     max_players: 99,
@@ -200,7 +200,7 @@ const EVENT_DATA = [
     category: "70-to-77-kg",
   },
   {
-    id: "EVNTB8ED3B",
+    id: "EVNT583665737",
     name: "powerlifting",
     min_players: 1,
     max_players: 99,
@@ -208,7 +208,7 @@ const EVENT_DATA = [
     category: "above-77-kg",
   },
   {
-    id: "EVNT318ED7",
+    id: "EVNT791291153",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -216,7 +216,7 @@ const EVENT_DATA = [
     category: "100m-men",
   },
   {
-    id: "EVNTE7B9C7",
+    id: "EVNT315060209",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -224,7 +224,7 @@ const EVENT_DATA = [
     category: "200m-men",
   },
   {
-    id: "EVNTBA8BA6",
+    id: "EVNT744512650",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -232,7 +232,7 @@ const EVENT_DATA = [
     category: "400m-men",
   },
   {
-    id: "EVNT550112",
+    id: "EVNT507290324",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -240,7 +240,7 @@ const EVENT_DATA = [
     category: "800m-men",
   },
   {
-    id: "EVNTF63812",
+    id: "EVNT774551693",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -248,7 +248,7 @@ const EVENT_DATA = [
     category: "1500m-men",
   },
   {
-    id: "EVNT31F4BB",
+    id: "EVNT518530041",
     name: "athletics",
     min_players: 4,
     max_players: 4,
@@ -256,7 +256,7 @@ const EVENT_DATA = [
     category: "4x100m-relay-men",
   },
   {
-    id: "EVNT414D29",
+    id: "EVNT719171479",
     name: "athletics",
     min_players: 4,
     max_players: 4,
@@ -264,7 +264,7 @@ const EVENT_DATA = [
     category: "4x400m-relay-men",
   },
   {
-    id: "EVNTEB9CBA",
+    id: "EVNT264151826",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -272,7 +272,7 @@ const EVENT_DATA = [
     category: "110m-hurdles-men",
   },
   {
-    id: "EVNTD8FB92",
+    id: "EVNT739546364",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -280,7 +280,7 @@ const EVENT_DATA = [
     category: "400m-hurdles-men",
   },
   {
-    id: "EVNT350933",
+    id: "EVNT399980702",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -288,7 +288,7 @@ const EVENT_DATA = [
     category: "long-jump-men",
   },
   {
-    id: "EVNT947D3C",
+    id: "EVNT345802316",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -296,7 +296,7 @@ const EVENT_DATA = [
     category: "high-jump-men",
   },
   {
-    id: "EVNTADD3C5",
+    id: "EVNT924191651",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -304,7 +304,7 @@ const EVENT_DATA = [
     category: "triple-jump-men",
   },
   {
-    id: "EVNT70A129",
+    id: "EVNT912714940",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -312,7 +312,7 @@ const EVENT_DATA = [
     category: "shotput-men",
   },
   {
-    id: "EVNT982BCB",
+    id: "EVNT767134764",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -320,7 +320,7 @@ const EVENT_DATA = [
     category: "hammer-throw-men",
   },
   {
-    id: "EVNT3AC26B",
+    id: "EVNT936923102",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -328,7 +328,7 @@ const EVENT_DATA = [
     category: "javelin-men",
   },
   {
-    id: "EVNT55BBC4",
+    id: "EVNT723088085",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -336,7 +336,7 @@ const EVENT_DATA = [
     category: "discuss-throw-men",
   },
   {
-    id: "EVNT9A6B8D",
+    id: "EVNT411031964",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -344,7 +344,7 @@ const EVENT_DATA = [
     category: "100m-women",
   },
   {
-    id: "EVNT4025FC",
+    id: "EVNT814033987",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -352,7 +352,7 @@ const EVENT_DATA = [
     category: "200m-women",
   },
   {
-    id: "EVNT8E9B8C",
+    id: "EVNT732628943",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -360,7 +360,7 @@ const EVENT_DATA = [
     category: "400m-women",
   },
   {
-    id: "EVNT55148A",
+    id: "EVNT591641611",
     name: "athletics",
     min_players: 4,
     max_players: 4,
@@ -368,7 +368,7 @@ const EVENT_DATA = [
     category: "4x100m-relay-women",
   },
   {
-    id: "EVNTAE5BA3",
+    id: "EVNT132200261",
     name: "athletics",
     min_players: 4,
     max_players: 4,
@@ -376,7 +376,7 @@ const EVENT_DATA = [
     category: "4x400m-relay-women",
   },
   {
-    id: "EVNT298227",
+    id: "EVNT160214045",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -384,7 +384,7 @@ const EVENT_DATA = [
     category: "long-jump-women",
   },
   {
-    id: "EVNTAE723A",
+    id: "EVNT459149449",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -392,7 +392,7 @@ const EVENT_DATA = [
     category: "high-jump-women",
   },
   {
-    id: "EVNT25C04C",
+    id: "EVNT803141387",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -400,7 +400,7 @@ const EVENT_DATA = [
     category: "shotput-women",
   },
   {
-    id: "EVNT4216AF",
+    id: "EVNT269153041",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -408,7 +408,7 @@ const EVENT_DATA = [
     category: "javelin-women",
   },
   {
-    id: "EVNTBE41FC",
+    id: "EVNT175424460",
     name: "athletics",
     min_players: 1,
     max_players: 2,
@@ -416,5 +416,4 @@ const EVENT_DATA = [
     category: "discuss-throw-women",
   },
 ];
-
 export default EVENT_DATA;
