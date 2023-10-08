@@ -283,7 +283,7 @@ const TEAM_DATA = {
       email: "raghuvarsrivastava@kgpian.iitkgp.ac.in",
       facebook: "https://www.facebook.com/raghuvar.srivastava",
       instagram: "https://www.instagram.com/raghuvarsrivastava/",
-      linkedin: "https://www.linkedin.com/in/aditya-g-gaikwad-155a67229",
+      linkedin: "https://www.linkedin.com/in/raghuvar-srivastava-5b1444226/",
     },
     {
       name: "Rishi Dhoble",
