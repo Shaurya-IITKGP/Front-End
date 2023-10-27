@@ -1,112 +1,388 @@
-import Zeenews from "../../assets/logos/logo1.png";
-import Sportskeeda from "../../assets/logos/logo2.png";
-import FrankRoss from "../../assets/logos/logo3.png";
-import Dominoes from "../../assets/logos/logo4.png";
-import RedFM from "../../assets/logos/logo5.png";
-import DainikJagran from "../../assets/logos/logo6.png";
-import Subway from "../../assets/logos/logo7.png";
-import SBL from "../../assets/logos/logo8.png";
-import SBI from "../../assets/logos/logo9.png";
-import Nivia from "../../assets/logos/logo10.png";
-import Victor from "../../assets/logos/logo12.png";
-import NPCIL from "../../assets/logos/logo13.png";
-import Tecnifibre from "../../assets/logos/logo14.png";
-import DLF from "../../assets/logos/logo16.png";
+import Jindal from "../../assets/logos/Jindal_Steel_Logo.png";
+import KKR from "../../assets/logos/KKR_Logo.png";
+import PB from "../../assets/logos/PB_Logo.png";
+import Decathlon from "../../assets/logos/Decathlon_Logo.png";
+import GB from "../../assets/logos/GB_Logo.png";
+import Aava from "../../assets/logos/Aava_Logo.png";
+import ABC from "../../assets/logos/ABC_Logo.png";
+import TBS from "../../assets/logos/TBS_Logo.png";
+import Aawhan from "../../assets/logos/Aawhan_Logo.png";
+import Edugraph from "../../assets/logos/edugraph_Logo.png";
+import RD from "../../assets/logos/RD_Logo.png";
+import TKB from "../../assets/logos/TKB_Logo.png";
+import ONT from "../../assets/logos/ONT_Logo.png";
+import ICF from "../../assets/logos/ICF_Logo.png";
 import STAG from "../../assets/logos/logo17.png";
-import Fadooengineers from "../../assets/logos/logo18.png";
-import Bingo from "../../assets/logos/logo19.png";
-import MMT from "../../assets/logos/logo20.png";
-import HDFC from "../../assets/logos/logo21.png";
-import ITC from "../../assets/logos/logo22.png";
-import MMF from "../../assets/logos/logo23.png";
-import TATA from "../../assets/logos/logo24.png";
-import Wipro from "../../assets/logos/logo25.png";
-import Indigo from "../../assets/logos/logo26.png";
-import Reliance from "../../assets/logos/logo27.png";
-import Spykar from "../../assets/logos/logo28.png";
-import Cipla from "../../assets/logos/logo29.png";
-import Cello from "../../assets/logos/logo30.png";
-import Bisleri from "../../assets/logos/logo32.png";
-import Entupe from "../../assets/logos/logo33.png";
-import BSNL from "../../assets/logos/logo34.png";
-import JBL from "../../assets/logos/logo35.png";
-import VRL from "../../assets/logos/logo36.png";
-import Nestle from "../../assets/logos/logo37.png";
-import Yonex from "../../assets/logos/logo38.png";
+import KAF from "../../assets/logos/KAF_Logo.png";
+import Dainik from "../../assets/logos/Dainik_Logo.png";
+import Coal from "../../assets/logos/Coal_Logo.png";
+
+
+
+
 
 const SponsorPage = () => {
-  const sponsors = [
-    { logo: Zeenews, name: "Zee News" },
-    { logo: FrankRoss, name: "Frank Ross " },
-    { logo: Dominoes, name: "Dominoes Pizza" },
-    { logo: RedFM, name: "Red FM" },
-    { logo: DainikJagran, name: " Dainik Jagran" },
-    { logo: Subway, name: "Subway" },
-    { logo: SBL, name: "SBL" },
-    { logo: SBI, name: "State Bank of India" },
-    { logo: Nivia, name: "Nivia" },
-    { logo: Victor, name: "Victor" },
-    { logo: NPCIL, name: "NPCIL" },
-    { logo: Tecnifibre, name: "Tecnifibre" },
-    { logo: DLF, name: "DLF" },
-    { logo: STAG, name: "STAG" },
-    { logo: Fadooengineers, name: "Fadoo Engineers" },
-    { logo: Bingo, name: "Bingo" },
-    { logo: MMT, name: "Make My Trip" },
-    { logo: HDFC, name: "HDFC Bank" },
-    { logo: ITC, name: "ITC" },
-    { logo: MMF, name: "Mark My Fest" },
-    { logo: TATA, name: "TATA" },
-    { logo: Wipro, name: "Wipro" },
-    { logo: Indigo, name: "Indigo Airlines" },
-    { logo: Reliance, name: "Reliance" },
-    { logo: Spykar, name: "Spykar" },
-    { logo: Cipla, name: "Cipla" },
-    { logo: Cello, name: "Cello" },
-    { logo: Bisleri, name: "Bisleri" },
-    { logo: Sportskeeda, name: "Sports Keeda" },
-    { logo: Entupe, name: "Entupe Technologies" },
-    { logo: BSNL, name: "BSNL" },
-    { logo: JBL, name: "JBL" },
-    { logo: VRL, name: "VRL Logistics" },
-    { logo: Nestle, name: "Nestle" },
-    { logo: Yonex, name: "Yonex" },
-  ];
+  
 
   return (
     <div className="container mx-auto p-6 text-center">
       <h2 className="text-[2.5rem] font-bold mb-6 text-white font-badger tracking-wider ">
-        OUR PREVIOUS SPONSORS
+       SPONSORS
       </h2>
       <p className="text-xl max-w-[60rem] px-10 mx-auto font-mont mb-16 text-white">
-        We extend our heartfelt thanks to our previous sponsors for their
-        invaluable support in making our past events a success. Their dedication
-        to promoting sports and education has been instrumental. We look forward
-        to continued collaboration and welcome new partners to join us in
-        shaping the future of sports at our institution
+      We extend our heartfelt thanks to our previous sponsors for their invaluable support in making our event a success. Their dedication to promoting sports and education has been instrumental. We look forward to continued collaboration and welcome new partners to join us in shaping the future of sports at our institution.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
-        {sponsors.map((sponsor, index) => (
-          <div
-            className="relative mb-6 transform hover:scale-105 transition-transform"
-            key={index}
-          >
-            <a href={sponsor.website} target="_blank" rel="noopener noreferrer">
+
+      {/* Title Sponsors */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Title Sponsor</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.coalindia.in/" target="_blank" rel="noopener noreferrer">
               <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
                 <img
-                  src={sponsor.logo}
+                  src={Coal}
                   className="w-full h-full object-cover"
                   alt=""
                 />
               </div>
             </a>
             <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
-              {sponsor.name}
+              Coal India
             </h2>
           </div>
-        ))}
+          
+          {/* Add more Title Sponsors as needed */}
+        </div>
       </div>
+
+      {/* Co-Title Sponsors */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Co-Title Sponsor</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.kkr.in/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={KKR}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Kolkata Knight Riders
+            </h2>
+          </div>
+        
+        </div>
+      </div>
+      {/* Premier Partner */}
+      <div className="mx-auto max-w-screen-lg mb-2">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Premier Partner</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.adityabirlacapital.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={ABC}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Aditya Birla Capital
+            </h2>
+          </div>
+        </div>
+        </div>
+
+
+      {/* Corporate  Sponsors */}
+      <div  className="flex flex-wrap justify-center">
+      
+
+
+      
+      <div className="mx-auto max-w-screen-lg mb-4">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Corporate Sponsor</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.jindalsteelpower.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Jindal}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Jindal Steel
+            </h2>
+          </div>
+          </div>
+      </div>
+          
+      <div className="mx-auto max-w-screen-lg">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Corporate Sponsor</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.pokerbaazi.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={PB}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Poker Baazi
+            </h2>
+          </div>
+
+          {/* Add more Hydration Sponsors as needed */}
+        </div>
+      </div>
+
+
+      {/* Major Partner */}
+      <div className="mx-auto max-w-screen-lg">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Major Partner</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.stag.in/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={STAG}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Stag
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      {/* Sports Partner */}
+      <div className="mx-auto max-w-screen-lg">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Sports Partner</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.decathlon.in/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Decathlon}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Decathlon
+            </h2>
+          </div>
+          
+        </div>
+        
+      </div>
+
+      {/* Corporate  Sponsors */}
+      <div className="mx-auto max-w-screen-lg">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Energy Partner</h2>
+        <div className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.glucovita.com" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={GB}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Glucovita Bolts
+            </h2>
+          </div>
+          </div>
+          </div>
+
+          <div className="mx-auto max-w-screen-lg">
+        <h2 className="text-1.5xl font-bold text-white mb-4">Hydration Partner</h2>
+        <div  className="flex justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.aavawater.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Aava}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Aava
+            </h2>
+          </div>
+
+          {/* Add more Hydration Sponsors as needed */}
+        </div>
+      </div>
+      </div>
+
+      {/* Corporate  Sponsors */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Media Partners</h2>
+        <div className="flex flex-wrap justify-center space-x-4">
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.thebusinessscan.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={TBS}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              The Business Scan
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.aahwahan.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Aawhan}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Aahwaan 
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.telegraphindia.com/edugraph" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Edugraph}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Edu Graph
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.rd.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={RD}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Reader's Digest
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://thekolkatabuzz.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={TKB}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              The Kolkata Buzz
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.odishanewstimes.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={ONT}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Orissa Times
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://indiacollegefest.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={ICF}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              India College Fest
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://www.knowafest.com/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={KAF}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Know a Fest
+            </h2>
+          </div>
+
+          <div className="relative mb-6 transform hover:scale-105 transition-transform">
+            <a href="https://epaper.navajyoti.net/" target="_blank" rel="noopener noreferrer">
+              <div className="bg-black bg-opacity-20 h-48 w-48 mx-auto mb-4 relative shadow-lg rounded-lg overflow-hidden">
+                <img
+                  src={Dainik}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+            </a>
+            <h2 className="text-xl font-bold mb-2 opacity-100 text-white">
+              Dainik Navjyoti
+            </h2>
+          </div>
+
+          {/* Add more Hydration Sponsors as needed */}
+        </div>
+      </div>
+
+      
+
+
     </div>
   );
 };
