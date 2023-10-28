@@ -30,7 +30,7 @@ const SponsorPage = () => {
        SPONSORS
       </h2>
       <p className="text-xl max-w-[60rem] px-10 mx-auto font-mont mb-16 text-white">
-      We extend our heartfelt thanks to our previous sponsors for their invaluable support in making our event a success. Their dedication to promoting sports and education has been instrumental. We look forward to continued collaboration and welcome new partners to join us in shaping the future of sports at our institution.
+      We're grateful for our current sponsors' pivotal role in our event's success, and we invite new partners to join us in shaping the future of sports at our institution.
       </p>
 
 
